@@ -1,3 +1,5 @@
+@use "sass:map";
+
 // ==========================================================================
 // Axel Framework - Colors
 // Description: Color palette for the Axel CSS framework, supporting light and
@@ -46,3 +48,10 @@ $themes: (
                 accent: #FF80AB
         )
 );
+
+// --------------------------------------------------------------------------
+// Default Colors
+// Sets the light theme as the default color palette for static SCSS usage.
+// Use CSS custom properties (--primary, --background) for runtime theming.
+// --------------------------------------------------------------------------
+$colors: map.get($themes, light);
