@@ -1,0 +1,37 @@
+{
+  "name": "axel",
+  "version": "1.0.0",
+  "description": "A modern, vibrant CSS framework with bold theming, modular design, and accessibility focus. Built with fluid typography, dynamic utilitiesA modern, vibrant CSS framework with bold theming, modular design, and accessibility focus.🚀",
+  "main": "dist/axel.css",
+  "style": "dist/axel.css",
+  "sass": "scss/axel.scss",
+  "scripts": {
+    "build": "sass scss/axel.scss dist/axel.css --style=expanded",
+    "build:min": "sass scss/axel.scss dist/axel.min.css --style=compressed",
+    "watch": "sass --watch scss/axel.scss dist/axel.css --style=expanded",
+    "test": "echo \"Tests coming soon!\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farzadasgari/axel.git"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "framework",
+    "ui",
+    "responsive",
+    "theming",
+    "accessibility",
+    "design-system"
+  ],
+  "author": "Farzad Asgari <https://github.com/farzadasgari>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/farzadasgari/axel/issues"
+  },
+  "homepage": "https://github.com/farzadasgari/axel#readme",
+  "devDependencies": {
+    "sass": "^1.89.0"
+  }
+}
