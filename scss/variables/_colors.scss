@@ -83,3 +83,18 @@ $color-variations: (
         active: -10%, // Darken colors for active states
         disabled: 0.65 // Opacity for disabled states
 );
+
+
+// --------------------------------------------------------------------------
+// High-Contrast Colors
+// Provides alternative colors for high-contrast mode to ensure WCAG compliance.
+// Used in media queries or classes like .high-contrast.
+// --------------------------------------------------------------------------
+$high-contrast-colors: (
+        primary: #8B00B3,
+        secondary: #00897B,
+        danger: #C2185B,
+        success: #007300,
+        warning: #FFB300,
+        info: #01579B
+);
