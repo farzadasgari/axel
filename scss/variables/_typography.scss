@@ -125,3 +125,15 @@ $text-transforms: (
         lowercase: lowercase, // All lowercase for style
         capitalize: capitalize // Capitalize first letter
 );
+
+
+// --------------------------------------------------------------------------
+// Accessibility
+// Typography tokens for accessibility, ensuring WCAG 2.1 compliance.
+// Minimum font size for readability and text color integration with colors.scss.
+// Example usage: color: map.get(c.$colors, text);
+// --------------------------------------------------------------------------
+$min-readable-font-size: map.get($font-sizes, sm); // 12px minimum for WCAG
+$default-text-color: map.get(c.$colors, text); // Default text color
+$default-heading-color: map.get(c.$colors, dark); // Darker for headings
+$high-contrast-text-color: map.get(c.$high-contrast-colors, dark); // For high-contrast mode
