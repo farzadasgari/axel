@@ -146,3 +146,16 @@ $high-contrast-text-color: map.get(c.$high-contrast-colors, dark); // For high-c
   line-height: map.get($line-heights, normal);
   color: $default-text-color;
 }
+
+
+// --------------------------------------------------------------------------
+// Responsive Typography Breakpoints
+// Optional breakpoints for adjusting typography at specific screen sizes.
+// Integrates with $breakpoints from _grid.scss (to be defined later).
+// Example usage in mixins: @include media(md) { font-size: map.get($font-sizes, lg); }
+// --------------------------------------------------------------------------
+$typography-breakpoints: (
+        sm: map.get($font-sizes, sm), // Smaller text for small screens
+        md: map.get($font-sizes, base), // Default for medium screens
+        lg: map.get($font-sizes, lg) // Larger text for large screens
+);
