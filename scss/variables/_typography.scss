@@ -112,3 +112,16 @@ $letter-spacings: (
         heading: 0.02rem, // Slightly expanded for headings
         loose: 0.05rem // Spacious for decorative text
 );
+
+
+// --------------------------------------------------------------------------
+// Text Transforms
+// Common text transform options for styling text case.
+// Example usage: text-transform: map.get($text-transforms, uppercase);
+// --------------------------------------------------------------------------
+$text-transforms: (
+        none: none, // No transformation
+        uppercase: uppercase, // All caps for emphasis
+        lowercase: lowercase, // All lowercase for style
+        capitalize: capitalize // Capitalize first letter
+);
