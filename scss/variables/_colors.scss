@@ -71,3 +71,15 @@ $colors: map.get($themes, light);
     --#{$key}: #{$value};
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Color Variations
+// Defines adjustments for interactive states (hover, active, disabled).
+// Used in mixins for consistent state styling across components.
+// --------------------------------------------------------------------------
+$color-variations: (
+        hover: 10%, // Lighten colors for hover states
+        active: -10%, // Darken colors for active states
+        disabled: 0.65 // Opacity for disabled states
+);
