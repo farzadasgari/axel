@@ -13,3 +13,36 @@
 // colors (primary, secondary, etc.), backgrounds, and text. Colors are chosen
 // for WCAG 2.1 contrast ratios (minimum 4.5:1 for text).
 // --------------------------------------------------------------------------
+
+$themes: (
+        light: (
+                primary: #AF47D2,
+                secondary: #00C4B4,
+                danger: #E91E63,
+                success: #00C853,
+                warning: #FFCA28,
+                info: #0288D1,
+                dark: #2E2E2E,
+                light: #F5F5F5,
+                white: #FFFFFF,
+                black: #000000,
+                background: #F5F5F5,
+                text: #2E2E2E,
+                accent: #FF4081
+        ),
+        dark: (
+                primary: #CE93D8,
+                secondary: #26A69A,
+                danger: #F06292,
+                success: #4CAF50,
+                warning: #FFECB3,
+                info: #4FC3F7,
+                dark: #212121,
+                light: #424242,
+                white: #FFFFFF,
+                black: #000000,
+                background: #212121,
+                text: #F5F5F5,
+                accent: #FF80AB
+        )
+);
