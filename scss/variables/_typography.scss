@@ -137,3 +137,12 @@ $min-readable-font-size: map.get($font-sizes, sm); // 12px minimum for WCAG
 $default-text-color: map.get(c.$colors, text); // Default text color
 $default-heading-color: map.get(c.$colors, dark); // Darker for headings
 $high-contrast-text-color: map.get(c.$high-contrast-colors, dark); // For high-contrast mode
+
+
+// Apply default typography to :root for global consistency
+:root {
+  font-size: $base-font-size;
+  font-family: map.get($font-families, base);
+  line-height: map.get($line-heights, normal);
+  color: $default-text-color;
+}
