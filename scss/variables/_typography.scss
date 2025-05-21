@@ -9,3 +9,12 @@
 // Author: Farzad Asgari
 // Version: 1.0.0
 // ==========================================================================
+
+
+// --------------------------------------------------------------------------
+// Base Font Size
+// Defines the root font size for relative units (rem). Default is 16px to align
+// with browser standards. All font sizes are calculated relative to this base.
+// Example: 1rem = 16px, 0.75rem = 12px.
+// --------------------------------------------------------------------------
+$base-font-size: 1rem; // 16px at default browser settings
