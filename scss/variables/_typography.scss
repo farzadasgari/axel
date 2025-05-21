@@ -85,3 +85,16 @@ $font-weights: (
         bold: 700, // Headings or critical elements
         extrabold: 800 // Hero text or maximum emphasis
 );
+
+
+// --------------------------------------------------------------------------
+// Line Heights
+// Line height options for readability and hierarchy. Unitless values ensure
+// consistency across font sizes. Supports tight, normal, and loose spacing.
+// Example usage: line-height: map.get($line-heights, normal);
+// --------------------------------------------------------------------------
+$line-heights: (
+        tight: 1.2,  // For dense text (e.g., headings)
+        normal: 1.5, // For body text (WCAG-compliant for readability)
+        loose: 1.8   // For spacious text (e.g., quotes, captions)
+);
