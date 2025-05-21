@@ -94,7 +94,21 @@ $font-weights: (
 // Example usage: line-height: map.get($line-heights, normal);
 // --------------------------------------------------------------------------
 $line-heights: (
-        tight: 1.2,  // For dense text (e.g., headings)
+        tight: 1.2, // For dense text (e.g., headings)
         normal: 1.5, // For body text (WCAG-compliant for readability)
-        loose: 1.8   // For spacious text (e.g., quotes, captions)
+        loose: 1.8 // For spacious text (e.g., quotes, captions)
+);
+
+
+// --------------------------------------------------------------------------
+// Letter Spacing
+// Adjustments for tracking (letter spacing) to enhance typography.
+// Uses rem for consistency. Positive for headings, negative for dense text.
+// Example usage: letter-spacing: map.get($letter-spacings, heading);
+// --------------------------------------------------------------------------
+$letter-spacings: (
+        tight: -0.02rem, // Slightly condensed for small text
+        normal: 0, // Default, no adjustment
+        heading: 0.02rem, // Slightly expanded for headings
+        loose: 0.05rem // Spacious for decorative text
 );
