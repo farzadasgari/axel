@@ -28,14 +28,30 @@ $base-font-size: 1rem; // 16px at default browser settings
 // Example usage: font-size: map.get($font-sizes, base);
 // --------------------------------------------------------------------------
 $font-sizes: (
-        xxs: 0.5 * $base-font-size,   // 8px, for fine print
-        xs: 0.625 * $base-font-size,  // 10px, for captions
-        sm: 0.75 * $base-font-size,   // 12px, for small text
-        md: 0.875 * $base-font-size,  // 14px, for secondary text
-        base: $base-font-size,        // 16px, for body text
-        lg: 1.125 * $base-font-size,  // 18px, for subheadings
-        xl: 1.25 * $base-font-size,   // 20px, for headings
-        xxl: 1.5 * $base-font-size,   // 24px, for larger headings
-        xxxl: 2 * $base-font-size,    // 32px, for main headings
-        xxxxl: 2.5 * $base-font-size  // 40px, for hero text
+        xxs: 0.5 * $base-font-size, // 8px, for fine print
+        xs: 0.625 * $base-font-size, // 10px, for captions
+        sm: 0.75 * $base-font-size, // 12px, for small text
+        md: 0.875 * $base-font-size, // 14px, for secondary text
+        base: $base-font-size, // 16px, for body text
+        lg: 1.125 * $base-font-size, // 18px, for subheadings
+        xl: 1.25 * $base-font-size, // 20px, for headings
+        xxl: 1.5 * $base-font-size, // 24px, for larger headings
+        xxxl: 2 * $base-font-size, // 32px, for main headings
+        xxxxl: 2.5 * $base-font-size // 40px, for hero text
+);
+
+
+// --------------------------------------------------------------------------
+// Fluid Font Sizes
+// Defines min/max font sizes for fluid typography using clamp().
+// Scales smoothly between breakpoints for responsive headings.
+// Example usage: font-size: clamp(map.get(map.get($fluid-font-sizes, h1), min), ...);
+// --------------------------------------------------------------------------
+$fluid-font-sizes: (
+        h1: (min: 1.5rem, max: 3rem, viewport: 4vw), // Hero headings
+        h2: (min: 1.25rem, max: 2.5rem, viewport: 3vw), // Section headings
+        h3: (min: 1.125rem, max: 2rem, viewport: 2.5vw), // Subheadings
+        h4: (min: 1rem, max: 1.5rem, viewport: 2vw), // Minor headings
+        h5: (min: 0.875rem, max: 1.25rem, viewport: 1.5vw), // Small headings
+        h6: (min: 0.75rem, max: 1rem, viewport: 1vw) // Tiny headings
 );
