@@ -1,3 +1,17 @@
-
+:root {
+  --primary: #AF47D2;
+  --secondary: #00C4B4;
+  --danger: #E91E63;
+  --success: #00C853;
+  --warning: #FFCA28;
+  --info: #0288D1;
+  --dark: #2E2E2E;
+  --light: #F5F5F5;
+  --white: #FFFFFF;
+  --black: #000000;
+  --background: #F5F5F5;
+  --text: #2E2E2E;
+  --accent: #FF4081;
+}
 
 /*# sourceMappingURL=axel.css.map */

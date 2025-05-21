@@ -1,5 +1,6 @@
 @use "sass:map";
 
+
 // ==========================================================================
 // Axel Framework - Colors
 // Description: Color palette for the Axel CSS framework, supporting light and
@@ -15,6 +16,7 @@
 // colors (primary, secondary, etc.), backgrounds, and text. Colors are chosen
 // for WCAG 2.1 contrast ratios (minimum 4.5:1 for text).
 // --------------------------------------------------------------------------
+
 
 $themes: (
         light: (
@@ -49,9 +51,23 @@ $themes: (
         )
 );
 
+
 // --------------------------------------------------------------------------
 // Default Colors
 // Sets the light theme as the default color palette for static SCSS usage.
 // Use CSS custom properties (--primary, --background) for runtime theming.
 // --------------------------------------------------------------------------
 $colors: map.get($themes, light);
+
+
+// --------------------------------------------------------------------------
+// CSS Custom Properties
+// Generates CSS custom properties for runtime theming (e.g., theme switching
+// via JavaScript or class-based theming). Applied to :root for global access.
+// Example usage: .theme-dark { --primary: #CE93D8; }
+// --------------------------------------------------------------------------
+:root {
+  @each $key, $value in $colors {
+    --#{$key}: #{$value};
+  }
+}
