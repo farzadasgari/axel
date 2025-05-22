@@ -22,4 +22,9 @@
   color: #2E2E2E;
 }
 
+:root {
+  --spacing-default: 1rem;
+  --gutter-default: 1rem;
+}
+
 /*# sourceMappingURL=axel.css.map */

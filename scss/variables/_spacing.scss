@@ -96,3 +96,10 @@ $spacing-multipliers: (
 // --------------------------------------------------------------------------
 $min-touch-target-size: 2.75rem; // 44px, per WCAG 2.1 for accessibility
 $min-spacing-interactive: map.get($spacings, 3); // 16px minimum for padding/margins
+
+
+// Apply default spacing to :root for global consistency
+:root {
+  --spacing-default: #{map.get($spacings, 3)}; // 16px
+  --gutter-default: #{map.get($grid-gutters, default)}; // 16px
+}
