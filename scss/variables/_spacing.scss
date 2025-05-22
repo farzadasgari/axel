@@ -57,3 +57,18 @@ $grid-gutters: (
         default: 1rem, // 16px, standard gutter
         loose: 1.5rem // 24px, for spacious layouts
 );
+
+
+// --------------------------------------------------------------------------
+// Container Paddings
+// Padding for container elements at different breakpoints.
+// Integrates with $breakpoints from _grid.scss (to be defined).
+// Example usage: padding: map.get($container-paddings, sm);
+// --------------------------------------------------------------------------
+$container-paddings: (
+        xs: map.get($spacings, 2), // 8px for extra-small screens
+        sm: map.get($spacings, 3), // 16px for small screens
+        md: map.get($spacings, 4), // 24px for medium screens
+        lg: map.get($spacings, 5), // 32px for large screens
+        xl: map.get($spacings, 6) // 48px for extra-large screens
+);
