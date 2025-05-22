@@ -87,3 +87,12 @@ $spacing-multipliers: (
         lg: 1.5, // 150% for large screens
         xl: 2 // 200% for extra-large screens
 );
+
+
+// --------------------------------------------------------------------------
+// Accessibility
+// Ensures spacing supports WCAG 2.1 readability (e.g., adequate padding for touch targets).
+// Minimum spacing for interactive elements (e.g., buttons) to meet 44x44px touch target size.
+// --------------------------------------------------------------------------
+$min-touch-target-size: 2.75rem; // 44px, per WCAG 2.1 for accessibility
+$min-spacing-interactive: map.get($spacings, 3); // 16px minimum for padding/margins
