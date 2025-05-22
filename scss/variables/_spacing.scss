@@ -8,3 +8,23 @@
 // Author: Farzad Asgari
 // Version: 1.0.0
 // ==========================================================================
+
+
+// --------------------------------------------------------------------------
+// Spacing Scale
+// A modular scale for margins, paddings, and other spacing properties.
+// Uses rem units for accessibility (relative to $base-font-size from _typography.scss).
+// Keys (0, 1, 2, etc.) enable easy iteration for utility classes (e.g., .m-1, .p-2).
+// Example usage: margin: map.get($spacings, 3);
+// --------------------------------------------------------------------------
+$spacings: (
+        0: 0, // No spacing
+        1: 0.25rem, // 4px, for tight spacing
+        2: 0.5rem, // 8px, for small gaps
+        3: 1rem, // 16px, for standard spacing
+        4: 1.5rem, // 24px, for medium gaps
+        5: 2rem, // 32px, for larger spacing
+        6: 3rem, // 48px, for sections
+        7: 4rem, // 64px, for major layouts
+        8: 6rem // 96px, for hero sections
+);
