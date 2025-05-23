@@ -4,7 +4,8 @@
 @use 'colors' as c;
 @use 'typography' as t;
 @use 'spacing' as s;
-@use 'flex' as f;
+@use 'grid' as g;
+@use '../mixins/mixins' as m;
 @use 'contrast';
 
 // ==========================================================================
@@ -303,6 +304,42 @@ $button-sizes: (
 
     &:active:not(:disabled):not(.disabled) {
       transform: translateY(1px);
+    }
+  }
+}
+
+// --------------------------------------------------------------------------
+// Button Sizes
+// Applies size-specific styles, with responsive variants.
+// Example usage: .btn-sm { font-size: map.get(map.get($button-sizes, sm), font-size); }
+// --------------------------------------------------------------------------
+@each $size, $props in $button-sizes {
+  .btn-#{$size} {
+    padding: map.get($props, padding);
+    font-size: map.get($props, font-size);
+    border-radius: map.get($props, border-radius);
+    min-height: map.get($props, min-height);
+
+    // Ensure touch target size
+    @if map.get($props, min-height) < $button-min-touch-target {
+      line-height: math.div($button-min-touch-target, map.get($props, font-size));
+    }
+  }
+
+  @each $bp-size, $value in g.$breakpoints {
+    @if $bp-size != 'xs' {
+    @include m.media($bp-size, g.$breakpoints) {
+      .btn-#{$size}-#{$bp-size} {
+        padding: map.get($props, padding);
+        font-size: map.get($props, font-size);
+        border-radius: map.get($props, border-radius);
+        min-height: map.get($props, min-height);
+
+        @if map.get($props, min-height) < $button-min-touch-target {
+          line-height: math.div($button-min-touch-target, map.get($props, font-size));
+        }
+      }
+    }
     }
   }
 }
