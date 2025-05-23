@@ -128,3 +128,9 @@ $button-sizes: (
     }
   }
 }
+
+
+// Keyframes for loading spinner
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
