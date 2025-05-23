@@ -42,3 +42,24 @@
   $darker: math.min($l1, $l2);
   @return ($lighter + 0.05) / ($darker + 0.05);
 }
+
+
+// --------------------------------------------------------------------------
+// Accessible Text Color
+// Returns white or black based on background color, ensuring WCAG 2.1 AA
+// contrast ratio (4.5:1 for normal text, 3:1 for large text).
+// Example usage: color: accessible-text-color(#AF47D2);
+// --------------------------------------------------------------------------
+@function accessible-text-color($bg-color, $white: #FFFFFF, $black: #000000) {
+  $white-ratio: contrast-ratio($bg-color, $white);
+  $black-ratio: contrast-ratio($bg-color, $black);
+
+  @if $white-ratio >= 4.5 {
+    @return $white;
+  } @else if $black-ratio >= 4.5 {
+    @return $black;
+  } @else {
+    // Fallback to higher contrast if neither meets 4.5:1
+    @return if($white-ratio > $black-ratio, $white, $black);
+  }
+}
