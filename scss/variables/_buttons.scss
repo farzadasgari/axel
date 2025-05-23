@@ -328,18 +328,42 @@ $button-sizes: (
 
   @each $bp-size, $value in g.$breakpoints {
     @if $bp-size != 'xs' {
-    @include m.media($bp-size, g.$breakpoints) {
-      .btn-#{$size}-#{$bp-size} {
-        padding: map.get($props, padding);
-        font-size: map.get($props, font-size);
-        border-radius: map.get($props, border-radius);
-        min-height: map.get($props, min-height);
+      @include m.media($bp-size, g.$breakpoints) {
+        .btn-#{$size}-#{$bp-size} {
+          padding: map.get($props, padding);
+          font-size: map.get($props, font-size);
+          border-radius: map.get($props, border-radius);
+          min-height: map.get($props, min-height);
 
-        @if map.get($props, min-height) < $button-min-touch-target {
-          line-height: math.div($button-min-touch-target, map.get($props, font-size));
+          @if map.get($props, min-height) < $button-min-touch-target {
+            line-height: math.div($button-min-touch-target, map.get($props, font-size));
+          }
         }
       }
     }
-    }
   }
+}
+
+
+// --------------------------------------------------------------------------
+// Button Utilities
+// Additional styles for block, rounded, and icon-only buttons.
+// Example usage: .btn-block { display: flex; width: 100%; }
+// --------------------------------------------------------------------------
+.btn-block {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.btn-rounded {
+  border-radius: 9999px;
+}
+
+.btn-icon {
+  padding: map.get(s.$spacings, 2);
+  width: map.get(map.get($button-sizes, md), min-height);
+  height: map.get(map.get($button-sizes, md), min-height);
+  line-height: 1;
+  font-size: 1.25rem; // For icons
 }

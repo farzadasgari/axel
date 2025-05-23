@@ -4189,5 +4189,22 @@
     min-height: 52px;
   }
 }
+.btn-block {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.btn-rounded {
+  border-radius: 9999px;
+}
+
+.btn-icon {
+  padding: 0.5rem;
+  width: 44px;
+  height: 44px;
+  line-height: 1;
+  font-size: 1.25rem;
+}
 
 /*# sourceMappingURL=axel.css.map */
