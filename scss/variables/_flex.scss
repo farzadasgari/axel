@@ -261,3 +261,25 @@ $flex-orders: (-1, 0, 1, 2, 3);
     }
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Gap
+// Classes for flex gap, using spacing tokens from _spacing.scss.
+// Example usage: .flex-gap-2 { gap: 0.5rem; }
+// --------------------------------------------------------------------------
+@each $key, $value in s.$spacings {
+  .flex-gap-#{$key} {
+    gap: $value;
+  }
+
+  @each $size, $breakpoint in g.$breakpoints {
+    @if $size != 'xs' {
+      @include g.media($size) {
+        .flex-gap-#{$size}-#{$key} {
+          gap: $value;
+        }
+      }
+    }
+  }
+}
