@@ -55,3 +55,12 @@ $grid-columns: (
         compact: 6, // For simpler layouts
         micro: 4 // For minimal layouts
 );
+
+
+// --------------------------------------------------------------------------
+// Grid Gutters
+// Reuses $grid-gutters from _spacing.scss for row/column gaps.
+// Supports responsive gutter adjustments.
+// Example usage: gap: map.get(s.$grid-gutters, default);
+// --------------------------------------------------------------------------
+$grid-gutter-widths: s.$grid-gutters;
