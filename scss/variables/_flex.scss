@@ -283,3 +283,13 @@ $flex-orders: (-1, 0, 1, 2, 3);
     }
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Accessibility
+// Ensures flex layouts support WCAG 2.1 readability and usability.
+// Uses spacing tokens for touch targets and logical order for screen readers.
+// Example usage: gap: s.$min-spacing-interactive;
+// --------------------------------------------------------------------------
+$min-flex-touch-target: s.$min-touch-target-size; // 44px for interactive elements
+$default-flex-gap: map.get(s.$spacings, 3); // 16px default gap
