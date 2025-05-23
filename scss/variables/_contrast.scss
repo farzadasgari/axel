@@ -21,9 +21,9 @@
   $g: math.div(color.channel($color, 'green', $space: rgb), 255);
   $b: math.div(color.channel($color, 'blue', $space: rgb), 255);
 
-  $rs: if($r <= 0.03928, $r / 12.92, math.pow(($r + 0.055) / 1.055, 2.4));
-  $gs: if($g <= 0.03928, $g / 12.92, math.pow(($g + 0.055) / 1.055, 2.4));
-  $bs: if($b <= 0.03928, $b / 12.92, math.pow(($b + 0.055) / 1.055, 2.4));
+  $rs: if($r <= 0.03928, calc($r / 12.92), math.pow(calc(($r + 0.055) / 1.055), 2.4));
+  $gs: if($g <= 0.03928, calc($g / 12.92), math.pow(calc(($g + 0.055) / 1.055), 2.4));
+  $bs: if($b <= 0.03928, calc($b / 12.92), math.pow(calc(($b + 0.055) / 1.055), 2.4));
 
   @return 0.2126 * $rs + 0.7152 * $gs + 0.0722 * $bs;
 }
@@ -40,7 +40,7 @@
   $l2: luminance($color2);
   $lighter: math.max($l1, $l2);
   $darker: math.min($l1, $l2);
-  @return ($lighter + 0.05) / ($darker + 0.05);
+  @return calc(($lighter + 0.05) / ($darker + 0.05));
 }
 
 

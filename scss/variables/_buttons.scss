@@ -1,5 +1,6 @@
 @use 'sass:map';
 @use 'sass:math';
+@use 'sass:color';
 @use 'colors' as c;
 @use 'typography' as t;
 @use 'spacing' as s;
@@ -133,4 +134,29 @@ $button-sizes: (
 // Keyframes for loading spinner
 @keyframes spin {
   to { transform: rotate(360deg); }
+}
+
+
+// --------------------------------------------------------------------------
+// Button Variants
+// Generates solid, outline, ghost, link, and soft buttons for all colors.
+// Example usage: .btn-primary { background: map.get(c.$colors, primary); }
+// --------------------------------------------------------------------------
+@each $color, $hex in c.$colors {
+  // Solid buttons
+  .btn-#{$color} {
+    background-color: $hex;
+    color: contrast.accessible-text-color($hex);
+    border: $button-outline-width solid $hex;
+
+    &:hover:not(:disabled):not(.disabled) {
+      background-color: color.adjust($hex, $lightness: -10%);
+      color: contrast.accessible-text-color(color.adjust($hex, $lightness: -10%));
+    }
+
+    &:active:not(:disabled):not(.disabled) {
+      transform: translateY(1px);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+  }
 }
