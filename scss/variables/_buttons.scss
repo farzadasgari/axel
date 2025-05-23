@@ -413,3 +413,13 @@ $button-sizes: (
     }
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Accessibility
+// Ensures buttons meet WCAG 2.1 requirements for contrast, touch targets,
+// and ARIA support.
+// Example usage: min-height: $button-min-touch-target;
+// --------------------------------------------------------------------------
+$min-button-touch-target: s.$min-touch-target-size; // 44px
+$button-contrast-ratio: 4.5; // WCAG AA for normal text
