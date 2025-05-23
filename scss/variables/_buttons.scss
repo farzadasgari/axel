@@ -227,4 +227,21 @@ $button-sizes: (
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     }
   }
+
+  // Gradient buttons
+  .btn-gradient-#{$color} {
+    background: linear-gradient(45deg, $hex, color.adjust($hex, $lightness: 20%));
+    color: contrast.accessible-text-color($hex);
+    border: 0;
+
+    &:hover:not(:disabled):not(.disabled) {
+      background: linear-gradient(45deg, color.adjust($hex, $lightness: -10%), $hex);
+      color: contrast.accessible-text-color(color.adjust($hex, $lightness: -10%));
+    }
+
+    &:active:not(:disabled):not(.disabled) {
+      transform: translateY(1px);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+  }
 }
