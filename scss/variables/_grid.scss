@@ -160,3 +160,44 @@ $container-config: (
   margin-right: calc(map.get(s.$grid-gutters, default) / -2);
   gap: map.get(s.$grid-gutters, default);
 }
+
+
+
+// --------------------------------------------------------------------------
+// Column Styles
+// Styles for columns, supporting responsive spans and auto-fit.
+// Example usage: .col-6 { @include col(6); }
+// --------------------------------------------------------------------------
+.col {
+  flex: 1 1 0;
+  max-width: 100%;
+  padding-left: calc(map.get(s.$grid-gutters, default) / 2);
+  padding-right: calc(map.get(s.$grid-gutters, default) / 2);
+  box-sizing: border-box;
+}
+
+@for $i from 1 through map.get($grid-columns, default) {
+  .col-#{$i} {
+    flex: 0 0 math.percentage(math.div($i, map.get($grid-columns, default)));
+    max-width: math.percentage(math.div($i, map.get($grid-columns, default)));
+    padding-left: calc(map.get(s.$grid-gutters, default) / 2);
+    padding-right: calc(map.get(s.$grid-gutters, default) / 2);
+    box-sizing: border-box;
+  }
+}
+
+@each $size, $value in $breakpoints {
+  @if $size != 'xs' {
+    @include media($size) {
+      @for $i from 1 through map.get($grid-columns, default) {
+        .col-#{$size}-#{$i} {
+          flex: 0 0 math.percentage(math.div($i, map.get($grid-columns, default)));
+          max-width: math.percentage(math.div($i, map.get($grid-columns, default)));
+          padding-left: calc(map.get(s.$grid-gutters, default) / 2);
+          padding-right: calc(map.get(s.$grid-gutters, default) / 2);
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}
