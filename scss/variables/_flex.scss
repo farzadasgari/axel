@@ -55,3 +55,34 @@ $flex-directions: (
     }
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Justify Content
+// Classes for justify-content, using shared mixin from _mixins.scss.
+// Example usage: .flex-justify-center { justify-content: center; }
+// --------------------------------------------------------------------------
+$justify-values: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly
+);
+
+@each $key, $value in $justify-values {
+  .flex-justify-#{$key} {
+    @include m.justify-content($value);
+  }
+
+  @each $size, $breakpoint in g.$breakpoints {
+    @if $size != 'xs' {
+      @include g.media($size) {
+        .flex-justify-#{$size}-#{$key} {
+          @include m.justify-content($value);
+        }
+      }
+    }
+  }
+}
