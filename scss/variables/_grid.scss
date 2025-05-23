@@ -64,3 +64,23 @@ $grid-columns: (
 // Example usage: gap: map.get(s.$grid-gutters, default);
 // --------------------------------------------------------------------------
 $grid-gutter-widths: s.$grid-gutters;
+
+
+// --------------------------------------------------------------------------
+// Container Configuration
+// Defines properties for fluid and fixed containers.
+// Uses padding from _spacing.scss for consistency.
+// Example usage: @include container(fixed, lg);
+// --------------------------------------------------------------------------
+$container-config: (
+        fluid: (
+                padding: map.get(s.$container-paddings, md), // 24px default
+                width: 100%, // Full-width
+                margin: auto // Center horizontally
+        ),
+        fixed: (
+                padding: map.get(s.$container-paddings, md), // 24px default
+                max-width: none, // Set per breakpoint
+                margin: auto
+        )
+);
