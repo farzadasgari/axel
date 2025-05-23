@@ -210,3 +210,30 @@ $flex-grow-shrink: (0, 1, 2);
     }
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Flex Basis
+// Classes for setting flex-basis.
+// Example usage: .flex-basis-auto { flex-basis: auto; }
+// --------------------------------------------------------------------------
+$flex-basis-values: (
+  auto: auto,
+  0: 0
+);
+
+@each $key, $value in $flex-basis-values {
+  .flex-basis-#{$key} {
+    flex-basis: $value;
+  }
+
+  @each $size, $breakpoint in g.$breakpoints {
+    @if $size != 'xs' {
+      @include g.media($size) {
+        .flex-basis-#{$size}-#{$key} {
+          flex-basis: $value;
+        }
+      }
+    }
+  }
+}

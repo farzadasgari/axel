@@ -1933,5 +1933,63 @@
     flex-shrink: 2;
   }
 }
+.flex-basis-auto {
+  flex-basis: auto;
+}
+
+@media (min-width: 576px) {
+  .flex-basis-sm-auto {
+    flex-basis: auto;
+  }
+}
+@media (min-width: 768px) {
+  .flex-basis-md-auto {
+    flex-basis: auto;
+  }
+}
+@media (min-width: 992px) {
+  .flex-basis-lg-auto {
+    flex-basis: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-basis-xl-auto {
+    flex-basis: auto;
+  }
+}
+@media (min-width: 1400px) {
+  .flex-basis-xxl-auto {
+    flex-basis: auto;
+  }
+}
+.flex-basis-0 {
+  flex-basis: 0;
+}
+
+@media (min-width: 576px) {
+  .flex-basis-sm-0 {
+    flex-basis: 0;
+  }
+}
+@media (min-width: 768px) {
+  .flex-basis-md-0 {
+    flex-basis: 0;
+  }
+}
+@media (min-width: 992px) {
+  .flex-basis-lg-0 {
+    flex-basis: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-basis-xl-0 {
+    flex-basis: 0;
+  }
+}
+@media (min-width: 1400px) {
+  .flex-basis-xxl-0 {
+    flex-basis: 0;
+  }
+}
 
 /*# sourceMappingURL=axel.css.map */
