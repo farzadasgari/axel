@@ -26,3 +26,32 @@
 .flex-d-inline {
   display: inline-flex;
 }
+
+
+// --------------------------------------------------------------------------
+// Flex Direction
+// Classes for setting flex-direction, with responsive variants.
+// Example usage: .flex-row-md { flex-direction: row; }
+// --------------------------------------------------------------------------
+$flex-directions: (
+  row: row,
+  row-reverse: row-reverse,
+  column: column,
+  column-reverse: column-reverse
+);
+
+@each $key, $value in $flex-directions {
+  .flex-#{$key} {
+    flex-direction: $value;
+  }
+
+  @each $size, $breakpoint in g.$breakpoints {
+    @if $size != 'xs' {
+      @include g.media($size) {
+        .flex-#{$size}-#{$key} {
+          flex-direction: $value;
+        }
+      }
+    }
+  }
+}

@@ -977,4 +977,121 @@
   display: inline-flex;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
+@media (min-width: 576px) {
+  .flex-sm-row {
+    flex-direction: row;
+  }
+}
+@media (min-width: 768px) {
+  .flex-md-row {
+    flex-direction: row;
+  }
+}
+@media (min-width: 992px) {
+  .flex-lg-row {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-xl-row {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1400px) {
+  .flex-xxl-row {
+    flex-direction: row;
+  }
+}
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+@media (min-width: 576px) {
+  .flex-sm-row-reverse {
+    flex-direction: row-reverse;
+  }
+}
+@media (min-width: 768px) {
+  .flex-md-row-reverse {
+    flex-direction: row-reverse;
+  }
+}
+@media (min-width: 992px) {
+  .flex-lg-row-reverse {
+    flex-direction: row-reverse;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-xl-row-reverse {
+    flex-direction: row-reverse;
+  }
+}
+@media (min-width: 1400px) {
+  .flex-xxl-row-reverse {
+    flex-direction: row-reverse;
+  }
+}
+.flex-column {
+  flex-direction: column;
+}
+
+@media (min-width: 576px) {
+  .flex-sm-column {
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) {
+  .flex-md-column {
+    flex-direction: column;
+  }
+}
+@media (min-width: 992px) {
+  .flex-lg-column {
+    flex-direction: column;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-xl-column {
+    flex-direction: column;
+  }
+}
+@media (min-width: 1400px) {
+  .flex-xxl-column {
+    flex-direction: column;
+  }
+}
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+@media (min-width: 576px) {
+  .flex-sm-column-reverse {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 768px) {
+  .flex-md-column-reverse {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 992px) {
+  .flex-lg-column-reverse {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-xl-column-reverse {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 1400px) {
+  .flex-xxl-column-reverse {
+    flex-direction: column-reverse;
+  }
+}
+
 /*# sourceMappingURL=axel.css.map */
