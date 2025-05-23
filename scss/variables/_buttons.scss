@@ -27,3 +27,43 @@ $button-hover-opacity: 0.9;
 $button-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 $button-neumorphic-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.5);
 $button-min-touch-target: s.$min-touch-target-size; // 44px for WCAG 2.1
+
+
+// --------------------------------------------------------------------------
+// Button Sizes
+// Defines padding, font-size, and border-radius for button sizes.
+// Supports responsive variants via breakpoints.
+// Example usage: .btn-sm { padding: map.get(map.get($button-sizes, sm), padding); }
+// --------------------------------------------------------------------------
+$button-sizes: (
+  xs: (
+    padding: map.get(s.$spacings, 1) map.get(s.$spacings, 2), // 4px 8px
+    font-size: map.get(t.$font-sizes, xs), // 12px
+    border-radius: 0.25rem,
+    min-height: $button-min-touch-target // 44px
+  ),
+  sm: (
+    padding: map.get(s.$spacings, 2) map.get(s.$spacings, 3), // 8px 16px
+    font-size: map.get(t.$font-sizes, sm), // 14px
+    border-radius: 0.375rem,
+    min-height: $button-min-touch-target
+  ),
+  md: (
+    padding: map.get(s.$spacings, 3) map.get(s.$spacings, 4), // 16px 24px
+    font-size: map.get(t.$font-sizes, base), // 16px
+    border-radius: 0.5rem,
+    min-height: $button-min-touch-target
+  ),
+  lg: (
+    padding: map.get(s.$spacings, 4) map.get(s.$spacings, 5), // 24px 32px
+    font-size: map.get(t.$font-sizes, lg), // 18px
+    border-radius: 0.625rem,
+    min-height: 48px
+  ),
+  xl: (
+    padding: map.get(s.$spacings, 5) map.get(s.$spacings, 6), // 32px 40px
+    font-size: map.get(t.$font-sizes, xl), // 20px
+    border-radius: 0.75rem,
+    min-height: 52px
+  )
+);
