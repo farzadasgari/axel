@@ -7,3 +7,18 @@
 // Author: Farzad Asgari
 // Version: 1.0.0
 // ==========================================================================
+
+
+// --------------------------------------------------------------------------
+// Alignment Mixins
+// Mixins for Flexbox justify-content and align-items properties.
+// Used by grid and flex systems to ensure consistency.
+// Example usage: @include justify-content(center);
+// --------------------------------------------------------------------------
+@mixin justify-content($value) {
+  justify-content: $value;
+}
+
+@mixin align-items($value) {
+  align-items: $value;
+}

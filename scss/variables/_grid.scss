@@ -1,6 +1,7 @@
 @use 'sass:map';
 @use 'sass:math';
 @use 'spacing' as s;
+@use 'mixins' as mx;
 
 // ==========================================================================
 // Axel Framework - Grid
@@ -225,21 +226,6 @@ $container-config: (
   }
 }
 
-
-// --------------------------------------------------------------------------
-// Alignment Mixins
-// Utility mixins for aligning content within rows and columns.
-// Supports Flexbox justify-content and align-items.
-// Example usage: .row { @include justify-content(center); }
-// --------------------------------------------------------------------------
-@mixin justify-content($value) {
-  justify-content: $value;
-}
-
-@mixin align-items($value) {
-  align-items: $value;
-}
-
 // Generate alignment utility classes
 $justify-values: (
   start: flex-start,
@@ -260,13 +246,13 @@ $align-items-values: (
 
 @each $key, $value in $justify-values {
   .justify-#{$key} {
-    @include justify-content($value);
+    @include mx.justify-content($value);
   }
 }
 
 @each $key, $value in $align-items-values {
   .align-#{$key} {
-    @include align-items($value);
+    @include mx.align-items($value);
   }
 }
 
