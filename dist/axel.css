@@ -1991,5 +1991,150 @@
     flex-basis: 0;
   }
 }
+.flex-order--1 {
+  order: -1;
+}
+
+@media (min-width: 576px) {
+  .flex-order-sm--1 {
+    order: -1;
+  }
+}
+@media (min-width: 768px) {
+  .flex-order-md--1 {
+    order: -1;
+  }
+}
+@media (min-width: 992px) {
+  .flex-order-lg--1 {
+    order: -1;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-order-xl--1 {
+    order: -1;
+  }
+}
+@media (min-width: 1400px) {
+  .flex-order-xxl--1 {
+    order: -1;
+  }
+}
+.flex-order-0 {
+  order: 0;
+}
+
+@media (min-width: 576px) {
+  .flex-order-sm-0 {
+    order: 0;
+  }
+}
+@media (min-width: 768px) {
+  .flex-order-md-0 {
+    order: 0;
+  }
+}
+@media (min-width: 992px) {
+  .flex-order-lg-0 {
+    order: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-order-xl-0 {
+    order: 0;
+  }
+}
+@media (min-width: 1400px) {
+  .flex-order-xxl-0 {
+    order: 0;
+  }
+}
+.flex-order-1 {
+  order: 1;
+}
+
+@media (min-width: 576px) {
+  .flex-order-sm-1 {
+    order: 1;
+  }
+}
+@media (min-width: 768px) {
+  .flex-order-md-1 {
+    order: 1;
+  }
+}
+@media (min-width: 992px) {
+  .flex-order-lg-1 {
+    order: 1;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-order-xl-1 {
+    order: 1;
+  }
+}
+@media (min-width: 1400px) {
+  .flex-order-xxl-1 {
+    order: 1;
+  }
+}
+.flex-order-2 {
+  order: 2;
+}
+
+@media (min-width: 576px) {
+  .flex-order-sm-2 {
+    order: 2;
+  }
+}
+@media (min-width: 768px) {
+  .flex-order-md-2 {
+    order: 2;
+  }
+}
+@media (min-width: 992px) {
+  .flex-order-lg-2 {
+    order: 2;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-order-xl-2 {
+    order: 2;
+  }
+}
+@media (min-width: 1400px) {
+  .flex-order-xxl-2 {
+    order: 2;
+  }
+}
+.flex-order-3 {
+  order: 3;
+}
+
+@media (min-width: 576px) {
+  .flex-order-sm-3 {
+    order: 3;
+  }
+}
+@media (min-width: 768px) {
+  .flex-order-md-3 {
+    order: 3;
+  }
+}
+@media (min-width: 992px) {
+  .flex-order-lg-3 {
+    order: 3;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-order-xl-3 {
+    order: 3;
+  }
+}
+@media (min-width: 1400px) {
+  .flex-order-xxl-3 {
+    order: 3;
+  }
+}
 
 /*# sourceMappingURL=axel.css.map */

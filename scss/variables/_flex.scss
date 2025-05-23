@@ -237,3 +237,27 @@ $flex-basis-values: (
     }
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Order
+// Classes for reordering flex items.
+// Example usage: .flex-order-1 { order: 1; }
+// --------------------------------------------------------------------------
+$flex-orders: (-1, 0, 1, 2, 3);
+
+@each $value in $flex-orders {
+  .flex-order-#{$value} {
+    order: $value;
+  }
+
+  @each $size, $breakpoint in g.$breakpoints {
+    @if $size != 'xs' {
+      @include g.media($size) {
+        .flex-order-#{$size}-#{$value} {
+          order: $value;
+        }
+      }
+    }
+  }
+}
