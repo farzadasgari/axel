@@ -20,12 +20,12 @@
 // Example usage: @include media(md) { width: 50%; }
 // --------------------------------------------------------------------------
 $breakpoints: (
-        xs: 0, // Extra-small (mobile, <576px)
-        sm: 576px, // Small (mobile, ≥576px)
-        md: 768px, // Medium (tablet, ≥768px)
-        lg: 992px, // Large (desktop, ≥992px)
-        xl: 1200px, // Extra-large (wide desktop, ≥1200px)
-        xxl: 1400px // Extra-extra-large (ultra-wide, ≥1400px)
+  xs: 0, // Extra-small (mobile, <576px)
+  sm: 576px, // Small (mobile, ≥576px)
+  md: 768px, // Medium (tablet, ≥768px)
+  lg: 992px, // Large (desktop, ≥992px)
+  xl: 1200px, // Extra-large (wide desktop, ≥1200px)
+  xxl: 1400px // Extra-extra-large (ultra-wide, ≥1400px)
 );
 
 
@@ -36,11 +36,11 @@ $breakpoints: (
 // Example usage: max-width: map.get($container-widths, lg);
 // --------------------------------------------------------------------------
 $container-widths: (
-        sm: 540px, // Small screens
-        md: 720px, // Medium screens
-        lg: 960px, // Large screens
-        xl: 1140px, // Extra-large screens
-        xxl: 1320px // Extra-extra-large screens
+  sm: 540px, // Small screens
+  md: 720px, // Medium screens
+  lg: 960px, // Large screens
+  xl: 1140px, // Extra-large screens
+  xxl: 1320px // Extra-extra-large screens
 );
 
 
@@ -51,9 +51,9 @@ $container-widths: (
 // Example usage: width: percentage($span / map.get($grid-columns, default));
 // --------------------------------------------------------------------------
 $grid-columns: (
-        default: 12, // Standard 12-column grid
-        compact: 6, // For simpler layouts
-        micro: 4 // For minimal layouts
+  default: 12, // Standard 12-column grid
+  compact: 6, // For simpler layouts
+  micro: 4 // For minimal layouts
 );
 
 
@@ -73,14 +73,14 @@ $grid-gutter-widths: s.$grid-gutters;
 // Example usage: @include container(fixed, lg);
 // --------------------------------------------------------------------------
 $container-config: (
-        fluid: (
-                padding: map.get(s.$container-paddings, md), // 24px default
-                width: 100%, // Full-width
-                margin: auto // Center horizontally
-        ),
-        fixed: (
-                padding: map.get(s.$container-paddings, md), // 24px default
-                max-width: none, // Set per breakpoint
-                margin: auto
-        )
+  fluid: (
+    padding: map.get(s.$container-paddings, md), // 24px default
+    width: 100%, // Full-width
+    margin: auto // Center horizontally
+  ),
+  fixed: (
+    padding: map.get(s.$container-paddings, md), // 24px default
+    max-width: none, // Set per breakpoint
+    margin: auto
+  )
 );

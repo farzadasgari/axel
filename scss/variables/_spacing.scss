@@ -18,15 +18,15 @@
 // Example usage: margin: map.get($spacings, 3);
 // --------------------------------------------------------------------------
 $spacings: (
-        0: 0, // No spacing
-        1: 0.25rem, // 4px, for tight spacing
-        2: 0.5rem, // 8px, for small gaps
-        3: 1rem, // 16px, for standard spacing
-        4: 1.5rem, // 24px, for medium gaps
-        5: 2rem, // 32px, for larger spacing
-        6: 3rem, // 48px, for sections
-        7: 4rem, // 64px, for major layouts
-        8: 6rem // 96px, for hero sections
+  0: 0, // No spacing
+  1: 0.25rem, // 4px, for tight spacing
+  2: 0.5rem, // 8px, for small gaps
+  3: 1rem, // 16px, for standard spacing
+  4: 1.5rem, // 24px, for medium gaps
+  5: 2rem, // 32px, for larger spacing
+  6: 3rem, // 48px, for sections
+  7: 4rem, // 64px, for major layouts
+  8: 6rem // 96px, for hero sections
 );
 
 
@@ -37,11 +37,11 @@ $spacings: (
 // Example usage: margin-left: map.get($negative-spacings, 2);
 // --------------------------------------------------------------------------
 $negative-spacings: (
-        1: -0.25rem, // -4px
-        2: -0.5rem, // -8px
-        3: -1rem, // -16px
-        4: -1.5rem, // -24px
-        5: -2rem // -32px
+  1: -0.25rem, // -4px
+  2: -0.5rem, // -8px
+  3: -1rem, // -16px
+  4: -1.5rem, // -24px
+  5: -2rem // -32px
 );
 
 
@@ -52,10 +52,10 @@ $negative-spacings: (
 // Example usage: gap: map.get($grid-gutters, default);
 // --------------------------------------------------------------------------
 $grid-gutters: (
-        none: 0, // No gutter
-        tight: 0.5rem, // 8px, for compact layouts
-        default: 1rem, // 16px, standard gutter
-        loose: 1.5rem // 24px, for spacious layouts
+  none: 0, // No gutter
+  tight: 0.5rem, // 8px, for compact layouts
+  default: 1rem, // 16px, standard gutter
+  loose: 1.5rem // 24px, for spacious layouts
 );
 
 
@@ -66,11 +66,11 @@ $grid-gutters: (
 // Example usage: padding: map.get($container-paddings, sm);
 // --------------------------------------------------------------------------
 $container-paddings: (
-        xs: map.get($spacings, 2), // 8px for extra-small screens
-        sm: map.get($spacings, 3), // 16px for small screens
-        md: map.get($spacings, 4), // 24px for medium screens
-        lg: map.get($spacings, 5), // 32px for large screens
-        xl: map.get($spacings, 6) // 48px for extra-large screens
+  xs: map.get($spacings, 2), // 8px for extra-small screens
+  sm: map.get($spacings, 3), // 16px for small screens
+  md: map.get($spacings, 4), // 24px for medium screens
+  lg: map.get($spacings, 5), // 32px for large screens
+  xl: map.get($spacings, 6) // 48px for extra-large screens
 );
 
 
@@ -81,11 +81,11 @@ $container-paddings: (
 // Example usage: margin: map.get($spacings, 3) * map.get($spacing-multipliers, md);
 // --------------------------------------------------------------------------
 $spacing-multipliers: (
-        xs: 0.75, // 75% of base spacing for small screens
-        sm: 1, // Default spacing
-        md: 1.25, // 125% for medium screens
-        lg: 1.5, // 150% for large screens
-        xl: 2 // 200% for extra-large screens
+  xs: 0.75, // 75% of base spacing for small screens
+  sm: 1, // Default spacing
+  md: 1.25, // 125% for medium screens
+  lg: 1.5, // 150% for large screens
+  xl: 2 // 200% for extra-large screens
 );
 
 

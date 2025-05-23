@@ -18,36 +18,36 @@
 // for WCAG 2.1 contrast ratios (minimum 4.5:1 for text).
 // --------------------------------------------------------------------------
 $themes: (
-        light: (
-                primary: #AF47D2,
-                secondary: #00C4B4,
-                danger: #E91E63,
-                success: #00C853,
-                warning: #FFCA28,
-                info: #0288D1,
-                dark: #2E2E2E,
-                light: #F5F5F5,
-                "white": #FFFFFF,
-                "black": #000000,
-                background: #F5F5F5,
-                text: #2E2E2E,
-                accent: #FF4081
-        ),
-        dark: (
-                primary: #CE93D8,
-                secondary: #26A69A,
-                danger: #F06292,
-                success: #4CAF50,
-                warning: #FFECB3,
-                info: #4FC3F7,
-                dark: #212121,
-                light: #424242,
-                "white": #FFFFFF,
-                "black": #000000,
-                background: #212121,
-                text: #F5F5F5,
-                accent: #FF80AB
-        )
+  light: (
+    primary: #AF47D2,
+    secondary: #00C4B4,
+    danger: #E91E63,
+    success: #00C853,
+    warning: #FFCA28,
+    info: #0288D1,
+    dark: #2E2E2E,
+    light: #F5F5F5,
+    "white": #FFFFFF,
+    "black": #000000,
+    background: #F5F5F5,
+    text: #2E2E2E,
+    accent: #FF4081
+  ),
+  dark: (
+    primary: #CE93D8,
+    secondary: #26A69A,
+    danger: #F06292,
+    success: #4CAF50,
+    warning: #FFECB3,
+    info: #4FC3F7,
+    dark: #212121,
+    light: #424242,
+    "white": #FFFFFF,
+    "black": #000000,
+    background: #212121,
+    text: #F5F5F5,
+    accent: #FF80AB
+  )
 );
 
 
@@ -78,9 +78,9 @@ $colors: map.get($themes, light);
 // Used in mixins for consistent state styling across components.
 // --------------------------------------------------------------------------
 $color-variations: (
-        hover: 10%, // Lighten colors for hover states
-        active: -10%, // Darken colors for active states
-        disabled: 0.65 // Opacity for disabled states
+  hover: 10%, // Lighten colors for hover states
+  active: -10%, // Darken colors for active states
+  disabled: 0.65 // Opacity for disabled states
 );
 
 
@@ -90,10 +90,10 @@ $color-variations: (
 // Used in media queries or classes like .high-contrast.
 // --------------------------------------------------------------------------
 $high-contrast-colors: (
-        primary: #8B00B3,
-        secondary: #00897B,
-        danger: #C2185B,
-        success: #007300,
-        warning: #FFB300,
-        info: #01579B
+  primary: #8B00B3,
+  secondary: #00897B,
+  danger: #C2185B,
+  success: #007300,
+  warning: #FFB300,
+  info: #01579B
 );

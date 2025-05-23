@@ -28,16 +28,16 @@ $base-font-size: 1rem; // 16px at default browser settings
 // Example usage: font-size: map.get($font-sizes, base);
 // --------------------------------------------------------------------------
 $font-sizes: (
-        xxs: 0.5 * $base-font-size, // 8px, for fine print
-        xs: 0.625 * $base-font-size, // 10px, for captions
-        sm: 0.75 * $base-font-size, // 12px, for small text
-        md: 0.875 * $base-font-size, // 14px, for secondary text
-        base: $base-font-size, // 16px, for body text
-        lg: 1.125 * $base-font-size, // 18px, for subheadings
-        xl: 1.25 * $base-font-size, // 20px, for headings
-        xxl: 1.5 * $base-font-size, // 24px, for larger headings
-        xxxl: 2 * $base-font-size, // 32px, for main headings
-        xxxxl: 2.5 * $base-font-size // 40px, for hero text
+    xxs: 0.5 * $base-font-size, // 8px, for fine print
+    xs: 0.625 * $base-font-size, // 10px, for captions
+    sm: 0.75 * $base-font-size, // 12px, for small text
+    md: 0.875 * $base-font-size, // 14px, for secondary text
+    base: $base-font-size, // 16px, for body text
+    lg: 1.125 * $base-font-size, // 18px, for subheadings
+    xl: 1.25 * $base-font-size, // 20px, for headings
+    xxl: 1.5 * $base-font-size, // 24px, for larger headings
+    xxxl: 2 * $base-font-size, // 32px, for main headings
+    xxxxl: 2.5 * $base-font-size // 40px, for hero text
 );
 
 
@@ -48,12 +48,12 @@ $font-sizes: (
 // Example usage: font-size: clamp(map.get(map.get($fluid-font-sizes, h1), min), ...);
 // --------------------------------------------------------------------------
 $fluid-font-sizes: (
-        h1: (min: 1.5rem, max: 3rem, viewport: 4vw), // Hero headings
-        h2: (min: 1.25rem, max: 2.5rem, viewport: 3vw), // Section headings
-        h3: (min: 1.125rem, max: 2rem, viewport: 2.5vw), // Subheadings
-        h4: (min: 1rem, max: 1.5rem, viewport: 2vw), // Minor headings
-        h5: (min: 0.875rem, max: 1.25rem, viewport: 1.5vw), // Small headings
-        h6: (min: 0.75rem, max: 1rem, viewport: 1vw) // Tiny headings
+    h1: (min: 1.5rem, max: 3rem, viewport: 4vw), // Hero headings
+    h2: (min: 1.25rem, max: 2.5rem, viewport: 3vw), // Section headings
+    h3: (min: 1.125rem, max: 2rem, viewport: 2.5vw), // Subheadings
+    h4: (min: 1rem, max: 1.5rem, viewport: 2vw), // Minor headings
+    h5: (min: 0.875rem, max: 1.25rem, viewport: 1.5vw), // Small headings
+    h6: (min: 0.75rem, max: 1rem, viewport: 1vw) // Tiny headings
 );
 
 
@@ -65,9 +65,9 @@ $fluid-font-sizes: (
 // --------------------------------------------------------------------------
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oxygen:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 $font-families: (
-        base: ('Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif),
-        heading: ('Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif),
-        monospace: ('Fira Code', 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace)
+    base: ('Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif),
+    heading: ('Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif),
+    monospace: ('Fira Code', 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace)
 );
 
 
@@ -78,12 +78,12 @@ $font-families: (
 // Example usage: font-weight: map.get($font-weights, regular);
 // --------------------------------------------------------------------------
 $font-weights: (
-        light: 300, // Light text
-        regular: 400, // Standard body text
-        medium: 500, // Slightly bolder for emphasis
-        semibold: 600, // Subheadings or strong emphasis
-        bold: 700, // Headings or critical elements
-        extrabold: 800 // Hero text or maximum emphasis
+    light: 300, // Light text
+    regular: 400, // Standard body text
+    medium: 500, // Slightly bolder for emphasis
+    semibold: 600, // Subheadings or strong emphasis
+    bold: 700, // Headings or critical elements
+    extrabold: 800 // Hero text or maximum emphasis
 );
 
 
@@ -94,9 +94,9 @@ $font-weights: (
 // Example usage: line-height: map.get($line-heights, normal);
 // --------------------------------------------------------------------------
 $line-heights: (
-        tight: 1.2, // For dense text (e.g., headings)
-        normal: 1.5, // For body text (WCAG-compliant for readability)
-        loose: 1.8 // For spacious text (e.g., quotes, captions)
+    tight: 1.2, // For dense text (e.g., headings)
+    normal: 1.5, // For body text (WCAG-compliant for readability)
+    loose: 1.8 // For spacious text (e.g., quotes, captions)
 );
 
 
@@ -107,10 +107,10 @@ $line-heights: (
 // Example usage: letter-spacing: map.get($letter-spacings, heading);
 // --------------------------------------------------------------------------
 $letter-spacings: (
-        tight: -0.02rem, // Slightly condensed for small text
-        normal: 0, // Default, no adjustment
-        heading: 0.02rem, // Slightly expanded for headings
-        loose: 0.05rem // Spacious for decorative text
+    tight: -0.02rem, // Slightly condensed for small text
+    normal: 0, // Default, no adjustment
+    heading: 0.02rem, // Slightly expanded for headings
+    loose: 0.05rem // Spacious for decorative text
 );
 
 
@@ -120,10 +120,10 @@ $letter-spacings: (
 // Example usage: text-transform: map.get($text-transforms, uppercase);
 // --------------------------------------------------------------------------
 $text-transforms: (
-        none: none, // No transformation
-        uppercase: uppercase, // All caps for emphasis
-        lowercase: lowercase, // All lowercase for style
-        capitalize: capitalize // Capitalize first letter
+    none: none, // No transformation
+    uppercase: uppercase, // All caps for emphasis
+    lowercase: lowercase, // All lowercase for style
+    capitalize: capitalize // Capitalize first letter
 );
 
 
@@ -155,7 +155,7 @@ $high-contrast-text-color: map.get(c.$high-contrast-colors, dark); // For high-c
 // Example usage in mixins: @include media(md) { font-size: map.get($font-sizes, lg); }
 // --------------------------------------------------------------------------
 $typography-breakpoints: (
-        sm: map.get($font-sizes, sm), // Smaller text for small screens
-        md: map.get($font-sizes, base), // Default for medium screens
-        lg: map.get($font-sizes, lg) // Larger text for large screens
+    sm: map.get($font-sizes, sm), // Smaller text for small screens
+    md: map.get($font-sizes, base), // Default for medium screens
+    lg: map.get($font-sizes, lg) // Larger text for large screens
 );
