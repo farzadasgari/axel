@@ -1412,5 +1412,208 @@
     align-items: stretch;
   }
 }
+.flex-align-content-start {
+  align-content: flex-start;
+}
+
+@media (min-width: 576px) {
+  .flex-align-content-sm-start {
+    align-content: flex-start;
+  }
+}
+@media (min-width: 768px) {
+  .flex-align-content-md-start {
+    align-content: flex-start;
+  }
+}
+@media (min-width: 992px) {
+  .flex-align-content-lg-start {
+    align-content: flex-start;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-align-content-xl-start {
+    align-content: flex-start;
+  }
+}
+@media (min-width: 1400px) {
+  .flex-align-content-xxl-start {
+    align-content: flex-start;
+  }
+}
+.flex-align-content-end {
+  align-content: flex-end;
+}
+
+@media (min-width: 576px) {
+  .flex-align-content-sm-end {
+    align-content: flex-end;
+  }
+}
+@media (min-width: 768px) {
+  .flex-align-content-md-end {
+    align-content: flex-end;
+  }
+}
+@media (min-width: 992px) {
+  .flex-align-content-lg-end {
+    align-content: flex-end;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-align-content-xl-end {
+    align-content: flex-end;
+  }
+}
+@media (min-width: 1400px) {
+  .flex-align-content-xxl-end {
+    align-content: flex-end;
+  }
+}
+.flex-align-content-center {
+  align-content: center;
+}
+
+@media (min-width: 576px) {
+  .flex-align-content-sm-center {
+    align-content: center;
+  }
+}
+@media (min-width: 768px) {
+  .flex-align-content-md-center {
+    align-content: center;
+  }
+}
+@media (min-width: 992px) {
+  .flex-align-content-lg-center {
+    align-content: center;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-align-content-xl-center {
+    align-content: center;
+  }
+}
+@media (min-width: 1400px) {
+  .flex-align-content-xxl-center {
+    align-content: center;
+  }
+}
+.flex-align-content-between {
+  align-content: space-between;
+}
+
+@media (min-width: 576px) {
+  .flex-align-content-sm-between {
+    align-content: space-between;
+  }
+}
+@media (min-width: 768px) {
+  .flex-align-content-md-between {
+    align-content: space-between;
+  }
+}
+@media (min-width: 992px) {
+  .flex-align-content-lg-between {
+    align-content: space-between;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-align-content-xl-between {
+    align-content: space-between;
+  }
+}
+@media (min-width: 1400px) {
+  .flex-align-content-xxl-between {
+    align-content: space-between;
+  }
+}
+.flex-align-content-around {
+  align-content: space-around;
+}
+
+@media (min-width: 576px) {
+  .flex-align-content-sm-around {
+    align-content: space-around;
+  }
+}
+@media (min-width: 768px) {
+  .flex-align-content-md-around {
+    align-content: space-around;
+  }
+}
+@media (min-width: 992px) {
+  .flex-align-content-lg-around {
+    align-content: space-around;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-align-content-xl-around {
+    align-content: space-around;
+  }
+}
+@media (min-width: 1400px) {
+  .flex-align-content-xxl-around {
+    align-content: space-around;
+  }
+}
+.flex-align-content-evenly {
+  align-content: space-evenly;
+}
+
+@media (min-width: 576px) {
+  .flex-align-content-sm-evenly {
+    align-content: space-evenly;
+  }
+}
+@media (min-width: 768px) {
+  .flex-align-content-md-evenly {
+    align-content: space-evenly;
+  }
+}
+@media (min-width: 992px) {
+  .flex-align-content-lg-evenly {
+    align-content: space-evenly;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-align-content-xl-evenly {
+    align-content: space-evenly;
+  }
+}
+@media (min-width: 1400px) {
+  .flex-align-content-xxl-evenly {
+    align-content: space-evenly;
+  }
+}
+.flex-align-content-stretch {
+  align-content: stretch;
+}
+
+@media (min-width: 576px) {
+  .flex-align-content-sm-stretch {
+    align-content: stretch;
+  }
+}
+@media (min-width: 768px) {
+  .flex-align-content-md-stretch {
+    align-content: stretch;
+  }
+}
+@media (min-width: 992px) {
+  .flex-align-content-lg-stretch {
+    align-content: stretch;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-align-content-xl-stretch {
+    align-content: stretch;
+  }
+}
+@media (min-width: 1400px) {
+  .flex-align-content-xxl-stretch {
+    align-content: stretch;
+  }
+}
 
 /*# sourceMappingURL=axel.css.map */

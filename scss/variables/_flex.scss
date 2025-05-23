@@ -116,3 +116,35 @@ $align-items-values: (
     }
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Align Content
+// Classes for align-content in multi-line flex containers.
+// Example usage: .flex-align-content-between { align-content: space-between; }
+// --------------------------------------------------------------------------
+$align-content-values: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly,
+  stretch: stretch
+);
+
+@each $key, $value in $align-content-values {
+  .flex-align-content-#{$key} {
+    align-content: $value;
+  }
+
+  @each $size, $breakpoint in g.$breakpoints {
+    @if $size != 'xs' {
+      @include g.media($size) {
+        .flex-align-content-#{$size}-#{$key} {
+          align-content: $value;
+        }
+      }
+    }
+  }
+}
