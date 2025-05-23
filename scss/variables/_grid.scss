@@ -269,3 +269,18 @@ $align-items-values: (
     @include align-items($value);
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Auto-Fit Columns
+// Styles for auto-fit columns that grow/shrink dynamically.
+// Example usage: .col-auto { @include col-auto; }
+// --------------------------------------------------------------------------
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+  padding-left: calc(map.get(s.$grid-gutters, default) / 2);
+  padding-right: calc(map.get(s.$grid-gutters, default) / 2);
+  box-sizing: border-box;
+}
