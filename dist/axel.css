@@ -969,4 +969,12 @@
   padding-right: 0.75rem;
 }
 
+.flex-d {
+  display: flex;
+}
+
+.flex-d-inline {
+  display: inline-flex;
+}
+
 /*# sourceMappingURL=axel.css.map */

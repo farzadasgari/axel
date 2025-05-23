@@ -12,3 +12,17 @@
 // Author: Farzad Asgari
 // Version: 1.0.0
 // ==========================================================================
+
+
+// --------------------------------------------------------------------------
+// Flexbox Display
+// Classes for enabling Flexbox and inline-flex displays.
+// Example usage: .flex-d { display: flex; }
+// --------------------------------------------------------------------------
+.flex-d {
+  display: flex;
+}
+
+.flex-d-inline {
+  display: inline-flex;
+}
