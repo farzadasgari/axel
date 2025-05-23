@@ -1,0 +1,14 @@
+@use 'sass:map';
+@use 'sass:math';
+@use 'spacing' as s;
+@use '../mixins/mixins' as m;
+@use 'grid' as g;
+
+// ==========================================================================
+// Axel Framework - Flexbox
+// Description: General-purpose Flexbox utilities for the Axel CSS framework.
+// Provides classes for display, direction, wrapping, alignment, and sizing.
+// Integrates with spacing and grid for consistency and WCAG 2.1 accessibility.
+// Author: Farzad Asgari
+// Version: 1.0.0
+// ==========================================================================
