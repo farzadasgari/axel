@@ -5,7 +5,7 @@
 // ==========================================================================
 // Axel Framework - Grid
 // Description: A responsive, flexible grid system for the Axel CSS framework.
-// Supports dynamic-column layouts, fluid/fixed containers, offsets, and responsive
+// Supports 12-column layouts, fluid/fixed containers, offsets, and responsive
 // breakpoints. Integrates with spacing tokens for consistency and WCAG 2.1
 // accessibility. Designed to surpass Bootstrap with advanced features and DX.
 // Author: Farzad Asgari
@@ -41,4 +41,17 @@ $container-widths: (
         lg: 960px, // Large screens
         xl: 1140px, // Extra-large screens
         xxl: 1320px // Extra-extra-large screens
+);
+
+
+// --------------------------------------------------------------------------
+// Grid Columns
+// Number of columns for different grid configurations.
+// Supports standard (12), compact (6), and micro (4) grids.
+// Example usage: width: percentage($span / map.get($grid-columns, default));
+// --------------------------------------------------------------------------
+$grid-columns: (
+        default: 12, // Standard 12-column grid
+        compact: 6, // For simpler layouts
+        micro: 4 // For minimal layouts
 );
