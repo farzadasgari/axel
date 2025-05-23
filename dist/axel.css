@@ -969,7 +969,7 @@
   padding-right: 0.75rem;
 }
 
-.flex-d {
+.flex-d, .btn-group, .btn-group-vertical {
   display: flex;
 }
 
@@ -1035,7 +1035,7 @@
     flex-direction: row-reverse;
   }
 }
-.flex-column {
+.flex-column, .btn-group-vertical {
   flex-direction: column;
 }
 
@@ -4205,6 +4205,37 @@
   height: 44px;
   line-height: 1;
   font-size: 1.25rem;
+}
+
+.btn-group {
+  gap: 0.25rem;
+}
+.btn-group .btn {
+  border-radius: 0;
+  box-shadow: none;
+}
+.btn-group .btn:first-child {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+.btn-group .btn:last-child {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.btn-group-vertical {
+  gap: 0.25rem;
+}
+.btn-group-vertical .btn {
+  border-radius: 0;
+}
+.btn-group-vertical .btn:first-child {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.btn-group-vertical .btn:last-child {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 /*# sourceMappingURL=axel.css.map */
