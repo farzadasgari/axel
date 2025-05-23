@@ -97,3 +97,24 @@ $container-config: (
   --grid-gutter-default: #{map.get(s.$grid-gutters, default)}; // 16px
   --container-padding-default: #{map.get(s.$container-paddings, md)}; // 24px
 }
+
+
+// --------------------------------------------------------------------------
+// Media Mixins
+// Utility mixins for applying styles at specific breakpoints.
+// Supports min-width and max-width queries.
+// Example usage: @include media(md) { width: 50%; }
+// --------------------------------------------------------------------------
+@mixin media($breakpoint) {
+  $value: map.get($breakpoints, $breakpoint);
+  @media (min-width: $value) {
+    @content;
+  }
+}
+
+@mixin media-down($breakpoint) {
+  $value: map.get($breakpoints, $breakpoint);
+  @media (max-width: $value - 1px) {
+    @content;
+  }
+}
