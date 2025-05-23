@@ -27,3 +27,18 @@
 
   @return 0.2126 * $rs + 0.7152 * $gs + 0.0722 * $bs;
 }
+
+
+// --------------------------------------------------------------------------
+// Contrast Ratio
+// Calculates contrast ratio between two colors per WCAG 2.1.
+// Returns a value between 1 and 21.
+// Example usage: $ratio: contrast-ratio(#AF47D2, #FFFFFF);
+// --------------------------------------------------------------------------
+@function contrast-ratio($color1, $color2) {
+  $l1: luminance($color1);
+  $l2: luminance($color2);
+  $lighter: math.max($l1, $l2);
+  $darker: math.min($l1, $l2);
+  @return ($lighter + 0.05) / ($darker + 0.05);
+}
