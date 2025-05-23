@@ -133,7 +133,9 @@ $button-sizes: (
 
 // Keyframes for loading spinner
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 
@@ -157,6 +159,22 @@ $button-sizes: (
     &:active:not(:disabled):not(.disabled) {
       transform: translateY(1px);
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  // Outline buttons
+  .btn-outline-#{$color} {
+    background-color: transparent;
+    color: $hex;
+    border: $button-outline-width solid $hex;
+
+    &:hover:not(:disabled):not(.disabled) {
+      background-color: $hex;
+      color: contrast.accessible-text-color($hex);
+    }
+
+    &:active:not(:disabled):not(.disabled) {
+      transform: translateY(1px);
     }
   }
 }
