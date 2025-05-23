@@ -3616,4 +3616,342 @@
   box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.btn-animated-border-primary {
+  position: relative;
+  background: none;
+  color: #AF47D2;
+  border: 2px solid transparent;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn-animated-border-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(175, 71, 210, 0.5), transparent);
+  transition: left 0.5s;
+  z-index: -1;
+}
+.btn-animated-border-primary:hover:not(:disabled):not(.disabled)::before {
+  left: 100%;
+}
+.btn-animated-border-primary:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+}
+
+.btn-animated-border-secondary {
+  position: relative;
+  background: none;
+  color: #00C4B4;
+  border: 2px solid transparent;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn-animated-border-secondary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 196, 180, 0.5), transparent);
+  transition: left 0.5s;
+  z-index: -1;
+}
+.btn-animated-border-secondary:hover:not(:disabled):not(.disabled)::before {
+  left: 100%;
+}
+.btn-animated-border-secondary:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+}
+
+.btn-animated-border-danger {
+  position: relative;
+  background: none;
+  color: #E91E63;
+  border: 2px solid transparent;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn-animated-border-danger::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(233, 30, 99, 0.5), transparent);
+  transition: left 0.5s;
+  z-index: -1;
+}
+.btn-animated-border-danger:hover:not(:disabled):not(.disabled)::before {
+  left: 100%;
+}
+.btn-animated-border-danger:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+}
+
+.btn-animated-border-success {
+  position: relative;
+  background: none;
+  color: #00C853;
+  border: 2px solid transparent;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn-animated-border-success::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 200, 83, 0.5), transparent);
+  transition: left 0.5s;
+  z-index: -1;
+}
+.btn-animated-border-success:hover:not(:disabled):not(.disabled)::before {
+  left: 100%;
+}
+.btn-animated-border-success:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+}
+
+.btn-animated-border-warning {
+  position: relative;
+  background: none;
+  color: #FFCA28;
+  border: 2px solid transparent;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn-animated-border-warning::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 202, 40, 0.5), transparent);
+  transition: left 0.5s;
+  z-index: -1;
+}
+.btn-animated-border-warning:hover:not(:disabled):not(.disabled)::before {
+  left: 100%;
+}
+.btn-animated-border-warning:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+}
+
+.btn-animated-border-info {
+  position: relative;
+  background: none;
+  color: #0288D1;
+  border: 2px solid transparent;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn-animated-border-info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(2, 136, 209, 0.5), transparent);
+  transition: left 0.5s;
+  z-index: -1;
+}
+.btn-animated-border-info:hover:not(:disabled):not(.disabled)::before {
+  left: 100%;
+}
+.btn-animated-border-info:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+}
+
+.btn-animated-border-dark {
+  position: relative;
+  background: none;
+  color: #2E2E2E;
+  border: 2px solid transparent;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn-animated-border-dark::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(46, 46, 46, 0.5), transparent);
+  transition: left 0.5s;
+  z-index: -1;
+}
+.btn-animated-border-dark:hover:not(:disabled):not(.disabled)::before {
+  left: 100%;
+}
+.btn-animated-border-dark:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+}
+
+.btn-animated-border-light {
+  position: relative;
+  background: none;
+  color: #F5F5F5;
+  border: 2px solid transparent;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn-animated-border-light::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(245, 245, 245, 0.5), transparent);
+  transition: left 0.5s;
+  z-index: -1;
+}
+.btn-animated-border-light:hover:not(:disabled):not(.disabled)::before {
+  left: 100%;
+}
+.btn-animated-border-light:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+}
+
+.btn-animated-border-white {
+  position: relative;
+  background: none;
+  color: #FFFFFF;
+  border: 2px solid transparent;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn-animated-border-white::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transition: left 0.5s;
+  z-index: -1;
+}
+.btn-animated-border-white:hover:not(:disabled):not(.disabled)::before {
+  left: 100%;
+}
+.btn-animated-border-white:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+}
+
+.btn-animated-border-black {
+  position: relative;
+  background: none;
+  color: #000000;
+  border: 2px solid transparent;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn-animated-border-black::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.5), transparent);
+  transition: left 0.5s;
+  z-index: -1;
+}
+.btn-animated-border-black:hover:not(:disabled):not(.disabled)::before {
+  left: 100%;
+}
+.btn-animated-border-black:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+}
+
+.btn-animated-border-background {
+  position: relative;
+  background: none;
+  color: #F5F5F5;
+  border: 2px solid transparent;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn-animated-border-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(245, 245, 245, 0.5), transparent);
+  transition: left 0.5s;
+  z-index: -1;
+}
+.btn-animated-border-background:hover:not(:disabled):not(.disabled)::before {
+  left: 100%;
+}
+.btn-animated-border-background:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+}
+
+.btn-animated-border-text {
+  position: relative;
+  background: none;
+  color: #2E2E2E;
+  border: 2px solid transparent;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn-animated-border-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(46, 46, 46, 0.5), transparent);
+  transition: left 0.5s;
+  z-index: -1;
+}
+.btn-animated-border-text:hover:not(:disabled):not(.disabled)::before {
+  left: 100%;
+}
+.btn-animated-border-text:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+}
+
+.btn-animated-border-accent {
+  position: relative;
+  background: none;
+  color: #FF4081;
+  border: 2px solid transparent;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn-animated-border-accent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 64, 129, 0.5), transparent);
+  transition: left 0.5s;
+  z-index: -1;
+}
+.btn-animated-border-accent:hover:not(:disabled):not(.disabled)::before {
+  left: 100%;
+}
+.btn-animated-border-accent:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+}
+
 /*# sourceMappingURL=axel.css.map */
