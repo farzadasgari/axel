@@ -284,3 +284,23 @@ $align-items-values: (
   padding-right: calc(map.get(s.$grid-gutters, default) / 2);
   box-sizing: border-box;
 }
+
+
+// --------------------------------------------------------------------------
+// Responsive Gutter Variations
+// Utility classes for different gutter sizes from $grid-gutters.
+// Example usage: .row--gutter-tight { gap: map.get(s.$grid-gutters, tight); }
+// --------------------------------------------------------------------------
+@each $key, $value in s.$grid-gutters {
+  .row--gutter-#{$key} {
+    gap: $value;
+    margin-left: calc($value / -2);
+    margin-right: calc($value / -2);
+
+    > .col,
+    > [class*='col-'] {
+      padding-left: calc($value / 2);
+      padding-right: calc($value / 2);
+    }
+  }
+}

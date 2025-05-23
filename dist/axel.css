@@ -925,4 +925,48 @@
   box-sizing: border-box;
 }
 
+.row--gutter-none {
+  gap: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+.row--gutter-none > .col,
+.row--gutter-none > [class*=col-] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.row--gutter-tight {
+  gap: 0.5rem;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
+}
+.row--gutter-tight > .col,
+.row--gutter-tight > [class*=col-] {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.row--gutter-default {
+  gap: 1rem;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+.row--gutter-default > .col,
+.row--gutter-default > [class*=col-] {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.row--gutter-loose {
+  gap: 1.5rem;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+.row--gutter-loose > .col,
+.row--gutter-loose > [class*=col-] {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 /*# sourceMappingURL=axel.css.map */
