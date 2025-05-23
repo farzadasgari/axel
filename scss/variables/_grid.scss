@@ -239,3 +239,33 @@ $container-config: (
 @mixin align-items($value) {
   align-items: $value;
 }
+
+// Generate alignment utility classes
+$justify-values: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly
+);
+
+$align-items-values: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  baseline: baseline,
+  stretch: stretch
+);
+
+@each $key, $value in $justify-values {
+  .justify-#{$key} {
+    @include justify-content($value);
+  }
+}
+
+@each $key, $value in $align-items-values {
+  .align-#{$key} {
+    @include align-items($value);
+  }
+}
