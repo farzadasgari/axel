@@ -13,7 +13,6 @@
 // Version: 1.0.0
 // ==========================================================================
 
-
 // --------------------------------------------------------------------------
 // Flexbox Display
 // Classes for enabling Flexbox and inline-flex displays.
@@ -26,7 +25,6 @@
 .flex-d-inline {
   display: inline-flex;
 }
-
 
 // --------------------------------------------------------------------------
 // Flex Direction
@@ -47,7 +45,7 @@ $flex-directions: (
 
   @each $size, $breakpoint in g.$breakpoints {
     @if $size != 'xs' {
-      @include g.media($size) {
+      @include m.media($size, g.$breakpoints) {
         .flex-#{$size}-#{$key} {
           flex-direction: $value;
         }
@@ -56,6 +54,32 @@ $flex-directions: (
   }
 }
 
+// --------------------------------------------------------------------------
+// Flex Wrap
+// Classes for controlling flex wrapping, with responsive variants.
+// Example usage: .flex-wrap { flex-wrap: wrap; }
+// --------------------------------------------------------------------------
+$flex-wraps: (
+  wrap: wrap,
+  nowrap: nowrap,
+  wrap-reverse: wrap-reverse
+);
+
+@each $key, $value in $flex-wraps {
+  .flex-#{$key} {
+    flex-wrap: $value;
+  }
+
+  @each $size, $breakpoint in g.$breakpoints {
+    @if $size != 'xs' {
+      @include m.media($size, g.$breakpoints) {
+        .flex-#{$size}-#{$key} {
+          flex-wrap: $value;
+        }
+      }
+    }
+  }
+}
 
 // --------------------------------------------------------------------------
 // Justify Content
@@ -78,7 +102,7 @@ $justify-values: (
 
   @each $size, $breakpoint in g.$breakpoints {
     @if $size != 'xs' {
-      @include g.media($size) {
+      @include m.media($size, g.$breakpoints) {
         .flex-justify-#{$size}-#{$key} {
           @include m.justify-content($value);
         }
@@ -86,7 +110,6 @@ $justify-values: (
     }
   }
 }
-
 
 // --------------------------------------------------------------------------
 // Align Items
@@ -108,7 +131,7 @@ $align-items-values: (
 
   @each $size, $breakpoint in g.$breakpoints {
     @if $size != 'xs' {
-      @include g.media($size) {
+      @include m.media($size, g.$breakpoints) {
         .flex-align-#{$size}-#{$key} {
           @include m.align-items($value);
         }
@@ -116,7 +139,6 @@ $align-items-values: (
     }
   }
 }
-
 
 // --------------------------------------------------------------------------
 // Align Content
@@ -140,7 +162,7 @@ $align-content-values: (
 
   @each $size, $breakpoint in g.$breakpoints {
     @if $size != 'xs' {
-      @include g.media($size) {
+      @include m.media($size, g.$breakpoints) {
         .flex-align-content-#{$size}-#{$key} {
           align-content: $value;
         }
@@ -148,7 +170,6 @@ $align-content-values: (
     }
   }
 }
-
 
 // --------------------------------------------------------------------------
 // Align Self
@@ -171,7 +192,7 @@ $align-self-values: (
 
   @each $size, $breakpoint in g.$breakpoints {
     @if $size != 'xs' {
-      @include g.media($size) {
+      @include m.media($size, g.$breakpoints) {
         .flex-align-self-#{$size}-#{$key} {
           align-self: $value;
         }
@@ -179,7 +200,6 @@ $align-self-values: (
     }
   }
 }
-
 
 // --------------------------------------------------------------------------
 // Flex Grow and Shrink
@@ -199,7 +219,7 @@ $flex-grow-shrink: (0, 1, 2);
 
   @each $size, $breakpoint in g.$breakpoints {
     @if $size != 'xs' {
-      @include g.media($size) {
+      @include m.media($size, g.$breakpoints) {
         .flex-grow-#{$size}-#{$value} {
           flex-grow: $value;
         }
@@ -210,7 +230,6 @@ $flex-grow-shrink: (0, 1, 2);
     }
   }
 }
-
 
 // --------------------------------------------------------------------------
 // Flex Basis
@@ -229,7 +248,7 @@ $flex-basis-values: (
 
   @each $size, $breakpoint in g.$breakpoints {
     @if $size != 'xs' {
-      @include g.media($size) {
+      @include m.media($size, g.$breakpoints) {
         .flex-basis-#{$size}-#{$key} {
           flex-basis: $value;
         }
@@ -237,7 +256,6 @@ $flex-basis-values: (
     }
   }
 }
-
 
 // --------------------------------------------------------------------------
 // Order
@@ -253,7 +271,7 @@ $flex-orders: (-1, 0, 1, 2, 3);
 
   @each $size, $breakpoint in g.$breakpoints {
     @if $size != 'xs' {
-      @include g.media($size) {
+      @include m.media($size, g.$breakpoints) {
         .flex-order-#{$size}-#{$value} {
           order: $value;
         }
@@ -261,7 +279,6 @@ $flex-orders: (-1, 0, 1, 2, 3);
     }
   }
 }
-
 
 // --------------------------------------------------------------------------
 // Gap
@@ -275,7 +292,7 @@ $flex-orders: (-1, 0, 1, 2, 3);
 
   @each $size, $breakpoint in g.$breakpoints {
     @if $size != 'xs' {
-      @include g.media($size) {
+      @include m.media($size, g.$breakpoints) {
         .flex-gap-#{$size}-#{$key} {
           gap: $value;
         }
@@ -283,7 +300,6 @@ $flex-orders: (-1, 0, 1, 2, 3);
     }
   }
 }
-
 
 // --------------------------------------------------------------------------
 // Accessibility

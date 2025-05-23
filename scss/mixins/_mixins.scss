@@ -8,6 +8,26 @@
 // Version: 1.0.0
 // ==========================================================================
 
+// --------------------------------------------------------------------------
+// Media Mixins
+// Utility mixins for applying styles at specific breakpoints.
+// Supports min-width and max-width queries.
+// Requires $breakpoints map from calling context (e.g., grid or flex).
+// Example usage: @include media(md) { width: 50%; }
+// --------------------------------------------------------------------------
+@mixin media($breakpoint, $breakpoints) {
+  $value: map.get($breakpoints, $breakpoint);
+  @media (min-width: $value) {
+    @content;
+  }
+}
+
+@mixin media-down($breakpoint, $breakpoints) {
+  $value: map.get($breakpoints, $breakpoint);
+  @media (max-width: $value - 1px) {
+    @content;
+  }
+}
 
 // --------------------------------------------------------------------------
 // Alignment Mixins

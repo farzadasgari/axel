@@ -1,7 +1,7 @@
 @use 'sass:map';
 @use 'sass:math';
 @use 'spacing' as s;
-@use '../mixins/mixins' as mx;
+@use '../mixins/mixins' as m;
 
 // ==========================================================================
 // Axel Framework - Grid
@@ -13,22 +13,20 @@
 // Version: 1.0.0
 // ==========================================================================
 
-
 // --------------------------------------------------------------------------
 // Breakpoints
 // Responsive breakpoints for grid and layout adjustments.
-// Uses pixel values for clarity, applied via media mixins.
-// Example usage: @include media(md) { width: 50%; }
+// Used with media mixins from _mixins.scss.
+// Example usage: @include m.media(md, $breakpoints) { width: 50%; }
 // --------------------------------------------------------------------------
 $breakpoints: (
-  xs: 0, // Extra-small (mobile, <576px)
-  sm: 576px, // Small (mobile, ≥576px)
-  md: 768px, // Medium (tablet, ≥768px)
-  lg: 992px, // Large (desktop, ≥992px)
+  xs: 0,      // Extra-small (mobile, <576px)
+  sm: 576px,  // Small (mobile, ≥576px)
+  md: 768px,  // Medium (tablet, ≥768px)
+  lg: 992px,  // Large (desktop, ≥992px)
   xl: 1200px, // Extra-large (wide desktop, ≥1200px)
   xxl: 1400px // Extra-extra-large (ultra-wide, ≥1400px)
 );
-
 
 // --------------------------------------------------------------------------
 // Container Widths
@@ -37,13 +35,12 @@ $breakpoints: (
 // Example usage: max-width: map.get($container-widths, lg);
 // --------------------------------------------------------------------------
 $container-widths: (
-  sm: 540px, // Small screens
-  md: 720px, // Medium screens
-  lg: 960px, // Large screens
+  sm: 540px,  // Small screens
+  md: 720px,  // Medium screens
+  lg: 960px,  // Large screens
   xl: 1140px, // Extra-large screens
   xxl: 1320px // Extra-extra-large screens
 );
-
 
 // --------------------------------------------------------------------------
 // Grid Columns
@@ -53,10 +50,9 @@ $container-widths: (
 // --------------------------------------------------------------------------
 $grid-columns: (
   default: 12, // Standard 12-column grid
-  compact: 6, // For simpler layouts
-  micro: 4 // For minimal layouts
+  compact: 6,  // For simpler layouts
+  micro: 4     // For minimal layouts
 );
-
 
 // --------------------------------------------------------------------------
 // Grid Gutters
@@ -66,12 +62,11 @@ $grid-columns: (
 // --------------------------------------------------------------------------
 $grid-gutter-widths: s.$grid-gutters;
 
-
 // --------------------------------------------------------------------------
 // Container Configuration
 // Defines properties for fluid and fixed containers.
 // Uses padding from _spacing.scss for consistency.
-// Example usage: @include container(fixed, lg);
+// Example usage: .container { padding: map.get(map.get($container-config, fixed), padding); }
 // --------------------------------------------------------------------------
 $container-config: (
   fluid: (
@@ -86,7 +81,6 @@ $container-config: (
   )
 );
 
-
 // --------------------------------------------------------------------------
 // CSS Custom Properties
 // Grid-related custom properties for runtime customization.
@@ -99,33 +93,10 @@ $container-config: (
   --container-padding-default: #{map.get(s.$container-paddings, md)}; // 24px
 }
 
-
-// --------------------------------------------------------------------------
-// Media Mixins
-// Utility mixins for applying styles at specific breakpoints.
-// Supports min-width and max-width queries.
-// Example usage: @include media(md) { width: 50%; }
-// --------------------------------------------------------------------------
-@mixin media($breakpoint) {
-  $value: map.get($breakpoints, $breakpoint);
-  @media (min-width: $value) {
-    @content;
-  }
-}
-
-@mixin media-down($breakpoint) {
-  $value: map.get($breakpoints, $breakpoint);
-  @media (max-width: $value - 1px) {
-    @content;
-  }
-}
-
-
 // --------------------------------------------------------------------------
 // Container Styles
 // Base styles for fluid and fixed containers, with responsive max-widths.
-// Builds on .cntnr and .cntnrfl from original code.
-// Example usage: .container { @include container(fixed, lg); }
+// Example usage: .container { padding: map.get(map.get($container-config, fixed), padding); }
 // --------------------------------------------------------------------------
 .container {
   padding-left: map.get(map.get($container-config, fixed), padding);
@@ -134,7 +105,7 @@ $container-config: (
   box-sizing: border-box;
 
   @each $size, $value in $container-widths {
-    @include media($size) {
+    @include m.media($size, $breakpoints) {
       max-width: $value;
     }
   }
@@ -148,11 +119,10 @@ $container-config: (
   box-sizing: border-box;
 }
 
-
 // --------------------------------------------------------------------------
 // Row Styles
 // Styles for rows, using Flexbox with responsive gutters.
-// Example usage: .row { @include row(default); }
+// Example usage: .row { display: flex; }
 // --------------------------------------------------------------------------
 .row {
   display: flex;
@@ -162,11 +132,10 @@ $container-config: (
   gap: map.get(s.$grid-gutters, default);
 }
 
-
 // --------------------------------------------------------------------------
 // Column Styles
 // Styles for columns, supporting responsive spans and auto-fit.
-// Example usage: .col-6 { @include col(6); }
+// Example usage: .col-6 { flex: 0 0 math.percentage(math.div(6, map.get($grid-columns, default))); }
 // --------------------------------------------------------------------------
 .col {
   flex: 1 1 0;
@@ -188,7 +157,7 @@ $container-config: (
 
 @each $size, $value in $breakpoints {
   @if $size != 'xs' {
-    @include media($size) {
+    @include m.media($size, $breakpoints) {
       @for $i from 1 through map.get($grid-columns, default) {
         .col-#{$size}-#{$i} {
           flex: 0 0 math.percentage(math.div($i, map.get($grid-columns, default)));
@@ -202,11 +171,10 @@ $container-config: (
   }
 }
 
-
 // --------------------------------------------------------------------------
 // Offset Styles
 // Applies margin-left offsets for column positioning.
-// Example usage: .offset-2 { @include offset(2); }
+// Example usage: .offset-2 { margin-left: math.percentage(math.div(2, map.get($grid-columns, default))); }
 // --------------------------------------------------------------------------
 @for $i from 0 through map.get($grid-columns, default) {
   .offset-#{$i} {
@@ -216,7 +184,7 @@ $container-config: (
 
 @each $size, $value in $breakpoints {
   @if $size != 'xs' {
-    @include media($size) {
+    @include m.media($size, $breakpoints) {
       @for $i from 0 through map.get($grid-columns, default) {
         .offset-#{$size}-#{$i} {
           margin-left: if($i == 0, 0, math.percentage(math.div($i, map.get($grid-columns, default))));
@@ -226,7 +194,12 @@ $container-config: (
   }
 }
 
-// Generate alignment utility classes
+// --------------------------------------------------------------------------
+// Alignment Styles
+// Utility classes for aligning content within rows.
+// Uses shared mixins from _mixins.scss for consistency.
+// Example usage: .justify-center { @include m.justify-content(center); }
+// --------------------------------------------------------------------------
 $justify-values: (
   start: flex-start,
   end: flex-end,
@@ -246,21 +219,20 @@ $align-items-values: (
 
 @each $key, $value in $justify-values {
   .justify-#{$key} {
-    @include mx.justify-content($value);
+    @include m.justify-content($value);
   }
 }
 
 @each $key, $value in $align-items-values {
   .align-#{$key} {
-    @include mx.align-items($value);
+    @include m.align-items($value);
   }
 }
-
 
 // --------------------------------------------------------------------------
 // Auto-Fit Columns
 // Styles for auto-fit columns that grow/shrink dynamically.
-// Example usage: .col-auto { @include col-auto; }
+// Example usage: .col-auto { flex: 0 0 auto; }
 // --------------------------------------------------------------------------
 .col-auto {
   flex: 0 0 auto;
@@ -270,7 +242,6 @@ $align-items-values: (
   padding-right: calc(map.get(s.$grid-gutters, default) / 2);
   box-sizing: border-box;
 }
-
 
 // --------------------------------------------------------------------------
 // Responsive Gutter Variations
@@ -290,7 +261,6 @@ $align-items-values: (
     }
   }
 }
-
 
 // --------------------------------------------------------------------------
 // Accessibility
