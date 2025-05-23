@@ -148,3 +148,34 @@ $align-content-values: (
     }
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Align Self
+// Classes for per-item alignment in flex containers.
+// Example usage: .flex-align-self-start { align-self: flex-start; }
+// --------------------------------------------------------------------------
+$align-self-values: (
+  auto: auto,
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  baseline: baseline,
+  stretch: stretch
+);
+
+@each $key, $value in $align-self-values {
+  .flex-align-self-#{$key} {
+    align-self: $value;
+  }
+
+  @each $size, $breakpoint in g.$breakpoints {
+    @if $size != 'xs' {
+      @include g.media($size) {
+        .flex-align-self-#{$size}-#{$key} {
+          align-self: $value;
+        }
+      }
+    }
+  }
+}
