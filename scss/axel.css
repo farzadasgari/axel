@@ -27,4 +27,10 @@
   --gutter-default: 1rem;
 }
 
+:root {
+  --grid-columns: 12;
+  --grid-gutter-default: 1rem;
+  --container-padding-default: 1.5rem;
+}
+
 /*# sourceMappingURL=axel.css.map */

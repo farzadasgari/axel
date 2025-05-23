@@ -84,3 +84,16 @@ $container-config: (
     margin: auto
   )
 );
+
+
+// --------------------------------------------------------------------------
+// CSS Custom Properties
+// Grid-related custom properties for runtime customization.
+// Applied to :root for global access.
+// Example usage: gap: var(--grid-gutter-default);
+// --------------------------------------------------------------------------
+:root {
+  --grid-columns: #{map.get($grid-columns, default)}; // 12
+  --grid-gutter-default: #{map.get(s.$grid-gutters, default)}; // 16px
+  --container-padding-default: #{map.get(s.$container-paddings, md)}; // 24px
+}
