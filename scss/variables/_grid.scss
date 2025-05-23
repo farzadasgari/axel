@@ -162,7 +162,6 @@ $container-config: (
 }
 
 
-
 // --------------------------------------------------------------------------
 // Column Styles
 // Styles for columns, supporting responsive spans and auto-fit.
@@ -196,6 +195,30 @@ $container-config: (
           padding-left: calc(map.get(s.$grid-gutters, default) / 2);
           padding-right: calc(map.get(s.$grid-gutters, default) / 2);
           box-sizing: border-box;
+        }
+      }
+    }
+  }
+}
+
+
+// --------------------------------------------------------------------------
+// Offset Styles
+// Applies margin-left offsets for column positioning.
+// Example usage: .offset-2 { @include offset(2); }
+// --------------------------------------------------------------------------
+@for $i from 0 through map.get($grid-columns, default) {
+  .offset-#{$i} {
+    margin-left: if($i == 0, 0, math.percentage(math.div($i, map.get($grid-columns, default))));
+  }
+}
+
+@each $size, $value in $breakpoints {
+  @if $size != 'xs' {
+    @include media($size) {
+      @for $i from 0 through map.get($grid-columns, default) {
+        .offset-#{$size}-#{$i} {
+          margin-left: if($i == 0, 0, math.percentage(math.div($i, map.get($grid-columns, default))));
         }
       }
     }
