@@ -11,3 +11,19 @@
 // Author: Farzad Asgari
 // Version: 1.0.0
 // ==========================================================================
+
+
+// --------------------------------------------------------------------------
+// Breakpoints
+// Responsive breakpoints for grid and layout adjustments.
+// Uses pixel values for clarity, applied via media mixins.
+// Example usage: @include media(md) { width: 50%; }
+// --------------------------------------------------------------------------
+$breakpoints: (
+        xs: 0, // Extra-small (mobile, <576px)
+        sm: 576px, // Small (mobile, ≥576px)
+        md: 768px, // Medium (tablet, ≥768px)
+        lg: 992px, // Large (desktop, ≥992px)
+        xl: 1200px, // Extra-large (wide desktop, ≥1200px)
+        xxl: 1400px // Extra-extra-large (ultra-wide, ≥1400px)
+);
