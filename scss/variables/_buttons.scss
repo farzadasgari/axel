@@ -245,3 +245,27 @@ $button-sizes: (
     }
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Neumorphic Buttons
+// Soft, 3D buttons with neumorphic shadows (single style, no color variants).
+// Example usage: .btn-neumorphic { box-shadow: $button-neumorphic-shadow; }
+// --------------------------------------------------------------------------
+.btn-neumorphic {
+  background: #e0e0e0;
+  color: contrast.accessible-text-color(#e0e0e0);
+  border: 0;
+  box-shadow: $button-neumorphic-shadow;
+  border-radius: map.get(map.get($button-sizes, md), border-radius);
+
+  &:hover:not(:disabled):not(.disabled) {
+    background: #d5d5d5;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1), inset -2px -2px 4px rgba(255, 255, 255, 0.5);
+  }
+
+  &:active:not(:disabled):not(.disabled) {
+    transform: translateY(1px);
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
