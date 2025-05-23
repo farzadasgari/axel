@@ -1,0 +1,16 @@
+@use 'sass:map';
+@use 'sass:math';
+@use 'colors' as c;
+@use 'typography' as t;
+@use 'spacing' as s;
+@use 'flex' as f;
+@use 'contrast';
+
+// ==========================================================================
+// Axel Framework - Buttons
+// Description: Comprehensive button styles for the Axel CSS framework.
+// Supports multiple variants, sizes, states, groups, and utilities with WCAG
+// 2.1 accessibility. Integrates with colors, typography, spacing, and flex.
+// Author: Farzad Asgari
+// Version: 1.0.0
+// ==========================================================================
