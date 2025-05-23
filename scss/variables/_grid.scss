@@ -224,3 +224,18 @@ $container-config: (
     }
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Alignment Mixins
+// Utility mixins for aligning content within rows and columns.
+// Supports Flexbox justify-content and align-items.
+// Example usage: .row { @include justify-content(center); }
+// --------------------------------------------------------------------------
+@mixin justify-content($value) {
+  justify-content: $value;
+}
+
+@mixin align-items($value) {
+  align-items: $value;
+}
