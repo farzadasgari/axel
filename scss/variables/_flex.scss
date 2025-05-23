@@ -86,3 +86,33 @@ $justify-values: (
     }
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Align Items
+// Classes for align-items, using shared mixin from _mixins.scss.
+// Example usage: .flex-align-center { align-items: center; }
+// --------------------------------------------------------------------------
+$align-items-values: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  baseline: baseline,
+  stretch: stretch
+);
+
+@each $key, $value in $align-items-values {
+  .flex-align-#{$key} {
+    @include m.align-items($value);
+  }
+
+  @each $size, $breakpoint in g.$breakpoints {
+    @if $size != 'xs' {
+      @include g.media($size) {
+        .flex-align-#{$size}-#{$key} {
+          @include m.align-items($value);
+        }
+      }
+    }
+  }
+}
