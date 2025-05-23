@@ -27,3 +27,18 @@ $breakpoints: (
         xl: 1200px, // Extra-large (wide desktop, ≥1200px)
         xxl: 1400px // Extra-extra-large (ultra-wide, ≥1400px)
 );
+
+
+// --------------------------------------------------------------------------
+// Container Widths
+// Maximum widths for fixed containers at each breakpoint.
+// Fluid containers use 100% width with padding from $container-paddings.
+// Example usage: max-width: map.get($container-widths, lg);
+// --------------------------------------------------------------------------
+$container-widths: (
+        sm: 540px, // Small screens
+        md: 720px, // Medium screens
+        lg: 960px, // Large screens
+        xl: 1140px, // Extra-large screens
+        xxl: 1320px // Extra-extra-large screens
+);
