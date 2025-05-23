@@ -118,3 +118,31 @@ $container-config: (
     @content;
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Container Styles
+// Base styles for fluid and fixed containers, with responsive max-widths.
+// Builds on .cntnr and .cntnrfl from original code.
+// Example usage: .container { @include container(fixed, lg); }
+// --------------------------------------------------------------------------
+.container {
+  padding-left: map.get(map.get($container-config, fixed), padding);
+  padding-right: map.get(map.get($container-config, fixed), padding);
+  margin: map.get(map.get($container-config, fixed), margin);
+  box-sizing: border-box;
+
+  @each $size, $value in $container-widths {
+    @include media($size) {
+      max-width: $value;
+    }
+  }
+}
+
+.container-fluid {
+  width: map.get(map.get($container-config, fluid), width);
+  padding-left: map.get(map.get($container-config, fluid), padding);
+  padding-right: map.get(map.get($container-config, fluid), padding);
+  margin: map.get(map.get($container-config, fluid), margin);
+  box-sizing: border-box;
+}
