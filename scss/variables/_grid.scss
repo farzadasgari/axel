@@ -1,0 +1,13 @@
+@use 'sass:map';
+@use 'sass:math';
+@use 'spacing' as s;
+
+// ==========================================================================
+// Axel Framework - Grid
+// Description: A responsive, flexible grid system for the Axel CSS framework.
+// Supports dynamic-column layouts, fluid/fixed containers, offsets, and responsive
+// breakpoints. Integrates with spacing tokens for consistency and WCAG 2.1
+// accessibility. Designed to surpass Bootstrap with advanced features and DX.
+// Author: Farzad Asgari
+// Version: 1.0.0
+// ==========================================================================
