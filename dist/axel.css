@@ -2575,6 +2575,19 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+.btn-link-primary {
+  background-color: transparent;
+  color: #AF47D2;
+  border: 2px solid transparent;
+}
+.btn-link-primary:hover:not(:disabled):not(.disabled) {
+  background-color: transparent;
+  color: rgb(116.4672489083, 35.1746724891, 143.8253275109);
+}
+.btn-link-primary:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+}
+
 .btn-secondary {
   background-color: #00C4B4;
   color: #000000;
@@ -2614,6 +2627,19 @@
 .btn-ghost-secondary:active:not(:disabled):not(.disabled) {
   transform: translateY(1px);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-link-secondary {
+  background-color: transparent;
+  color: #00C4B4;
+  border: 2px solid transparent;
+}
+.btn-link-secondary:hover:not(:disabled):not(.disabled) {
+  background-color: transparent;
+  color: rgb(0, 94, 86.3265306122);
+}
+.btn-link-secondary:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
 }
 
 .btn-danger {
@@ -2657,6 +2683,19 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+.btn-link-danger {
+  background-color: transparent;
+  color: #E91E63;
+  border: 2px solid transparent;
+}
+.btn-link-danger:hover:not(:disabled):not(.disabled) {
+  background-color: transparent;
+  color: rgb(146.6599190283, 14.3400809717, 59.3157894737);
+}
+.btn-link-danger:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+}
+
 .btn-success {
   background-color: #00C853;
   color: #000000;
@@ -2696,6 +2735,19 @@
 .btn-ghost-success:active:not(:disabled):not(.disabled) {
   transform: translateY(1px);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-link-success {
+  background-color: transparent;
+  color: #00C853;
+  border: 2px solid transparent;
+}
+.btn-link-success:hover:not(:disabled):not(.disabled) {
+  background-color: transparent;
+  color: rgb(0, 98, 40.67);
+}
+.btn-link-success:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
 }
 
 .btn-warning {
@@ -2739,6 +2791,19 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+.btn-link-warning {
+  background-color: transparent;
+  color: #FFCA28;
+  border: 2px solid transparent;
+}
+.btn-link-warning:hover:not(:disabled):not(.disabled) {
+  background-color: transparent;
+  color: rgb(193, 145.423255814, 0);
+}
+.btn-link-warning:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+}
+
 .btn-info {
   background-color: #0288D1;
   color: #000000;
@@ -2778,6 +2843,19 @@
 .btn-ghost-info:active:not(:disabled):not(.disabled) {
   transform: translateY(1px);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-link-info {
+  background-color: transparent;
+  color: #0288D1;
+  border: 2px solid transparent;
+}
+.btn-link-info:hover:not(:disabled):not(.disabled) {
+  background-color: transparent;
+  color: rgb(1.0331753555, 70.2559241706, 107.9668246445);
+}
+.btn-link-info:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
 }
 
 .btn-dark {
@@ -2821,6 +2899,19 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+.btn-link-dark {
+  background-color: transparent;
+  color: #2E2E2E;
+  border: 2px solid transparent;
+}
+.btn-link-dark:hover:not(:disabled):not(.disabled) {
+  background-color: transparent;
+  color: hsl(0, 0%, -1.9607843137%);
+}
+.btn-link-dark:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+}
+
 .btn-light {
   background-color: #F5F5F5;
   color: #000000;
@@ -2860,6 +2951,19 @@
 .btn-ghost-light:active:not(:disabled):not(.disabled) {
   transform: translateY(1px);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-link-light {
+  background-color: transparent;
+  color: #F5F5F5;
+  border: 2px solid transparent;
+}
+.btn-link-light:hover:not(:disabled):not(.disabled) {
+  background-color: transparent;
+  color: #c2c2c2;
+}
+.btn-link-light:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
 }
 
 .btn-white {
@@ -2903,6 +3007,19 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+.btn-link-white {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 2px solid transparent;
+}
+.btn-link-white:hover:not(:disabled):not(.disabled) {
+  background-color: transparent;
+  color: #cccccc;
+}
+.btn-link-white:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+}
+
 .btn-black {
   background-color: #000000;
   color: #FFFFFF;
@@ -2942,6 +3059,19 @@
 .btn-ghost-black:active:not(:disabled):not(.disabled) {
   transform: translateY(1px);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-link-black {
+  background-color: transparent;
+  color: #000000;
+  border: 2px solid transparent;
+}
+.btn-link-black:hover:not(:disabled):not(.disabled) {
+  background-color: transparent;
+  color: hsl(0, 0%, -20%);
+}
+.btn-link-black:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
 }
 
 .btn-background {
@@ -2985,6 +3115,19 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+.btn-link-background {
+  background-color: transparent;
+  color: #F5F5F5;
+  border: 2px solid transparent;
+}
+.btn-link-background:hover:not(:disabled):not(.disabled) {
+  background-color: transparent;
+  color: #c2c2c2;
+}
+.btn-link-background:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+}
+
 .btn-text {
   background-color: #2E2E2E;
   color: #FFFFFF;
@@ -3026,6 +3169,19 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+.btn-link-text {
+  background-color: transparent;
+  color: #2E2E2E;
+  border: 2px solid transparent;
+}
+.btn-link-text:hover:not(:disabled):not(.disabled) {
+  background-color: transparent;
+  color: hsl(0, 0%, -1.9607843137%);
+}
+.btn-link-text:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+}
+
 .btn-accent {
   background-color: #FF4081;
   color: #000000;
@@ -3065,6 +3221,19 @@
 .btn-ghost-accent:active:not(:disabled):not(.disabled) {
   transform: translateY(1px);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-link-accent {
+  background-color: transparent;
+  color: #FF4081;
+  border: 2px solid transparent;
+}
+.btn-link-accent:hover:not(:disabled):not(.disabled) {
+  background-color: transparent;
+  color: rgb(217, 0, 73.8481675393);
+}
+.btn-link-accent:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
 }
 
 /*# sourceMappingURL=axel.css.map */
