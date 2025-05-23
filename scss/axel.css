@@ -2561,6 +2561,20 @@
   transform: translateY(1px);
 }
 
+.btn-ghost-primary {
+  background-color: transparent;
+  color: #AF47D2;
+  border: 2px solid transparent;
+}
+.btn-ghost-primary:hover:not(:disabled):not(.disabled) {
+  background-color: rgba(175, 71, 210, 0.1);
+  color: #AF47D2;
+}
+.btn-ghost-primary:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
 .btn-secondary {
   background-color: #00C4B4;
   color: #000000;
@@ -2586,6 +2600,20 @@
 }
 .btn-outline-secondary:active:not(:disabled):not(.disabled) {
   transform: translateY(1px);
+}
+
+.btn-ghost-secondary {
+  background-color: transparent;
+  color: #00C4B4;
+  border: 2px solid transparent;
+}
+.btn-ghost-secondary:hover:not(:disabled):not(.disabled) {
+  background-color: rgba(0, 196, 180, 0.1);
+  color: #00C4B4;
+}
+.btn-ghost-secondary:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .btn-danger {
@@ -2615,6 +2643,20 @@
   transform: translateY(1px);
 }
 
+.btn-ghost-danger {
+  background-color: transparent;
+  color: #E91E63;
+  border: 2px solid transparent;
+}
+.btn-ghost-danger:hover:not(:disabled):not(.disabled) {
+  background-color: rgba(233, 30, 99, 0.1);
+  color: #E91E63;
+}
+.btn-ghost-danger:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
 .btn-success {
   background-color: #00C853;
   color: #000000;
@@ -2640,6 +2682,20 @@
 }
 .btn-outline-success:active:not(:disabled):not(.disabled) {
   transform: translateY(1px);
+}
+
+.btn-ghost-success {
+  background-color: transparent;
+  color: #00C853;
+  border: 2px solid transparent;
+}
+.btn-ghost-success:hover:not(:disabled):not(.disabled) {
+  background-color: rgba(0, 200, 83, 0.1);
+  color: #00C853;
+}
+.btn-ghost-success:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .btn-warning {
@@ -2669,6 +2725,20 @@
   transform: translateY(1px);
 }
 
+.btn-ghost-warning {
+  background-color: transparent;
+  color: #FFCA28;
+  border: 2px solid transparent;
+}
+.btn-ghost-warning:hover:not(:disabled):not(.disabled) {
+  background-color: rgba(255, 202, 40, 0.1);
+  color: #FFCA28;
+}
+.btn-ghost-warning:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
 .btn-info {
   background-color: #0288D1;
   color: #000000;
@@ -2694,6 +2764,20 @@
 }
 .btn-outline-info:active:not(:disabled):not(.disabled) {
   transform: translateY(1px);
+}
+
+.btn-ghost-info {
+  background-color: transparent;
+  color: #0288D1;
+  border: 2px solid transparent;
+}
+.btn-ghost-info:hover:not(:disabled):not(.disabled) {
+  background-color: rgba(2, 136, 209, 0.1);
+  color: #0288D1;
+}
+.btn-ghost-info:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .btn-dark {
@@ -2723,6 +2807,20 @@
   transform: translateY(1px);
 }
 
+.btn-ghost-dark {
+  background-color: transparent;
+  color: #2E2E2E;
+  border: 2px solid transparent;
+}
+.btn-ghost-dark:hover:not(:disabled):not(.disabled) {
+  background-color: rgba(46, 46, 46, 0.1);
+  color: #2E2E2E;
+}
+.btn-ghost-dark:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
 .btn-light {
   background-color: #F5F5F5;
   color: #000000;
@@ -2748,6 +2846,20 @@
 }
 .btn-outline-light:active:not(:disabled):not(.disabled) {
   transform: translateY(1px);
+}
+
+.btn-ghost-light {
+  background-color: transparent;
+  color: #F5F5F5;
+  border: 2px solid transparent;
+}
+.btn-ghost-light:hover:not(:disabled):not(.disabled) {
+  background-color: rgba(245, 245, 245, 0.1);
+  color: #F5F5F5;
+}
+.btn-ghost-light:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .btn-white {
@@ -2777,6 +2889,20 @@
   transform: translateY(1px);
 }
 
+.btn-ghost-white {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 2px solid transparent;
+}
+.btn-ghost-white:hover:not(:disabled):not(.disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+}
+.btn-ghost-white:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
 .btn-black {
   background-color: #000000;
   color: #FFFFFF;
@@ -2802,6 +2928,20 @@
 }
 .btn-outline-black:active:not(:disabled):not(.disabled) {
   transform: translateY(1px);
+}
+
+.btn-ghost-black {
+  background-color: transparent;
+  color: #000000;
+  border: 2px solid transparent;
+}
+.btn-ghost-black:hover:not(:disabled):not(.disabled) {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #000000;
+}
+.btn-ghost-black:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .btn-background {
@@ -2831,6 +2971,20 @@
   transform: translateY(1px);
 }
 
+.btn-ghost-background {
+  background-color: transparent;
+  color: #F5F5F5;
+  border: 2px solid transparent;
+}
+.btn-ghost-background:hover:not(:disabled):not(.disabled) {
+  background-color: rgba(245, 245, 245, 0.1);
+  color: #F5F5F5;
+}
+.btn-ghost-background:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
 .btn-text {
   background-color: #2E2E2E;
   color: #FFFFFF;
@@ -2858,6 +3012,20 @@
   transform: translateY(1px);
 }
 
+.btn-ghost-text {
+  background-color: transparent;
+  color: #2E2E2E;
+  border: 2px solid transparent;
+}
+.btn-ghost-text:hover:not(:disabled):not(.disabled) {
+  background-color: rgba(46, 46, 46, 0.1);
+  color: #2E2E2E;
+}
+.btn-ghost-text:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
 .btn-accent {
   background-color: #FF4081;
   color: #000000;
@@ -2883,6 +3051,20 @@
 }
 .btn-outline-accent:active:not(:disabled):not(.disabled) {
   transform: translateY(1px);
+}
+
+.btn-ghost-accent {
+  background-color: transparent;
+  color: #FF4081;
+  border: 2px solid transparent;
+}
+.btn-ghost-accent:hover:not(:disabled):not(.disabled) {
+  background-color: rgba(255, 64, 129, 0.1);
+  color: #FF4081;
+}
+.btn-ghost-accent:active:not(:disabled):not(.disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /*# sourceMappingURL=axel.css.map */

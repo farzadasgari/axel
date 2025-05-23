@@ -177,4 +177,21 @@ $button-sizes: (
       transform: translateY(1px);
     }
   }
+
+  // Ghost buttons
+  .btn-ghost-#{$color} {
+    background-color: transparent;
+    color: $hex;
+    border: $button-outline-width solid transparent;
+
+    &:hover:not(:disabled):not(.disabled) {
+      background-color: rgba($hex, 0.1);
+      color: $hex;
+    }
+
+    &:active:not(:disabled):not(.disabled) {
+      transform: translateY(1px);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+  }
 }
