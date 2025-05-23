@@ -14,3 +14,16 @@
 // Author: Farzad Asgari
 // Version: 1.0.0
 // ==========================================================================
+
+
+// --------------------------------------------------------------------------
+// Button Variables
+// Core configuration for button styles, transitions, and accessibility.
+// Example usage: transition: $button-transition;
+// --------------------------------------------------------------------------
+$button-transition: all 0.2s ease-in-out;
+$button-outline-width: 2px;
+$button-hover-opacity: 0.9;
+$button-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$button-neumorphic-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.5);
+$button-min-touch-target: s.$min-touch-target-size; // 44px for WCAG 2.1
