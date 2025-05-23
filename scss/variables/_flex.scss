@@ -179,3 +179,34 @@ $align-self-values: (
     }
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Flex Grow and Shrink
+// Classes for controlling flex-grow and flex-shrink.
+// Example usage: .flex-grow-1 { flex-grow: 1; }
+// --------------------------------------------------------------------------
+$flex-grow-shrink: (0, 1, 2);
+
+@each $value in $flex-grow-shrink {
+  .flex-grow-#{$value} {
+    flex-grow: $value;
+  }
+
+  .flex-shrink-#{$value} {
+    flex-shrink: $value;
+  }
+
+  @each $size, $breakpoint in g.$breakpoints {
+    @if $size != 'xs' {
+      @include g.media($size) {
+        .flex-grow-#{$size}-#{$value} {
+          flex-grow: $value;
+        }
+        .flex-shrink-#{$size}-#{$value} {
+          flex-shrink: $value;
+        }
+      }
+    }
+  }
+}

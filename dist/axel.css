@@ -1789,5 +1789,149 @@
     align-self: stretch;
   }
 }
+.flex-grow-0 {
+  flex-grow: 0;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+@media (min-width: 576px) {
+  .flex-grow-sm-0 {
+    flex-grow: 0;
+  }
+  .flex-shrink-sm-0 {
+    flex-shrink: 0;
+  }
+}
+@media (min-width: 768px) {
+  .flex-grow-md-0 {
+    flex-grow: 0;
+  }
+  .flex-shrink-md-0 {
+    flex-shrink: 0;
+  }
+}
+@media (min-width: 992px) {
+  .flex-grow-lg-0 {
+    flex-grow: 0;
+  }
+  .flex-shrink-lg-0 {
+    flex-shrink: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-grow-xl-0 {
+    flex-grow: 0;
+  }
+  .flex-shrink-xl-0 {
+    flex-shrink: 0;
+  }
+}
+@media (min-width: 1400px) {
+  .flex-grow-xxl-0 {
+    flex-grow: 0;
+  }
+  .flex-shrink-xxl-0 {
+    flex-shrink: 0;
+  }
+}
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.flex-shrink-1 {
+  flex-shrink: 1;
+}
+
+@media (min-width: 576px) {
+  .flex-grow-sm-1 {
+    flex-grow: 1;
+  }
+  .flex-shrink-sm-1 {
+    flex-shrink: 1;
+  }
+}
+@media (min-width: 768px) {
+  .flex-grow-md-1 {
+    flex-grow: 1;
+  }
+  .flex-shrink-md-1 {
+    flex-shrink: 1;
+  }
+}
+@media (min-width: 992px) {
+  .flex-grow-lg-1 {
+    flex-grow: 1;
+  }
+  .flex-shrink-lg-1 {
+    flex-shrink: 1;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-grow-xl-1 {
+    flex-grow: 1;
+  }
+  .flex-shrink-xl-1 {
+    flex-shrink: 1;
+  }
+}
+@media (min-width: 1400px) {
+  .flex-grow-xxl-1 {
+    flex-grow: 1;
+  }
+  .flex-shrink-xxl-1 {
+    flex-shrink: 1;
+  }
+}
+.flex-grow-2 {
+  flex-grow: 2;
+}
+
+.flex-shrink-2 {
+  flex-shrink: 2;
+}
+
+@media (min-width: 576px) {
+  .flex-grow-sm-2 {
+    flex-grow: 2;
+  }
+  .flex-shrink-sm-2 {
+    flex-shrink: 2;
+  }
+}
+@media (min-width: 768px) {
+  .flex-grow-md-2 {
+    flex-grow: 2;
+  }
+  .flex-shrink-md-2 {
+    flex-shrink: 2;
+  }
+}
+@media (min-width: 992px) {
+  .flex-grow-lg-2 {
+    flex-grow: 2;
+  }
+  .flex-shrink-lg-2 {
+    flex-shrink: 2;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-grow-xl-2 {
+    flex-grow: 2;
+  }
+  .flex-shrink-xl-2 {
+    flex-shrink: 2;
+  }
+}
+@media (min-width: 1400px) {
+  .flex-grow-xxl-2 {
+    flex-grow: 2;
+  }
+  .flex-shrink-xxl-2 {
+    flex-shrink: 2;
+  }
+}
 
 /*# sourceMappingURL=axel.css.map */
