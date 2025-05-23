@@ -304,3 +304,13 @@ $align-items-values: (
     }
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Accessibility
+// Ensures grid layouts support WCAG 2.1 readability and usability.
+// Uses spacing tokens for touch targets and clear visual hierarchy.
+// Example usage: min-height: s.$min-touch-target-size;
+// --------------------------------------------------------------------------
+$min-grid-touch-target: s.$min-touch-target-size; // 44px for interactive elements
+$default-grid-gap: map.get(s.$grid-gutters, default); // 16px default gap
