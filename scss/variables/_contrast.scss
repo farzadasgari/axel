@@ -6,9 +6,8 @@
 // Description: Utility functions for calculating text color based on background
 // luminance and ensuring WCAG 2.1 contrast ratios for accessibility.
 // Author: Farzad Asgari
-// Version: 1.0.0
+// Version: 1.1.1
 // ==========================================================================
-
 
 // --------------------------------------------------------------------------
 // Luminance Calculation
@@ -17,6 +16,10 @@
 // Example usage: $lum: luminance(#AF47D2);
 // --------------------------------------------------------------------------
 @function luminance($color) {
+  @if type-of($color) != color {
+    @warn "luminance: Expected a color, got #{$color}. Returning 0.";
+    @return 0;
+  }
   $r: math.div(color.channel($color, 'red', $space: rgb), 255);
   $g: math.div(color.channel($color, 'green', $space: rgb), 255);
   $b: math.div(color.channel($color, 'blue', $space: rgb), 255);
@@ -28,7 +31,6 @@
   @return 0.2126 * $rs + 0.7152 * $gs + 0.0722 * $bs;
 }
 
-
 // --------------------------------------------------------------------------
 // Contrast Ratio
 // Calculates contrast ratio between two colors per WCAG 2.1.
@@ -36,13 +38,16 @@
 // Example usage: $ratio: contrast-ratio(#AF47D2, #FFFFFF);
 // --------------------------------------------------------------------------
 @function contrast-ratio($color1, $color2) {
+  @if type-of($color1) != color or type-of($color2) != color {
+    @warn "contrast-ratio: Expected colors, got #{$color1}, #{$color2}. Returning 1.";
+    @return 1;
+  }
   $l1: luminance($color1);
   $l2: luminance($color2);
   $lighter: math.max($l1, $l2);
   $darker: math.min($l1, $l2);
   @return calc(($lighter + 0.05) / ($darker + 0.05));
 }
-
 
 // --------------------------------------------------------------------------
 // Accessible Text Color
@@ -51,6 +56,10 @@
 // Example usage: color: accessible-text-color(#AF47D2);
 // --------------------------------------------------------------------------
 @function accessible-text-color($bg-color, $white: #FFFFFF, $black: #000000) {
+  @if type-of($bg-color) != color {
+    @warn "accessible-text-color: Expected a color, got #{$bg-color}. Using fallback.";
+    @return $black; // Fallback to black for non-color inputs
+  }
   $white-ratio: contrast-ratio($bg-color, $white);
   $black-ratio: contrast-ratio($bg-color, $black);
 
