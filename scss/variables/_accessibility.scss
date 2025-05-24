@@ -43,3 +43,33 @@
     left: 0;
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Reduced Motion Support
+// Disables animations and transitions for prefers-reduced-motion users.
+// Example usage: .no-motion { transition: none !important; }
+// --------------------------------------------------------------------------
+@media (prefers-reduced-motion: reduce) {
+  .no-motion {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+
+  // Apply to all buttons
+  .btn {
+    &.loading::after {
+      animation: none !important;
+      border: 2px solid var(--text);
+    }
+  }
+
+  // Disable animated border effect
+  [class*="btn-animated-border"] {
+    &::before {
+      transition: none !important;
+      background: none !important;
+    }
+  }
+}
