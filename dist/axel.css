@@ -8735,4 +8735,62 @@
   background-color: var(--accent);
 }
 
+.focus-ring {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+.focus-ring:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.skip-link {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  z-index: 1000;
+  background: var(--background);
+  color: var(--text);
+  padding: 0.5rem;
+  font-size: clamp(14px, 2vw, 16px);
+}
+.skip-link:focus {
+  top: 0;
+  left: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .no-motion {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+  .btn.loading::after {
+    animation: none !important;
+    border: 2px solid var(--text);
+  }
+  [class*=btn-animated-border]::before {
+    transition: none !important;
+    background: none !important;
+  }
+}
+.sr-only, .sr-only-focusable {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.sr-only-focusable:focus, .sr-only-focusable:active {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
 /*# sourceMappingURL=axel.css.map */
