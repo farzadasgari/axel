@@ -272,3 +272,43 @@ $utilities: (
     )
   )
 );
+
+
+// --------------------------------------------------------------------------
+// Utility Generation
+// Generates utility classes for all properties and breakpoints.
+// Example usage: .p-1 { padding: 4px; } .md-p-1 { @media (min-width: 768px) { padding: 4px; } }
+// --------------------------------------------------------------------------
+@each $prop, $map in $utilities {
+  $prefix: map.get($map, "prefix");
+  $values: map.get($map, "values");
+  $theme: map.get($map, "theme", false);
+
+  // Base utilities
+  @each $key, $value in $values {
+    .#{$prefix}-#{$key} {
+      @if $theme {
+        #{$prop}: var(--color-#{$key});
+      } @else {
+        #{$prop}: $value;
+      }
+    }
+  }
+
+  // Responsive utilities
+  @each $bp-size, $bp-value in g.$breakpoints {
+    @if $bp-size != 'xs' {
+      @include m.media($bp-size, g.$breakpoints) {
+        @each $key, $value in $values {
+          .#{$bp-size}\:#{$prefix}-#{$key} {
+            @if $theme {
+              #{$prop}: var(--color-#{$key});
+            } @else {
+              #{$prop}: $value;
+            }
+          }
+        }
+      }
+    }
+  }
+}
