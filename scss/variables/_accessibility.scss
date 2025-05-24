@@ -12,3 +12,34 @@
 // Author: Farzad Asgari <https://github.com/farzadasgari>
 // Version: 1.1.1
 // ==========================================================================
+
+
+// --------------------------------------------------------------------------
+// Focus Management
+// Utilities for accessible focus indicators and skip links.
+// Example usage: .focus-ring { outline: 3px solid var(--primary); }
+// --------------------------------------------------------------------------
+.focus-ring {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  z-index: 1000;
+  background: var(--background);
+  color: var(--text);
+  padding: map.get(s.$spacings, 2);
+  font-size: map.get(t.$font-sizes, base);
+
+  &:focus {
+    top: 0;
+    left: 0;
+  }
+}
