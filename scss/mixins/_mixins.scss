@@ -204,3 +204,20 @@
     }
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Touch Target Mixin
+// Ensures interactive elements meet WCAG 2.1 44x44px touch target size.
+// Example usage: @include touch-target;
+// --------------------------------------------------------------------------
+@mixin touch-target {
+  min-width: s.$min-touch-target-size;
+  min-height: s.$min-touch-target-size;
+  padding: map.get(s.$spacings, 2);
+
+  // Ensure content is centered
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
