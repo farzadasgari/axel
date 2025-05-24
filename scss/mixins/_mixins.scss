@@ -1,18 +1,20 @@
 @use 'sass:map';
+@use 'sass:math';
 @use 'sass:color';
-@use '../variables/colors' as c;
 @use '../variables/spacing' as s;
 @use '../variables/typography' as t;
 @use '../variables/contrast';
 
+
 // ==========================================================================
 // Axel Framework - Mixins
 // Description: Centralized mixins for the Axel CSS framework, providing reusable
-// utilities for grid, flex, buttons, theming, and more. Integrates with spacing,
-// typography, and colors for consistency and WCAG 2.1 accessibility.
+// utilities for grid, flex, buttons, theming, and more. Integrates with spacing
+// and typography for consistency and WCAG 2.1 accessibility.
 // Author: Farzad Asgari
-// Version: 1.1.0
+// Version: 1.1.1
 // ==========================================================================
+
 
 // --------------------------------------------------------------------------
 // Media Mixins
@@ -56,7 +58,6 @@
   align-self: $value;
 }
 
-
 // --------------------------------------------------------------------------
 // Theming Mixin
 // Applies theme-specific CSS custom properties based on $theme.
@@ -67,7 +68,6 @@
     --#{$key}: #{$value};
   }
 }
-
 
 // --------------------------------------------------------------------------
 // Button Variant Mixin
@@ -160,7 +160,6 @@
   }
 }
 
-
 // --------------------------------------------------------------------------
 // Utility Generator Mixin
 // Generates utility classes for a given property and values.
@@ -177,7 +176,6 @@
     }
   }
 }
-
 
 // --------------------------------------------------------------------------
 // Responsive Utility Generator Mixin
