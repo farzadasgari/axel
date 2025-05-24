@@ -1,21 +1,20 @@
 @use "sass:map";
-
+//@use "../mixins/mixins" as m;
 
 // ==========================================================================
 // Axel Framework - Colors
-// Description: Color palette for the Axel CSS framework, supporting light and
-// dark themes with accessible, vibrant hues. Integrates CSS custom properties
-// for runtime theming. Designed for modularity and WCAG compliance.
+// Description: Color palette for the Axel CSS framework, supporting light, dark,
+// and high-contrast themes with accessible, vibrant hues. Uses CSS custom properties
+// for runtime theming and WCAG 2.1 compliance.
 // Author: Farzad Asgari
-// Version: 1.0.0
+// Version: 1.1.0
 // ==========================================================================
-
 
 // --------------------------------------------------------------------------
 // Themes
-// Defines color palettes for light and dark modes. Each theme includes semantic
-// colors (primary, secondary, etc.), backgrounds, and text. Colors are chosen
-// for WCAG 2.1 contrast ratios (minimum 4.5:1 for text).
+// Defines color palettes for light, dark, and high-contrast modes.
+// Each theme includes semantic colors, backgrounds, and text.
+// Colors meet WCAG 2.1 contrast ratios (minimum 4.5:1 for text).
 // --------------------------------------------------------------------------
 $themes: (
   light: (
@@ -27,8 +26,8 @@ $themes: (
     info: #0288D1,
     dark: #2E2E2E,
     light: #F5F5F5,
-    "white": #FFFFFF,
-    "black": #000000,
+    white: #FFFFFF,
+    black: #000000,
     background: #F5F5F5,
     text: #2E2E2E,
     accent: #FF4081
@@ -42,11 +41,26 @@ $themes: (
     info: #4FC3F7,
     dark: #212121,
     light: #424242,
-    "white": #FFFFFF,
-    "black": #000000,
+    white: #FFFFFF,
+    black: #000000,
     background: #212121,
     text: #F5F5F5,
     accent: #FF80AB
+  ),
+  high-contrast: (
+    primary: #8B00B3,
+    secondary: #00897B,
+    danger: #C2185B,
+    success: #007300,
+    warning: #FFB300,
+    info: #01579B,
+    dark: #000000,
+    light: #FFFFFF,
+    white: #FFFFFF,
+    black: #000000,
+    background: #FFFFFF,
+    text: #000000,
+    accent: #D81B60
   )
 );
 
@@ -81,19 +95,4 @@ $color-variations: (
   hover: 10%, // Lighten colors for hover states
   active: -10%, // Darken colors for active states
   disabled: 0.65 // Opacity for disabled states
-);
-
-
-// --------------------------------------------------------------------------
-// High-Contrast Colors
-// Provides alternative colors for high-contrast mode to ensure WCAG compliance.
-// Used in media queries or classes like .high-contrast.
-// --------------------------------------------------------------------------
-$high-contrast-colors: (
-  primary: #8B00B3,
-  secondary: #00897B,
-  danger: #C2185B,
-  success: #007300,
-  warning: #FFB300,
-  info: #01579B
 );
