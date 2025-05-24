@@ -312,3 +312,18 @@ $utilities: (
     }
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Accessibility Utilities
+// Ensures color utilities meet WCAG 2.1 contrast requirements.
+// Example usage: .text-primary { color: var(--color-primary); }
+// --------------------------------------------------------------------------
+@each $color, $hex in c.$colors {
+  .text-#{$color} {
+    color: var(--#{$color});
+  }
+  .bg-#{$color} {
+    background-color: var(--#{$color});
+  }
+}
