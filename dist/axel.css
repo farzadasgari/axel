@@ -8854,15 +8854,6 @@
   color: var(--text) !important;
 }
 
-.btn {
-  min-width: 44px;
-  min-height: 44px;
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .aria-hidden {
   aria-hidden: "true";
 }
