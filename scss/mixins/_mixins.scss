@@ -76,11 +76,11 @@
 @mixin button-variant($variant, $color, $hex) {
   @if $variant == 'solid' {
     background-color: $hex;
-    color: var(--text); // Use theme text color
+    color: var(--text);
     border: 2px solid $hex;
 
     &:hover:not(:disabled):not(.disabled) {
-      background-color: color.adjust($hex, $lightness: -10%);
+      filter: brightness(90%); // Darken by 10%
       color: var(--text);
     }
 
@@ -107,7 +107,7 @@
     border: 2px solid transparent;
 
     &:hover:not(:disabled):not(.disabled) {
-      background-color: rgba($hex, 0.1);
+      background-color: rgba(var(--#{$color}-rgb), 0.1);
       color: $hex;
     }
 
@@ -121,20 +121,20 @@
     border: 2px solid transparent;
 
     &:hover:not(:disabled):not(.disabled) {
-      background-color: transparent;
-      color: color.adjust($hex, $lightness: -20%);
+      filter: brightness(80%); // Darken by 20%
+      color: $hex;
     }
 
     &:active:not(:disabled):not(.disabled) {
       transform: translateY(1px);
     }
   } @else if $variant == 'soft' {
-    background-color: rgba($hex, 0.15);
+    background-color: rgba(var(--#{$color}-rgb), 0.15);
     color: $hex;
     border: 2px solid transparent;
 
     &:hover:not(:disabled):not(.disabled) {
-      background-color: rgba($hex, 0.3);
+      background-color: rgba(var(--#{$color}-rgb), 0.3);
       color: $hex;
     }
 
@@ -143,12 +143,12 @@
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     }
   } @else if $variant == 'gradient' {
-    background: linear-gradient(45deg, $hex, color.adjust($hex, $lightness: 20%));
+    background: linear-gradient(45deg, $hex, rgba(var(--#{$color}-rgb), 0.8));
     color: var(--text);
     border: 0;
 
     &:hover:not(:disabled):not(.disabled) {
-      background: linear-gradient(45deg, color.adjust($hex, $lightness: -10%), $hex);
+      filter: brightness(90%);
       color: var(--text);
     }
 

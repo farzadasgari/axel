@@ -5,85 +5,75 @@
 @use 'typography' as t;
 @use 'spacing' as s;
 @use 'grid' as g;
-@use 'flex' as f;
 @use '../mixins/mixins' as m;
 @use 'contrast';
 
 // ==========================================================================
 // Axel Framework - Buttons
-// Description: Comprehensive button styles for the Axel CSS framework.
-// Supports multiple variants (solid, outline, ghost, link, soft, gradient,
-// neumorphic) for all colors, with sizes, states, groups, and utilities.
-// Ensures WCAG 2.1 accessibility and crushes Bootstrap with advanced features.
+// Description: Comprehensive button styles with multiple variants, sizes,
+// states, and groups. Supports light/dark/high-contrast themes and WCAG 2.1
+// accessibility.
 // Author: Farzad Asgari
-// Version: 1.0.0
+// Version: 1.1.1
 // ==========================================================================
-
 
 // --------------------------------------------------------------------------
 // Button Variables
 // Core configuration for button styles, transitions, and accessibility.
-// Example usage: transition: $button-transition;
 // --------------------------------------------------------------------------
 $button-transition: all 0.2s ease-in-out;
 $button-outline-width: 2px;
-$button-hover-opacity: 0.9;
 $button-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 $button-neumorphic-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.5);
-$button-min-touch-target: s.$min-touch-target-size; // 44px for WCAG 2.1
-
+$button-min-touch-target: s.$min-touch-target-size; // 44px
 
 // --------------------------------------------------------------------------
 // Button Sizes
 // Defines padding, font-size, and border-radius for button sizes.
-// Supports responsive variants via breakpoints.
-// Example usage: .btn-sm { padding: map.get(map.get($button-sizes, sm), padding); }
 // --------------------------------------------------------------------------
 $button-sizes: (
   xs: (
-    padding: map.get(s.$spacings, 1) map.get(s.$spacings, 2), // 4px 8px
-    font-size: map.get(t.$font-sizes, xs), // 12px
+    padding: map.get(s.$spacings, 1) map.get(s.$spacings, 2),
+    font-size: map.get(t.$font-sizes, xs),
     border-radius: 0.25rem,
-    min-height: $button-min-touch-target // 44px
+    min-height: $button-min-touch-target
   ),
   sm: (
-    padding: map.get(s.$spacings, 2) map.get(s.$spacings, 3), // 8px 16px
-    font-size: map.get(t.$font-sizes, sm), // 14px
+    padding: map.get(s.$spacings, 2) map.get(s.$spacings, 3),
+    font-size: map.get(t.$font-sizes, sm),
     border-radius: 0.375rem,
     min-height: $button-min-touch-target
   ),
   md: (
-    padding: map.get(s.$spacings, 3) map.get(s.$spacings, 4), // 16px 24px
-    font-size: map.get(t.$font-sizes, base), // 16px
+    padding: map.get(s.$spacings, 3) map.get(s.$spacings, 4),
+    font-size: map.get(t.$font-sizes, base),
     border-radius: 0.5rem,
     min-height: $button-min-touch-target
   ),
   lg: (
-    padding: map.get(s.$spacings, 4) map.get(s.$spacings, 5), // 24px 32px
-    font-size: map.get(t.$font-sizes, lg), // 18px
+    padding: map.get(s.$spacings, 4) map.get(s.$spacings, 5),
+    font-size: map.get(t.$font-sizes, lg),
     border-radius: 0.625rem,
     min-height: 48px
   ),
   xl: (
-    padding: map.get(s.$spacings, 5) map.get(s.$spacings, 6), // 32px 40px
-    font-size: map.get(t.$font-sizes, xl), // 20px
+    padding: map.get(s.$spacings, 5) map.get(s.$spacings, 6),
+    font-size: map.get(t.$font-sizes, xl),
     border-radius: 0.75rem,
     min-height: 52px
   )
 );
 
-
 // --------------------------------------------------------------------------
 // Base Button Styles
-// Core styles applied to all buttons, ensuring consistency and accessibility.
-// Example usage: .btn { display: inline-flex; }
+// Core styles applied to all buttons for consistency and accessibility.
 // --------------------------------------------------------------------------
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: map.get(t.$font-families, primary);
-  font-weight: 500;
+  font-family: map.get(t.$font-families, heading);
+  font-weight: map.get(t.$font-weights, medium);
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -96,19 +86,19 @@ $button-sizes: (
   font-size: map.get(map.get($button-sizes, md), font-size);
   border-radius: map.get(map.get($button-sizes, md), border-radius);
   line-height: 1.5;
-  position: relative; // For loading spinner
+  position: relative;
   box-shadow: $button-shadow;
 
   // Accessibility
-  &:focus {
-    outline: 3px solid rgba(map.get(c.$colors, primary), 0.5);
+  &:focus-visible {
+    outline: 3px solid var(--primary);
     outline-offset: 2px;
   }
 
   // Disabled state
   &:disabled,
   &.disabled {
-    opacity: 0.6;
+    opacity: map.get(c.$color-variations, disabled);
     cursor: not-allowed;
     box-shadow: none;
   }
@@ -124,14 +114,13 @@ $button-sizes: (
       position: absolute;
       width: 16px;
       height: 16px;
-      border: 2px solid currentColor;
+      border: 2px solid var(--text);
       border-top-color: transparent;
       border-radius: 50%;
       animation: spin 0.6s linear infinite;
     }
   }
 }
-
 
 // Keyframes for loading spinner
 @keyframes spin {
@@ -140,129 +129,50 @@ $button-sizes: (
   }
 }
 
-
 // --------------------------------------------------------------------------
 // Button Variants
-// Generates solid, outline, ghost, link, and soft buttons for all colors.
-// Example usage: .btn-primary { background: map.get(c.$colors, primary); }
+// Generates button variants for all colors using button-variant mixin.
+// Uses SCSS colors from c.$themes.light for compile-time manipulation.
 // --------------------------------------------------------------------------
-@each $color, $hex in c.$colors {
-  // Solid buttons
+@each $color, $hex in map.get(c.$themes, light) {
   .btn-#{$color} {
-    background-color: $hex;
-    color: contrast.accessible-text-color($hex);
-    border: $button-outline-width solid $hex;
-
-    &:hover:not(:disabled):not(.disabled) {
-      background-color: color.adjust($hex, $lightness: -10%);
-      color: contrast.accessible-text-color(color.adjust($hex, $lightness: -10%));
-    }
-
-    &:active:not(:disabled):not(.disabled) {
-      transform: translateY(1px);
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    }
+    @include m.button-variant(solid, $color, $hex);
   }
 
-  // Outline buttons
   .btn-outline-#{$color} {
-    background-color: transparent;
-    color: $hex;
-    border: $button-outline-width solid $hex;
-
-    &:hover:not(:disabled):not(.disabled) {
-      background-color: $hex;
-      color: contrast.accessible-text-color($hex);
-    }
-
-    &:active:not(:disabled):not(.disabled) {
-      transform: translateY(1px);
-    }
+    @include m.button-variant(outline, $color, $hex);
   }
 
-  // Ghost buttons
   .btn-ghost-#{$color} {
-    background-color: transparent;
-    color: $hex;
-    border: $button-outline-width solid transparent;
-
-    &:hover:not(:disabled):not(.disabled) {
-      background-color: rgba($hex, 0.1);
-      color: $hex;
-    }
-
-    &:active:not(:disabled):not(.disabled) {
-      transform: translateY(1px);
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    }
+    @include m.button-variant(ghost, $color, $hex);
   }
 
-  // Link buttons
   .btn-link-#{$color} {
-    background-color: transparent;
-    color: $hex;
-    border: $button-outline-width solid transparent;
-
-    &:hover:not(:disabled):not(.disabled) {
-      background-color: transparent;
-      color: color.adjust($hex, $lightness: -20%);
-    }
-
-    &:active:not(:disabled):not(.disabled) {
-      transform: translateY(1px);
-    }
+    @include m.button-variant(link, $color, $hex);
   }
 
-  // Soft buttons
   .btn-soft-#{$color} {
-    background-color: rgba($hex, 0.15);
-    color: $hex;
-    border: $button-outline-width solid transparent;
-
-    &:hover:not(:disabled):not(.disabled) {
-      background-color: rgba($hex, 0.3);
-      color: $hex;
-    }
-
-    &:active:not(:disabled):not(.disabled) {
-      transform: translateY(1px);
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    }
+    @include m.button-variant(soft, $color, $hex);
   }
 
-  // Gradient buttons
   .btn-gradient-#{$color} {
-    background: linear-gradient(45deg, $hex, color.adjust($hex, $lightness: 20%));
-    color: contrast.accessible-text-color($hex);
-    border: 0;
-
-    &:hover:not(:disabled):not(.disabled) {
-      background: linear-gradient(45deg, color.adjust($hex, $lightness: -10%), $hex);
-      color: contrast.accessible-text-color(color.adjust($hex, $lightness: -10%));
-    }
-
-    &:active:not(:disabled):not(.disabled) {
-      transform: translateY(1px);
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    }
+    @include m.button-variant(gradient, $color, $hex);
   }
 }
 
-
 // --------------------------------------------------------------------------
 // Neumorphic Buttons
-// Soft, 3D buttons with neumorphic shadows (single style, no color variants).
-// Example usage: .btn-neumorphic { box-shadow: $button-neumorphic-shadow; }
+// Soft, 3D buttons with neumorphic shadows, using SCSS colors for adjustments.
 // --------------------------------------------------------------------------
 .btn-neumorphic {
-  background: #e0e0e0;
-  color: contrast.accessible-text-color(#e0e0e0);
+  background: var(--light);
+  color: var(--text);
   border: 0;
   box-shadow: $button-neumorphic-shadow;
   border-radius: map.get(map.get($button-sizes, md), border-radius);
 
   &:hover:not(:disabled):not(.disabled) {
-    background: #d5d5d5;
+    background: color.adjust(map.get(c.$themes, light, light), $lightness: -5%);
     box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1), inset -2px -2px 4px rgba(255, 255, 255, 0.5);
   }
 
@@ -272,17 +182,15 @@ $button-sizes: (
   }
 }
 
-
 // --------------------------------------------------------------------------
 // Animated Border Buttons
-// Buttons with a sliding border effect for extra flair.
-// Example usage: .btn-animated-border-primary { background: none; }
+// Buttons with a sliding border effect, using RGB custom properties.
 // --------------------------------------------------------------------------
-@each $color, $hex in c.$colors {
+@each $color in map.keys(map.get(c.$themes, light)) {
   .btn-animated-border-#{$color} {
     position: relative;
     background: none;
-    color: $hex;
+    color: var(--#{$color});
     border: $button-outline-width solid transparent;
     overflow: hidden;
     z-index: 1;
@@ -294,7 +202,7 @@ $button-sizes: (
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba($hex, 0.5), transparent);
+      background: linear-gradient(90deg, transparent, rgba(var(--#{$color}-rgb), 0.5), transparent);
       transition: left 0.5s;
       z-index: -1;
     }
@@ -311,8 +219,7 @@ $button-sizes: (
 
 // --------------------------------------------------------------------------
 // Button Sizes
-// Applies size-specific styles, with responsive variants.
-// Example usage: .btn-sm { font-size: map.get(map.get($button-sizes, sm), font-size); }
+// Applies size-specific styles with responsive variants.
 // --------------------------------------------------------------------------
 @each $size, $props in $button-sizes {
   .btn-#{$size} {
@@ -321,7 +228,6 @@ $button-sizes: (
     border-radius: map.get($props, border-radius);
     min-height: map.get($props, min-height);
 
-    // Ensure touch target size
     @if map.get($props, min-height) < $button-min-touch-target {
       line-height: math.div($button-min-touch-target, map.get($props, font-size));
     }
@@ -345,11 +251,9 @@ $button-sizes: (
   }
 }
 
-
 // --------------------------------------------------------------------------
 // Button Utilities
 // Additional styles for block, rounded, and icon-only buttons.
-// Example usage: .btn-block { display: flex; width: 100%; }
 // --------------------------------------------------------------------------
 .btn-block {
   display: flex;
@@ -366,18 +270,16 @@ $button-sizes: (
   width: map.get(map.get($button-sizes, md), min-height);
   height: map.get(map.get($button-sizes, md), min-height);
   line-height: 1;
-  font-size: 1.25rem; // For icons
+  font-size: 1.25rem;
 }
-
 
 // --------------------------------------------------------------------------
 // Button Groups
 // Horizontal and vertical button groups using flex utilities.
-// Example usage: .btn-group { @extend .flex-d; }
 // --------------------------------------------------------------------------
 .btn-group {
   @extend .flex-d;
-  gap: map.get(s.$spacings, 1); // 4px
+  gap: map.get(s.$spacings, 1);
 
   .btn {
     border-radius: 0;
@@ -414,12 +316,9 @@ $button-sizes: (
   }
 }
 
-
 // --------------------------------------------------------------------------
 // Accessibility
-// Ensures buttons meet WCAG 2.1 requirements for contrast, touch targets,
-// and ARIA support.
-// Example usage: min-height: $button-min-touch-target;
+// Ensures buttons meet WCAG 2.1 requirements for contrast and touch targets.
 // --------------------------------------------------------------------------
-$min-button-touch-target: s.$min-touch-target-size; // 44px
-$button-contrast-ratio: 4.5; // WCAG AA for normal text
+$min-button-touch-target: s.$min-touch-target-size;
+$button-contrast-ratio: 4.5;
