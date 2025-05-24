@@ -1,0 +1,38 @@
+@use 'sass:map';
+@use '../mixins/mixins' as m;
+@use 'colors' as c;
+
+// ==========================================================================
+// Axel Framework - Theming
+// Description: Applies theme-specific CSS custom properties for light, dark,
+// and high-contrast themes. Supports prefers-color-scheme and data-theme attributes.
+// Author: Farzad Asgari
+// Version: 1.1.1
+// ==========================================================================
+
+
+// --------------------------------------------------------------------------
+// Theme Application
+// Applies CSS custom properties to :root and [data-theme] selectors.
+// Supports prefers-color-scheme for automatic theme switching.
+// Example usage: [data-theme="dark"] { --primary: #CE93D8; }
+// --------------------------------------------------------------------------
+:root {
+  @include m.theme(light, c.$themes);
+
+  @media (prefers-color-scheme: dark) {
+    @include m.theme(dark, c.$themes);
+  }
+}
+
+[data-theme="light"] {
+  @include m.theme(light, c.$themes);
+}
+
+[data-theme="dark"] {
+  @include m.theme(dark, c.$themes);
+}
+
+[data-theme="high-contrast"] {
+  @include m.theme(high-contrast, c.$themes);
+}
