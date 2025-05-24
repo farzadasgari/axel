@@ -1,4 +1,5 @@
 @use 'sass:map';
+@use 'sass:color';
 @use '../mixins/mixins' as m;
 @use 'colors' as c;
 
@@ -10,7 +11,6 @@
 // Version: 1.1.1
 // ==========================================================================
 
-
 // --------------------------------------------------------------------------
 // Theme Application
 // Applies CSS custom properties to :root and [data-theme] selectors.
@@ -18,21 +18,39 @@
 // Example usage: [data-theme="dark"] { --primary: #CE93D8; }
 // --------------------------------------------------------------------------
 :root {
-  @include m.theme(light, c.$themes);
-
-  @media (prefers-color-scheme: dark) {
-    @include m.theme(dark, c.$themes);
+  @each $theme, $colors in c.$themes {
+    @if $theme == 'light' {
+      @include m.theme(light, c.$themes);
+      @each $key, $value in $colors {
+        --#{$key}-rgb: #{color.channel($value, 'red', $space: rgb)}, #{color.channel($value, 'green', $space: rgb)}, #{color.channel($value, 'blue', $space: rgb)};
+      }
+    }
+    @media (prefers-color-scheme: dark) {
+      @include m.theme(dark, c.$themes);
+      @each $key, $value in map.get(c.$themes, dark) {
+        --#{$key}-rgb: #{color.channel($value, 'red', $space: rgb)}, #{color.channel($value, 'green', $space: rgb)}, #{color.channel($value, 'blue', $space: rgb)};
+      }
+    }
   }
 }
 
 [data-theme="light"] {
   @include m.theme(light, c.$themes);
+  @each $key, $value in map.get(c.$themes, light) {
+    --#{$key}-rgb: #{color.channel($value, 'red', $space: rgb)}, #{color.channel($value, 'green', $space: rgb)}, #{color.channel($value, 'blue', $space: rgb)};
+  }
 }
 
 [data-theme="dark"] {
   @include m.theme(dark, c.$themes);
+  @each $key, $value in map.get(c.$themes, dark) {
+    --#{$key}-rgb: #{color.channel($value, 'red', $space: rgb)}, #{color.channel($value, 'green', $space: rgb)}, #{color.channel($value, 'blue', $space: rgb)};
+  }
 }
 
 [data-theme="high-contrast"] {
   @include m.theme(high-contrast, c.$themes);
+  @each $key, $value in map.get(c.$themes, high-contrast) {
+    --#{$key}-rgb: #{color.channel($value, 'red', $space: rgb)}, #{color.channel($value, 'green', $space: rgb)}, #{color.channel($value, 'blue', $space: rgb)};
+  }
 }
