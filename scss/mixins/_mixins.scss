@@ -221,3 +221,25 @@
   align-items: center;
   justify-content: center;
 }
+
+
+// --------------------------------------------------------------------------
+// Accessibility Mixin
+// Applies baseline accessibility styles for components.
+// Example usage: @include accessible-component;
+// --------------------------------------------------------------------------
+@mixin accessible-component {
+  // Focus styles
+  &:focus-visible {
+    @extend .focus-ring;
+  }
+
+  // Touch target
+  @include touch-target;
+
+  // Reduced motion
+  @media (prefers-reduced-motion: reduce) {
+    animation: none !important;
+    transition: none !important;
+  }
+}
