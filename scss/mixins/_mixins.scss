@@ -54,3 +54,15 @@
 @mixin align-self($value) {
   align-self: $value;
 }
+
+
+// --------------------------------------------------------------------------
+// Theming Mixin
+// Applies theme-specific CSS custom properties based on $theme.
+// Example usage: @include theme(light, $themes);
+// --------------------------------------------------------------------------
+@mixin theme($theme, $themes) {
+  @each $key, $value in map.get($themes, $theme) {
+    --#{$key}: #{$value};
+  }
+}
