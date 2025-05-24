@@ -1,0 +1,14 @@
+@use 'sass:map';
+@use 'spacing' as s;
+@use 'typography' as t;
+@use 'colors' as c;
+@use '../mixins/mixins' as m;
+
+// ==========================================================================
+// Axel Framework - Accessibility
+// Description: Accessibility utilities and mixins for the Axel CSS framework.
+// Provides focus management, reduced motion support, screen reader utilities,
+// and high-contrast enhancements. Builds on WCAG 2.1 compliance from _contrast.scss.
+// Author: Farzad Asgari <https://github.com/farzadasgari>
+// Version: 1.1.1
+// ==========================================================================
