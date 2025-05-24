@@ -8793,4 +8793,78 @@
   clip: auto;
 }
 
+.high-contrast-text {
+  color: var(--text) !important;
+  -webkit-text-stroke: 0.5px var(--text);
+}
+
+.high-contrast-bg {
+  background-color: var(--background) !important;
+}
+
+.high-contrast-primary {
+  background-color: var(--primary) !important;
+  color: var(--text) !important;
+}
+
+.high-contrast-secondary {
+  background-color: var(--secondary) !important;
+  color: var(--text) !important;
+}
+
+.high-contrast-danger {
+  background-color: var(--danger) !important;
+  color: var(--text) !important;
+}
+
+.high-contrast-success {
+  background-color: var(--success) !important;
+  color: var(--text) !important;
+}
+
+.high-contrast-warning {
+  background-color: var(--warning) !important;
+  color: var(--text) !important;
+}
+
+.high-contrast-info {
+  background-color: var(--info) !important;
+  color: var(--text) !important;
+}
+
+.high-contrast-dark {
+  background-color: var(--dark) !important;
+  color: var(--text) !important;
+}
+
+.high-contrast-light {
+  background-color: var(--light) !important;
+  color: var(--text) !important;
+}
+
+.high-contrast-white {
+  background-color: var(--white) !important;
+  color: var(--text) !important;
+}
+
+.high-contrast-black {
+  background-color: var(--black) !important;
+  color: var(--text) !important;
+}
+
+.high-contrast-background {
+  background-color: var(--background) !important;
+  color: var(--text) !important;
+}
+
+.high-contrast-text {
+  background-color: var(--text) !important;
+  color: var(--text) !important;
+}
+
+.high-contrast-accent {
+  background-color: var(--accent) !important;
+  color: var(--text) !important;
+}
+
 /*# sourceMappingURL=axel.css.map */

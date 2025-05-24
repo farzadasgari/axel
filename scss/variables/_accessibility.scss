@@ -104,3 +104,25 @@
     clip: auto;
   }
 }
+
+
+// --------------------------------------------------------------------------
+// High-Contrast Utilities
+// Forces high-contrast styles for text and backgrounds.
+// Example usage: .high-contrast-text { color: var(--text); }
+// --------------------------------------------------------------------------
+.high-contrast-text {
+  color: var(--text) !important;
+  -webkit-text-stroke: 0.5px var(--text);
+}
+
+.high-contrast-bg {
+  background-color: var(--background) !important;
+}
+
+@each $color in map.keys(map.get(c.$themes, high-contrast)) {
+  .high-contrast-#{$color} {
+    background-color: var(--#{$color}) !important;
+    color: var(--text) !important;
+  }
+}
