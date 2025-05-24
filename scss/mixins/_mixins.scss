@@ -177,3 +177,27 @@
     }
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Responsive Utility Generator Mixin
+// Generates responsive utility classes for a given property and breakpoints.
+// Example usage: @include generate-responsive-utility('width', $width-values, $breakpoints);
+// --------------------------------------------------------------------------
+@mixin generate-responsive-utility($prop, $prefix, $values, $breakpoints, $theme: false) {
+  @each $bp-size, $bp-value in $breakpoints {
+    @if $bp-size != 'xs' {
+      @include media($bp-size, $breakpoints) {
+        @each $key, $value in $values {
+          .#{$bp-size}\:#{$prefix}-#{$key} {
+            @if $theme {
+              #{$prop}: var(--color-#{$key});
+            } @else {
+              #{$prop}: $value;
+            }
+          }
+        }
+      }
+    }
+  }
+}
