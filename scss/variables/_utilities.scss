@@ -3,7 +3,8 @@
 @use 'colors' as c;
 @use 'typography' as t;
 @use 'spacing' as s;
-@use 'flex' as f;
+@use 'grid' as g;
+@use '../mixins/mixins' as m;
 @use 'contrast';
 
 // ==========================================================================
@@ -14,3 +15,260 @@
 // Author: Farzad Asgari
 // Version: 1.0.0
 // ==========================================================================
+
+// --------------------------------------------------------------------------
+// Utility Configuration
+// Defines utility properties, prefixes, and values for class generation.
+// Example usage: .p-1 { padding: map.get(s.$spacings, 1); }
+// --------------------------------------------------------------------------
+$utilities: (
+  // Spacing: Margin
+  "margin": (
+    "prefix": "m",
+    "values": s.$spacings // 0: 0, 1: 4px, 2: 8px, 3: 16px, 4: 24px, 5: 32px, 6: 40px
+  ),
+  "margin-top": (
+    "prefix": "mt",
+    "values": s.$spacings
+  ),
+  "margin-right": (
+    "prefix": "mr",
+    "values": s.$spacings
+  ),
+  "margin-bottom": (
+    "prefix": "mb",
+    "values": s.$spacings
+  ),
+  "margin-left": (
+    "prefix": "ml",
+    "values": s.$spacings
+  ),
+  // Spacing: Padding
+  "padding": (
+    "prefix": "p",
+    "values": s.$spacings
+  ),
+  "padding-top": (
+    "prefix": "pt",
+    "values": s.$spacings
+  ),
+  "padding-right": (
+    "prefix": "pr",
+    "values": s.$spacings
+  ),
+  "padding-bottom": (
+    "prefix": "pb",
+    "values": s.$spacings
+  ),
+  "padding-left": (
+    "prefix": "pl",
+    "values": s.$spacings
+  ),
+  // Spacing: Gap
+  "gap": (
+    "prefix": "gap",
+    "values": s.$spacings
+  ),
+  // Display
+  "display": (
+    "prefix": "d",
+    "values": (
+      "none": none,
+      "block": block,
+      "inline": inline,
+      "inline-block": inline-block,
+      "flex": flex,
+      "inline-flex": inline-flex,
+      "grid": grid,
+      "inline-grid": inline-grid
+    )
+  ),
+  // Position
+  "position": (
+    "prefix": "pos",
+    "values": (
+      "static": static,
+      "relative": relative,
+      "absolute": absolute,
+      "fixed": fixed,
+      "sticky": sticky
+    )
+  ),
+  // Text Alignment
+  "text-align": (
+    "prefix": "text",
+    "values": (
+      "left": left,
+      "center": center,
+      "right": right,
+      "justify": justify
+    )
+  ),
+  // Font Weight
+  "font-weight": (
+    "prefix": "text",
+    "values": t.$font-weights // light: 300, regular: 400, medium: 500, bold: 700
+  ),
+  // Font Size
+  "font-size": (
+    "prefix": "text",
+    "values": t.$font-sizes // xs: 12px, sm: 14px, base: 16px, lg: 18px, xl: 20px
+  ),
+  // Line Height
+  "line-height": (
+    "prefix": "lh",
+    "values": (
+      "1": 1,
+      "tight": 1.25,
+      "normal": 1.5,
+      "loose": 2
+    )
+  ),
+  // Text Color
+  "color": (
+    "prefix": "text",
+    "values": c.$colors, // primary: #AF47D2, secondary: #00C4B4, etc.
+    "theme": true // Use custom properties for theme switching
+  ),
+  // Background Color
+  "background-color": (
+    "prefix": "bg",
+    "values": c.$colors,
+    "theme": true
+  ),
+  // Border Color
+  "border-color": (
+    "prefix": "border",
+    "values": c.$colors,
+    "theme": true
+  ),
+  // Border Width
+  "border-width": (
+    "prefix": "border",
+    "values": (
+      "0": 0,
+      "1": 1px,
+      "2": 2px,
+      "3": 3px,
+      "4": 4px
+    )
+  ),
+  // Border Style
+  "border-style": (
+    "prefix": "border",
+    "values": (
+      "solid": solid,
+      "dashed": dashed,
+      "dotted": dotted,
+      "none": none
+    )
+  ),
+  // Border Radius
+  "border-radius": (
+    "prefix": "rounded",
+    "values": (
+      "0": 0,
+      "1": 2px,
+      "2": 4px,
+      "3": 8px,
+      "4": 12px,
+      "5": 16px,
+      "full": 9999px
+    )
+  ),
+  "border-top-left-radius": (
+    "prefix": "rounded-tl",
+    "values": (
+      "0": 0,
+      "1": 2px,
+      "2": 4px,
+      "3": 8px,
+      "4": 12px,
+      "5": 16px
+    )
+  ),
+  "border-top-right-radius": (
+    "prefix": "rounded-tr",
+    "values": (
+      "0": 0,
+      "1": 2px,
+      "2": 4px,
+      "3": 8px,
+      "4": 12px,
+      "5": 16px
+    )
+  ),
+  "border-bottom-left-radius": (
+    "prefix": "rounded-bl",
+    "values": (
+      "0": 0,
+      "1": 2px,
+      "2": 4px,
+      "3": 8px,
+      "4": 12px,
+      "5": 16px
+    )
+  ),
+  "border-bottom-right-radius": (
+    "prefix": "rounded-br",
+    "values": (
+      "0": 0,
+      "1": 2px,
+      "2": 4px,
+      "3": 8px,
+      "4": 12px,
+      "5": 16px
+    )
+  ),
+  // Box Shadow
+  "box-shadow": (
+    "prefix": "shadow",
+    "values": (
+      "none": none,
+      "sm": 0 1px 2px rgba(0, 0, 0, 0.05),
+      "md": 0 4px 6px rgba(0, 0, 0, 0.1),
+      "lg": 0 10px 15px rgba(0, 0, 0, 0.1),
+      "xl": 0 20px 25px rgba(0, 0, 0, 0.15)
+    )
+  ),
+  // Opacity
+  "opacity": (
+    "prefix": "opacity",
+    "values": (
+      "0": 0,
+      "10": 0.1,
+      "20": 0.2,
+      "30": 0.3,
+      "40": 0.4,
+      "50": 0.5,
+      "60": 0.6,
+      "70": 0.7,
+      "80": 0.8,
+      "90": 0.9,
+      "100": 1
+    )
+  ),
+  // Cursor
+  "cursor": (
+    "prefix": "cursor",
+    "values": (
+      "auto": auto,
+      "pointer": pointer,
+      "default": default,
+      "not-allowed": not-allowed
+    )
+  ),
+  // Z-index
+  "z-index": (
+    "prefix": "z",
+    "values": (
+      "0": 0,
+      "10": 10,
+      "20": 20,
+      "30": 30,
+      "40": 40,
+      "50": 50,
+      "auto": auto
+    )
+  )
+);
