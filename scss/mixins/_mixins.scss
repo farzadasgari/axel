@@ -10,9 +10,10 @@
 // Description: Centralized mixins for the Axel CSS framework, providing reusable
 // utilities for grid, flex, buttons, theming, and more. Integrates with spacing
 // and typography for consistency and WCAG 2.1 accessibility.
-// Author: Farzad Asgari
+// Author: Farzad Asgari <https://github.com/farzadasgari>
 // Version: 1.1.1
 // ==========================================================================
+
 
 // --------------------------------------------------------------------------
 // Media Mixins
@@ -33,6 +34,7 @@
     @content;
   }
 }
+
 
 // --------------------------------------------------------------------------
 // Alignment Mixins
@@ -56,6 +58,7 @@
   align-self: $value;
 }
 
+
 // --------------------------------------------------------------------------
 // Theming Mixin
 // Applies theme-specific CSS custom properties based on $theme.
@@ -66,6 +69,7 @@
     --#{$key}: #{$value};
   }
 }
+
 
 // --------------------------------------------------------------------------
 // Button Variant Mixin
@@ -159,6 +163,7 @@
   }
 }
 
+
 // --------------------------------------------------------------------------
 // Utility Generator Mixin
 // Generates utility classes for a given property and values.
@@ -175,6 +180,7 @@
     }
   }
 }
+
 
 // --------------------------------------------------------------------------
 // Responsive Utility Generator Mixin

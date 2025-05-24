@@ -5,9 +5,10 @@
 // Axel Framework - Contrast
 // Description: Utility functions for calculating text color based on background
 // luminance and ensuring WCAG 2.1 contrast ratios for accessibility.
-// Author: Farzad Asgari
+// Author: Farzad Asgari <https://github.com/farzadasgari>
 // Version: 1.1.1
 // ==========================================================================
+
 
 // --------------------------------------------------------------------------
 // Luminance Calculation
@@ -31,6 +32,7 @@
   @return 0.2126 * $rs + 0.7152 * $gs + 0.0722 * $bs;
 }
 
+
 // --------------------------------------------------------------------------
 // Contrast Ratio
 // Calculates contrast ratio between two colors per WCAG 2.1.
@@ -48,6 +50,7 @@
   $darker: math.min($l1, $l2);
   @return calc(($lighter + 0.05) / ($darker + 0.05));
 }
+
 
 // --------------------------------------------------------------------------
 // Accessible Text Color

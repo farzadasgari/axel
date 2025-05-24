@@ -5,9 +5,10 @@
 // Description: Color palette for the Axel CSS framework, supporting light, dark,
 // and high-contrast themes with accessible, vibrant hues. Themes are applied in
 // _theming.scss using CSS custom properties for runtime theming and WCAG 2.1 compliance.
-// Author: Farzad Asgari
+// Author: Farzad Asgari <https://github.com/farzadasgari>
 // Version: 1.1.1
 // ==========================================================================
+
 
 // --------------------------------------------------------------------------
 // Themes
@@ -62,6 +63,7 @@ $themes: (
     accent: #D81B60
   )
 );
+
 
 // --------------------------------------------------------------------------
 // Color Variations

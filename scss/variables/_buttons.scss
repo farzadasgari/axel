@@ -14,9 +14,10 @@
 // Description: Comprehensive button styles with multiple variants, sizes,
 // states, and groups. Supports light/dark/high-contrast themes and WCAG 2.1
 // accessibility.
-// Author: Farzad Asgari
+// Author: Farzad Asgari <https://github.com/farzadasgari>
 // Version: 1.1.1
 // ==========================================================================
+
 
 // --------------------------------------------------------------------------
 // Button Variables
@@ -27,6 +28,7 @@ $button-outline-width: 2px;
 $button-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 $button-neumorphic-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.5);
 $button-min-touch-target: s.$min-touch-target-size; // 44px
+
 
 // --------------------------------------------------------------------------
 // Button Sizes
@@ -64,6 +66,7 @@ $button-sizes: (
     min-height: 52px
   )
 );
+
 
 // --------------------------------------------------------------------------
 // Base Button Styles
@@ -130,6 +133,7 @@ $button-sizes: (
   }
 }
 
+
 // --------------------------------------------------------------------------
 // Button Variants
 // Generates button variants for all colors using button-variant mixin.
@@ -161,6 +165,7 @@ $button-sizes: (
   }
 }
 
+
 // --------------------------------------------------------------------------
 // Neumorphic Buttons
 // Soft, 3D buttons with neumorphic shadows, using SCSS colors for adjustments.
@@ -182,6 +187,7 @@ $button-sizes: (
     box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2);
   }
 }
+
 
 // --------------------------------------------------------------------------
 // Animated Border Buttons
@@ -218,6 +224,7 @@ $button-sizes: (
   }
 }
 
+
 // --------------------------------------------------------------------------
 // Button Sizes
 // Applies size-specific styles with responsive variants.
@@ -252,6 +259,7 @@ $button-sizes: (
   }
 }
 
+
 // --------------------------------------------------------------------------
 // Button Utilities
 // Additional styles for block, rounded, and icon-only buttons.
@@ -273,6 +281,7 @@ $button-sizes: (
   line-height: 1;
   font-size: 1.25rem;
 }
+
 
 // --------------------------------------------------------------------------
 // Button Groups
@@ -316,6 +325,7 @@ $button-sizes: (
     }
   }
 }
+
 
 // --------------------------------------------------------------------------
 // Accessibility

@@ -12,9 +12,10 @@
 // Description: Comprehensive utility classes for spacing, sizing, display,
 // position, text, colors, borders, shadows, and more. Supports responsive
 // variants and light/dark/high-contrast themes.
-// Author: Farzad Asgari
+// Author: Farzad Asgari <https://github.com/farzadasgari>
 // Version: 1.1.1
 // ==========================================================================
+
 
 // --------------------------------------------------------------------------
 // Utility Configuration
@@ -43,6 +44,7 @@ $utilities: (
     "prefix": "ml",
     "values": s.$spacings
   ),
+
   // Spacing: Padding
   "padding": (
     "prefix": "p",
@@ -64,11 +66,13 @@ $utilities: (
     "prefix": "pl",
     "values": s.$spacings
   ),
+
   // Spacing: Gap
   "gap": (
     "prefix": "gap",
     "values": s.$spacings
   ),
+
   // Sizing: Width
   "width": (
     "prefix": "w",
@@ -84,6 +88,7 @@ $utilities: (
       "75": 75%
     )
   ),
+
   // Sizing: Height
   "height": (
     "prefix": "h",
@@ -99,6 +104,7 @@ $utilities: (
       "75": 75%
     )
   ),
+
   // Display
   "display": (
     "prefix": "d",
@@ -114,6 +120,7 @@ $utilities: (
       "table": table
     )
   ),
+
   // Position
   "position": (
     "prefix": "pos",
@@ -125,6 +132,7 @@ $utilities: (
       "sticky": sticky
     )
   ),
+
   // Text Alignment
   "text-align": (
     "prefix": "text",
@@ -135,16 +143,19 @@ $utilities: (
       "justify": justify
     )
   ),
+
   // Font Weight
   "font-weight": (
     "prefix": "text",
     "values": t.$font-weights
   ),
+
   // Font Size
   "font-size": (
     "prefix": "text",
     "values": t.$font-sizes
   ),
+
   // Line Height
   "line-height": (
     "prefix": "lh",
@@ -155,24 +166,28 @@ $utilities: (
       "loose": 2
     )
   ),
+
   // Text Color
   "color": (
     "prefix": "text",
     "values": map.keys(map.get(c.$themes, light)), // Use theme keys
     "theme": true
   ),
+
   // Background Color
   "background-color": (
     "prefix": "bg",
     "values": map.keys(map.get(c.$themes, light)),
     "theme": true
   ),
+
   // Border Color
   "border-color": (
     "prefix": "border",
     "values": map.keys(map.get(c.$themes, light)),
     "theme": true
   ),
+
   // Border Width
   "border-width": (
     "prefix": "border",
@@ -184,6 +199,7 @@ $utilities: (
       "4": 4px
     )
   ),
+
   // Border Style
   "border-style": (
     "prefix": "border",
@@ -194,6 +210,7 @@ $utilities: (
       "none": none
     )
   ),
+
   // Border Radius
   "border-radius": (
     "prefix": "rounded",
@@ -207,6 +224,7 @@ $utilities: (
       "full": 9999px
     )
   ),
+
   // Box Shadow
   "box-shadow": (
     "prefix": "shadow",
@@ -218,6 +236,7 @@ $utilities: (
       "xl": 0 20px 25px rgba(0, 0, 0, 0.15)
     )
   ),
+
   // Opacity
   "opacity": (
     "prefix": "opacity",
@@ -235,6 +254,7 @@ $utilities: (
       "100": 1
     )
   ),
+
   // Cursor
   "cursor": (
     "prefix": "cursor",
@@ -245,6 +265,7 @@ $utilities: (
       "not-allowed": not-allowed
     )
   ),
+
   // Z-index
   "z-index": (
     "prefix": "z",
@@ -258,6 +279,7 @@ $utilities: (
       "auto": auto
     )
   ),
+
   // Overflow
   "overflow": (
     "prefix": "overflow",
@@ -268,6 +290,7 @@ $utilities: (
       "scroll": scroll
     )
   ),
+
   // Visibility
   "visibility": (
     "prefix": "visibility",
@@ -278,6 +301,7 @@ $utilities: (
     )
   )
 );
+
 
 // --------------------------------------------------------------------------
 // Utility Generation
@@ -292,6 +316,7 @@ $utilities: (
   @include m.generate-utility($prop, $prefix, $values, $theme);
   @include m.generate-responsive-utility($prop, $prefix, $values, g.$breakpoints, $theme);
 }
+
 
 // --------------------------------------------------------------------------
 // Accessibility Utilities

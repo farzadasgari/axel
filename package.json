@@ -1,6 +1,6 @@
 {
   "name": "axel",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "A modern, vibrant CSS framework with bold theming, modular design, and accessibility focus. Built with fluid typography, dynamic utilitiesA modern, vibrant CSS framework with bold theming, modular design, and accessibility focus.🚀",
   "main": "dist/axel.css",
   "style": "dist/axel.css",

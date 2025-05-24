@@ -9,9 +9,10 @@
 // Description: General-purpose Flexbox utilities for the Axel CSS framework.
 // Provides classes for display, direction, wrapping, alignment, and sizing.
 // Integrates with spacing and grid for consistency and WCAG 2.1 accessibility.
-// Author: Farzad Asgari
-// Version: 1.0.0
+// Author: Farzad Asgari <https://github.com/farzadasgari>
+// Version: 1.1.1
 // ==========================================================================
+
 
 // --------------------------------------------------------------------------
 // Flexbox Display
@@ -25,6 +26,7 @@
 .flex-d-inline {
   display: inline-flex;
 }
+
 
 // --------------------------------------------------------------------------
 // Flex Direction
@@ -54,6 +56,7 @@ $flex-directions: (
   }
 }
 
+
 // --------------------------------------------------------------------------
 // Flex Wrap
 // Classes for controlling flex wrapping, with responsive variants.
@@ -80,6 +83,7 @@ $flex-wraps: (
     }
   }
 }
+
 
 // --------------------------------------------------------------------------
 // Justify Content
@@ -111,6 +115,7 @@ $justify-values: (
   }
 }
 
+
 // --------------------------------------------------------------------------
 // Align Items
 // Classes for align-items, using shared mixin from _mixins.scss.
@@ -139,6 +144,7 @@ $align-items-values: (
     }
   }
 }
+
 
 // --------------------------------------------------------------------------
 // Align Content
@@ -171,6 +177,7 @@ $align-content-values: (
   }
 }
 
+
 // --------------------------------------------------------------------------
 // Align Self
 // Classes for per-item alignment in flex containers.
@@ -200,6 +207,7 @@ $align-self-values: (
     }
   }
 }
+
 
 // --------------------------------------------------------------------------
 // Flex Grow and Shrink
@@ -231,6 +239,7 @@ $flex-grow-shrink: (0, 1, 2);
   }
 }
 
+
 // --------------------------------------------------------------------------
 // Flex Basis
 // Classes for setting flex-basis.
@@ -257,6 +266,7 @@ $flex-basis-values: (
   }
 }
 
+
 // --------------------------------------------------------------------------
 // Order
 // Classes for reordering flex items.
@@ -280,6 +290,7 @@ $flex-orders: (-1, 0, 1, 2, 3);
   }
 }
 
+
 // --------------------------------------------------------------------------
 // Gap
 // Classes for flex gap, using spacing tokens from _spacing.scss.
@@ -300,6 +311,7 @@ $flex-orders: (-1, 0, 1, 2, 3);
     }
   }
 }
+
 
 // --------------------------------------------------------------------------
 // Accessibility

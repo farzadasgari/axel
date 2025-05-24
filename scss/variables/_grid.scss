@@ -9,9 +9,10 @@
 // Supports 12-column layouts, fluid/fixed containers, offsets, and responsive
 // breakpoints. Integrates with spacing tokens for consistency and WCAG 2.1
 // accessibility. Designed to surpass Bootstrap with advanced features and DX.
-// Author: Farzad Asgari
-// Version: 1.0.0
+// Author: Farzad Asgari <https://github.com/farzadasgari>
+// Version: 1.1.1
 // ==========================================================================
+
 
 // --------------------------------------------------------------------------
 // Breakpoints
@@ -28,6 +29,7 @@ $breakpoints: (
   xxl: 1400px // Extra-extra-large (ultra-wide, ≥1400px)
 );
 
+
 // --------------------------------------------------------------------------
 // Container Widths
 // Maximum widths for fixed containers at each breakpoint.
@@ -42,6 +44,7 @@ $container-widths: (
   xxl: 1320px // Extra-extra-large screens
 );
 
+
 // --------------------------------------------------------------------------
 // Grid Columns
 // Number of columns for different grid configurations.
@@ -54,6 +57,7 @@ $grid-columns: (
   micro: 4     // For minimal layouts
 );
 
+
 // --------------------------------------------------------------------------
 // Grid Gutters
 // Reuses $grid-gutters from _spacing.scss for row/column gaps.
@@ -61,6 +65,7 @@ $grid-columns: (
 // Example usage: gap: map.get(s.$grid-gutters, default);
 // --------------------------------------------------------------------------
 $grid-gutter-widths: s.$grid-gutters;
+
 
 // --------------------------------------------------------------------------
 // Container Configuration
@@ -81,6 +86,7 @@ $container-config: (
   )
 );
 
+
 // --------------------------------------------------------------------------
 // CSS Custom Properties
 // Grid-related custom properties for runtime customization.
@@ -92,6 +98,7 @@ $container-config: (
   --grid-gutter-default: #{map.get(s.$grid-gutters, default)}; // 16px
   --container-padding-default: #{map.get(s.$container-paddings, md)}; // 24px
 }
+
 
 // --------------------------------------------------------------------------
 // Container Styles
@@ -119,6 +126,7 @@ $container-config: (
   box-sizing: border-box;
 }
 
+
 // --------------------------------------------------------------------------
 // Row Styles
 // Styles for rows, using Flexbox with responsive gutters.
@@ -131,6 +139,7 @@ $container-config: (
   margin-right: calc(map.get(s.$grid-gutters, default) / -2);
   gap: map.get(s.$grid-gutters, default);
 }
+
 
 // --------------------------------------------------------------------------
 // Column Styles
@@ -171,6 +180,7 @@ $container-config: (
   }
 }
 
+
 // --------------------------------------------------------------------------
 // Offset Styles
 // Applies margin-left offsets for column positioning.
@@ -193,6 +203,7 @@ $container-config: (
     }
   }
 }
+
 
 // --------------------------------------------------------------------------
 // Alignment Styles
@@ -229,6 +240,7 @@ $align-items-values: (
   }
 }
 
+
 // --------------------------------------------------------------------------
 // Auto-Fit Columns
 // Styles for auto-fit columns that grow/shrink dynamically.
@@ -242,6 +254,7 @@ $align-items-values: (
   padding-right: calc(map.get(s.$grid-gutters, default) / 2);
   box-sizing: border-box;
 }
+
 
 // --------------------------------------------------------------------------
 // Responsive Gutter Variations
@@ -261,6 +274,7 @@ $align-items-values: (
     }
   }
 }
+
 
 // --------------------------------------------------------------------------
 // Accessibility
