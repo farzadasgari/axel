@@ -1,13 +1,9 @@
+@use 'mixins/mixins';
 @use 'variables/colors';
-
+@use 'variables/theming';
 @use 'variables/typography';
-
 @use 'variables/spacing';
-
 @use 'variables/grid';
-
 @use 'variables/flex';
-
 @use 'variables/buttons';
-
 @use 'variables/utilities';

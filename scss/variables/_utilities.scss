@@ -9,11 +9,11 @@
 
 // ==========================================================================
 // Axel Framework - Utilities
-// Description: Comprehensive utility classes for spacing, display, position,
-// text, colors, borders, shadows, and more. Supports responsive variants and
-// light/dark themes. Integrates with colors, typography, spacing, and flex.
+// Description: Comprehensive utility classes for spacing, sizing, display,
+// position, text, colors, borders, shadows, and more. Supports responsive
+// variants and light/dark/high-contrast themes.
 // Author: Farzad Asgari
-// Version: 1.0.0
+// Version: 1.1.1
 // ==========================================================================
 
 // --------------------------------------------------------------------------
@@ -25,7 +25,7 @@ $utilities: (
   // Spacing: Margin
   "margin": (
     "prefix": "m",
-    "values": s.$spacings // 0: 0, 1: 4px, 2: 8px, 3: 16px, 4: 24px, 5: 32px, 6: 40px
+    "values": s.$spacings
   ),
   "margin-top": (
     "prefix": "mt",
@@ -69,6 +69,36 @@ $utilities: (
     "prefix": "gap",
     "values": s.$spacings
   ),
+  // Sizing: Width
+  "width": (
+    "prefix": "w",
+    "values": (
+      "auto": auto,
+      "full": 100%,
+      "screen": 100vw,
+      "min": min-content,
+      "max": max-content,
+      "0": 0,
+      "25": 25%,
+      "50": 50%,
+      "75": 75%
+    )
+  ),
+  // Sizing: Height
+  "height": (
+    "prefix": "h",
+    "values": (
+      "auto": auto,
+      "full": 100%,
+      "screen": 100vh,
+      "min": min-content,
+      "max": max-content,
+      "0": 0,
+      "25": 25%,
+      "50": 50%,
+      "75": 75%
+    )
+  ),
   // Display
   "display": (
     "prefix": "d",
@@ -80,7 +110,8 @@ $utilities: (
       "flex": flex,
       "inline-flex": inline-flex,
       "grid": grid,
-      "inline-grid": inline-grid
+      "inline-grid": inline-grid,
+      "table": table
     )
   ),
   // Position
@@ -107,12 +138,12 @@ $utilities: (
   // Font Weight
   "font-weight": (
     "prefix": "text",
-    "values": t.$font-weights // light: 300, regular: 400, medium: 500, bold: 700
+    "values": t.$font-weights
   ),
   // Font Size
   "font-size": (
     "prefix": "text",
-    "values": t.$font-sizes // xs: 12px, sm: 14px, base: 16px, lg: 18px, xl: 20px
+    "values": t.$font-sizes
   ),
   // Line Height
   "line-height": (
@@ -127,19 +158,19 @@ $utilities: (
   // Text Color
   "color": (
     "prefix": "text",
-    "values": c.$colors, // primary: #AF47D2, secondary: #00C4B4, etc.
-    "theme": true // Use custom properties for theme switching
+    "values": map.keys(map.get(c.$themes, light)), // Use theme keys
+    "theme": true
   ),
   // Background Color
   "background-color": (
     "prefix": "bg",
-    "values": c.$colors,
+    "values": map.keys(map.get(c.$themes, light)),
     "theme": true
   ),
   // Border Color
   "border-color": (
     "prefix": "border",
-    "values": c.$colors,
+    "values": map.keys(map.get(c.$themes, light)),
     "theme": true
   ),
   // Border Width
@@ -174,50 +205,6 @@ $utilities: (
       "4": 12px,
       "5": 16px,
       "full": 9999px
-    )
-  ),
-  "border-top-left-radius": (
-    "prefix": "rounded-tl",
-    "values": (
-      "0": 0,
-      "1": 2px,
-      "2": 4px,
-      "3": 8px,
-      "4": 12px,
-      "5": 16px
-    )
-  ),
-  "border-top-right-radius": (
-    "prefix": "rounded-tr",
-    "values": (
-      "0": 0,
-      "1": 2px,
-      "2": 4px,
-      "3": 8px,
-      "4": 12px,
-      "5": 16px
-    )
-  ),
-  "border-bottom-left-radius": (
-    "prefix": "rounded-bl",
-    "values": (
-      "0": 0,
-      "1": 2px,
-      "2": 4px,
-      "3": 8px,
-      "4": 12px,
-      "5": 16px
-    )
-  ),
-  "border-bottom-right-radius": (
-    "prefix": "rounded-br",
-    "values": (
-      "0": 0,
-      "1": 2px,
-      "2": 4px,
-      "3": 8px,
-      "4": 12px,
-      "5": 16px
     )
   ),
   // Box Shadow
@@ -270,56 +257,48 @@ $utilities: (
       "50": 50,
       "auto": auto
     )
+  ),
+  // Overflow
+  "overflow": (
+    "prefix": "overflow",
+    "values": (
+      "auto": auto,
+      "hidden": hidden,
+      "visible": visible,
+      "scroll": scroll
+    )
+  ),
+  // Visibility
+  "visibility": (
+    "prefix": "visibility",
+    "values": (
+      "visible": visible,
+      "hidden": hidden,
+      "collapse": collapse
+    )
   )
 );
 
-
 // --------------------------------------------------------------------------
 // Utility Generation
-// Generates utility classes for all properties and breakpoints.
-// Example usage: .p-1 { padding: 4px; } .md-p-1 { @media (min-width: 768px) { padding: 4px; } }
+// Generates utility classes for all properties and breakpoints using mixins.
+// Example usage: .p-1 { padding: 4px; }
 // --------------------------------------------------------------------------
 @each $prop, $map in $utilities {
   $prefix: map.get($map, "prefix");
   $values: map.get($map, "values");
   $theme: map.get($map, "theme", false);
 
-  // Base utilities
-  @each $key, $value in $values {
-    .#{$prefix}-#{$key} {
-      @if $theme {
-        #{$prop}: var(--color-#{$key});
-      } @else {
-        #{$prop}: $value;
-      }
-    }
-  }
-
-  // Responsive utilities
-  @each $bp-size, $bp-value in g.$breakpoints {
-    @if $bp-size != 'xs' {
-      @include m.media($bp-size, g.$breakpoints) {
-        @each $key, $value in $values {
-          .#{$bp-size}\:#{$prefix}-#{$key} {
-            @if $theme {
-              #{$prop}: var(--color-#{$key});
-            } @else {
-              #{$prop}: $value;
-            }
-          }
-        }
-      }
-    }
-  }
+  @include m.generate-utility($prop, $prefix, $values, $theme);
+  @include m.generate-responsive-utility($prop, $prefix, $values, g.$breakpoints, $theme);
 }
-
 
 // --------------------------------------------------------------------------
 // Accessibility Utilities
 // Ensures color utilities meet WCAG 2.1 contrast requirements.
-// Example usage: .text-primary { color: var(--color-primary); }
+// Example usage: .text-primary { color: var(--primary); }
 // --------------------------------------------------------------------------
-@each $color, $hex in c.$colors {
+@each $color in map.keys(map.get(c.$themes, light)) {
   .text-#{$color} {
     color: var(--#{$color});
   }
