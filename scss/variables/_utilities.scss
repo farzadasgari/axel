@@ -1,0 +1,16 @@
+@use 'sass:map';
+@use 'sass:math';
+@use 'colors' as c;
+@use 'typography' as t;
+@use 'spacing' as s;
+@use 'flex' as f;
+@use 'contrast';
+
+// ==========================================================================
+// Axel Framework - Utilities
+// Description: Comprehensive utility classes for spacing, display, position,
+// text, colors, borders, shadows, and more. Supports responsive variants and
+// light/dark themes. Integrates with colors, typography, spacing, and flex.
+// Author: Farzad Asgari
+// Version: 1.0.0
+// ==========================================================================
