@@ -159,3 +159,21 @@
     }
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Utility Generator Mixin
+// Generates utility classes for a given property and values.
+// Example usage: @include generate-utility('width', $width-values);
+// --------------------------------------------------------------------------
+@mixin generate-utility($prop, $prefix, $values, $theme: false) {
+  @each $key, $value in $values {
+    .#{$prefix}-#{$key} {
+      @if $theme {
+        #{$prop}: var(--color-#{$key});
+      } @else {
+        #{$prop}: $value;
+      }
+    }
+  }
+}
