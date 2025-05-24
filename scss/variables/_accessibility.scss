@@ -160,3 +160,12 @@
     }
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Accessibility Variables
+// Configuration for accessibility utilities.
+// --------------------------------------------------------------------------
+$focus-outline-width: 3px;
+$focus-outline-offset: 2px;
+$min-touch-target: s.$min-touch-target-size; // 44px
