@@ -126,3 +126,12 @@
     color: var(--text) !important;
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Buttons Touch Target
+// Ensures interactive buttons meet WCAG 2.1 44x44px touch target size.
+// --------------------------------------------------------------------------
+.btn {
+  @include m.touch-target;
+}
