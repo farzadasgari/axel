@@ -1,13 +1,12 @@
 @use "sass:map";
-//@use "../mixins/mixins" as m;
 
 // ==========================================================================
 // Axel Framework - Colors
 // Description: Color palette for the Axel CSS framework, supporting light, dark,
-// and high-contrast themes with accessible, vibrant hues. Uses CSS custom properties
-// for runtime theming and WCAG 2.1 compliance.
+// and high-contrast themes with accessible, vibrant hues. Themes are applied in
+// _theming.scss using CSS custom properties for runtime theming and WCAG 2.1 compliance.
 // Author: Farzad Asgari
-// Version: 1.1.0
+// Version: 1.1.1
 // ==========================================================================
 
 // --------------------------------------------------------------------------
@@ -26,8 +25,8 @@ $themes: (
     info: #0288D1,
     dark: #2E2E2E,
     light: #F5F5F5,
-    white: #FFFFFF,
-    black: #000000,
+    "white": #FFFFFF,
+    "black": #000000,
     background: #F5F5F5,
     text: #2E2E2E,
     accent: #FF4081
@@ -41,8 +40,8 @@ $themes: (
     info: #4FC3F7,
     dark: #212121,
     light: #424242,
-    white: #FFFFFF,
-    black: #000000,
+    "white": #FFFFFF,
+    "black": #000000,
     background: #212121,
     text: #F5F5F5,
     accent: #FF80AB
@@ -56,35 +55,13 @@ $themes: (
     info: #01579B,
     dark: #000000,
     light: #FFFFFF,
-    white: #FFFFFF,
-    black: #000000,
+    "white": #FFFFFF,
+    "black": #000000,
     background: #FFFFFF,
     text: #000000,
     accent: #D81B60
   )
 );
-
-
-// --------------------------------------------------------------------------
-// Default Colors
-// Sets the light theme as the default color palette for static SCSS usage.
-// Use CSS custom properties (--primary, --background) for runtime theming.
-// --------------------------------------------------------------------------
-$colors: map.get($themes, light);
-
-
-// --------------------------------------------------------------------------
-// CSS Custom Properties
-// Generates CSS custom properties for runtime theming (e.g., theme switching
-// via JavaScript or class-based theming). Applied to :root for global access.
-// Example usage: .theme-dark { --primary: #CE93D8; }
-// --------------------------------------------------------------------------
-:root {
-  @each $key, $value in $colors {
-    --#{$key}: #{$value};
-  }
-}
-
 
 // --------------------------------------------------------------------------
 // Color Variations
