@@ -135,3 +135,28 @@
 .btn {
   @include m.touch-target;
 }
+
+
+// --------------------------------------------------------------------------
+// ARIA Utilities
+// Classes for common ARIA attributes to enhance semantics.
+// Example usage: .aria-hidden { aria-hidden: "true"; }
+// --------------------------------------------------------------------------
+.aria-hidden {
+  aria-hidden: "true";
+}
+
+.aria-expanded {
+  &[aria-expanded="true"] {
+    &::after {
+      content: " (expanded)";
+      @extend .sr-only;
+    }
+  }
+  &[aria-expanded="false"] {
+    &::after {
+      content: " (collapsed)";
+      @extend .sr-only;
+    }
+  }
+}
