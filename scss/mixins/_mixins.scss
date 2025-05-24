@@ -1,19 +1,23 @@
 @use 'sass:map';
+@use '../variables/colors' as c;
+@use '../variables/spacing' as s;
+@use '../variables/typography' as t;
+@use '../variables/contrast';
 
 // ==========================================================================
 // Axel Framework - Mixins
-// Description: Shared mixins for the Axel CSS framework, providing reusable
-// utilities for grid, flex, and other systems. Integrates with spacing and grid.
+// Description: Centralized mixins for the Axel CSS framework, providing reusable
+// utilities for grid, flex, buttons, theming, and more. Integrates with spacing,
+// typography, and colors for consistency and WCAG 2.1 accessibility.
 // Author: Farzad Asgari
-// Version: 1.0.0
+// Version: 1.1.0
 // ==========================================================================
 
 // --------------------------------------------------------------------------
 // Media Mixins
 // Utility mixins for applying styles at specific breakpoints.
 // Supports min-width and max-width queries.
-// Requires $breakpoints map from calling context (e.g., grid or flex).
-// Example usage: @include media(md) { width: 50%; }
+// Example usage: @include media(md, $breakpoints) { width: 50%; }
 // --------------------------------------------------------------------------
 @mixin media($breakpoint, $breakpoints) {
   $value: map.get($breakpoints, $breakpoint);
@@ -31,7 +35,7 @@
 
 // --------------------------------------------------------------------------
 // Alignment Mixins
-// Mixins for Flexbox justify-content and align-items properties.
+// Mixins for Flexbox and Grid alignment properties.
 // Used by grid and flex systems to ensure consistency.
 // Example usage: @include justify-content(center);
 // --------------------------------------------------------------------------
@@ -41,4 +45,12 @@
 
 @mixin align-items($value) {
   align-items: $value;
+}
+
+@mixin align-content($value) {
+  align-content: $value;
+}
+
+@mixin align-self($value) {
+  align-self: $value;
 }
