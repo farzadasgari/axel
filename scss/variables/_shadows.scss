@@ -1,5 +1,6 @@
 @use 'sass:map';
 @use '../mixins/mixins' as m;
+@use 'grid' as g;
 
 // ==========================================================================
 // Axel Framework - Shadows
@@ -22,3 +23,22 @@ $shadows: (
   "lg": 0 10px 15px rgba(0, 0, 0, 0.1),
   "xl": 0 20px 25px rgba(0, 0, 0, 0.15)
 );
+
+
+// --------------------------------------------------------------------------
+// Shadow Utilities
+// Generates shadow utility classes with responsive variants.
+// --------------------------------------------------------------------------
+@include m.generate-utility("box-shadow", "shadow", $shadows);
+
+@each $bp-size, $bp-value in g.$breakpoints {
+  @if $bp-size != 'xs' {
+    @include m.media($bp-size, g.$breakpoints) {
+      @each $key, $value in $shadows {
+        .#{$bp-size}\:shadow-#{$key} {
+          box-shadow: $value;
+        }
+      }
+    }
+  }
+}

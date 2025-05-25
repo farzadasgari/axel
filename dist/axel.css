@@ -8865,4 +8865,110 @@
   content: " (collapsed)";
 }
 
+.shadow-none {
+  box-shadow: none;
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 576px) {
+  .sm\:shadow-none {
+    box-shadow: none;
+  }
+  .sm\:shadow-sm {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  .sm\:shadow-md {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .sm\:shadow-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  .sm\:shadow-xl {
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+  }
+}
+@media (min-width: 768px) {
+  .md\:shadow-none {
+    box-shadow: none;
+  }
+  .md\:shadow-sm {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  .md\:shadow-md {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .md\:shadow-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  .md\:shadow-xl {
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+  }
+}
+@media (min-width: 992px) {
+  .lg\:shadow-none {
+    box-shadow: none;
+  }
+  .lg\:shadow-sm {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  .lg\:shadow-md {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .lg\:shadow-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  .lg\:shadow-xl {
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+  }
+}
+@media (min-width: 1200px) {
+  .xl\:shadow-none {
+    box-shadow: none;
+  }
+  .xl\:shadow-sm {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  .xl\:shadow-md {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .xl\:shadow-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  .xl\:shadow-xl {
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+  }
+}
+@media (min-width: 1400px) {
+  .xxl\:shadow-none {
+    box-shadow: none;
+  }
+  .xxl\:shadow-sm {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  .xxl\:shadow-md {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .xxl\:shadow-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  .xxl\:shadow-xl {
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+  }
+}
+
 /*# sourceMappingURL=axel.css.map */
