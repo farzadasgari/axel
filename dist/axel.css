@@ -10279,5 +10279,9 @@ select {
     --accent: #FF80AB;
   }
 }
+:root {
+  font-family: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+  font-size: clamp(14px, 2vw, 16px);
+}
 
 /*# sourceMappingURL=axel.css.map */

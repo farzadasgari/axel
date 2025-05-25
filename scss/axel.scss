@@ -14,6 +14,8 @@
 @use 'variables/z-index';
 @use 'variables/forms';
 @use 'mixins/mixins' as m;
+@use 'variables/base';
+@use 'sass:map';
 
 // ==========================================================================
 // Axel Framework - Core
@@ -47,4 +49,9 @@
   :root:not([data-theme]) {
     @include m.theme(dark, colors.$themes);
   }
+}
+
+:root {
+  font-family: map.get(typography.$font-families, body);
+  font-size: map.get(typography.$font-sizes, base);
 }
