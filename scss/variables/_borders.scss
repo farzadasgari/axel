@@ -10,3 +10,33 @@
 // Author: Farzad Asgari <https://github.com/farzadasgari>
 // Version: 1.1.1
 // ==========================================================================
+
+
+// --------------------------------------------------------------------------
+// Border Configuration
+// Defines border properties for utility classes.
+// Example usage: .border-2 { border-width: 2px; }
+//                .border-primary { border-color: var(--primary); }
+// --------------------------------------------------------------------------
+$border-widths: (
+  "0": 0,
+  "1": 1px,
+  "2": 2px,
+  "4": 4px,
+  "8": 8px
+);
+
+$border-styles: (
+  "solid": solid,
+  "dashed": dashed,
+  "dotted": dotted,
+  "none": none
+);
+
+$border-radii: (
+  "none": 0,
+  "sm": 4px,
+  "md": 8px,
+  "lg": 16px,
+  "full": 9999px
+);
