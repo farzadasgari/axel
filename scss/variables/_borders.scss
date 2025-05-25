@@ -40,3 +40,67 @@ $border-radii: (
   "lg": 16px,
   "full": 9999px
 );
+
+
+// --------------------------------------------------------------------------
+// Border Utilities
+// Generates border utility classes with responsive variants.
+// --------------------------------------------------------------------------
+
+// Border Width
+@include m.generate-utility("border-width", "border", $border-widths);
+@each $bp-size, $bp-value in g.$breakpoints {
+  @if $bp-size != 'xs' {
+    @include m.media($bp-size, g.$breakpoints) {
+      @each $key, $value in $border-widths {
+        .#{$bp-size}\:border-#{$key} {
+          border-width: $value;
+        }
+      }
+    }
+  }
+}
+
+// Border Style
+@include m.generate-utility("border-style", "border", $border-styles);
+@each $bp-size, $bp-value in g.$breakpoints {
+  @if $bp-size != 'xs' {
+    @include m.media($bp-size, g.$breakpoints) {
+      @each $key, $value in $border-styles {
+        .#{$bp-size}\:border-#{$key} {
+          border-style: $value;
+        }
+      }
+    }
+  }
+}
+
+// Border Color
+@each $color in map.keys(map.get(c.$themes, light)) {
+  .border-#{$color} {
+    border-color: var(--#{$color});
+  }
+  @each $bp-size, $bp-value in g.$breakpoints {
+    @if $bp-size != 'xs' {
+      @include m.media($bp-size, g.$breakpoints) {
+        .#{$bp-size}\:border-#{$color} {
+          border-color: var(--#{$color});
+        }
+      }
+    }
+  }
+}
+
+// Border Radius
+@include m.generate-utility("border-radius", "rounded", $border-radii);
+@each $bp-size, $bp-value in g.$breakpoints {
+  @if $bp-size != 'xs' {
+    @include m.media($bp-size, g.$breakpoints) {
+      @each $key, $value in $border-radii {
+        .#{$bp-size}\:rounded-#{$key} {
+          border-radius: $value;
+        }
+      }
+    }
+  }
+}
