@@ -16,3 +16,14 @@
 // Author: Farzad Asgari <https://github.com/farzadasgari>
 // Version: 1.1.1
 // ==========================================================================
+
+
+// --------------------------------------------------------------------------
+// Form Variables
+// Core configuration for form elements, transitions, and accessibility.
+// --------------------------------------------------------------------------
+$form-transition: all 0.2s ease-in-out;
+$form-border-width: 2px;
+$form-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$form-min-touch-target: s.$min-touch-target-size; // 44px
+$form-contrast-ratio: 4.5;
