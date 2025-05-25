@@ -10,3 +10,18 @@
 // Author: Farzad Asgari <https://github.com/farzadasgari>
 // Version: 1.1.1
 // ==========================================================================
+
+
+// --------------------------------------------------------------------------
+// Focus Management
+// Utility for accessible focus indicators.
+// Example usage: .focus-ring { outline: 3px solid var(--primary); }
+// --------------------------------------------------------------------------
+.focus-ring {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
