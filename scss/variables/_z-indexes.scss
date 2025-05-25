@@ -1,5 +1,6 @@
 @use 'sass:map';
 @use '../mixins/mixins' as m;
+@use 'grid' as g;
 
 // ==========================================================================
 // Axel Framework - Z-Index
@@ -24,3 +25,21 @@ $z-indices: (
   "50": 50,
   "auto": auto
 );
+
+
+// --------------------------------------------------------------------------
+// Z-Index Utilities
+// Generates z-index utility classes with responsive variants.
+// --------------------------------------------------------------------------
+@include m.generate-utility("z-index", "z", $z-indices);
+@each $bp-size, $bp-value in g.$breakpoints {
+  @if $bp-size != 'xs' {
+    @include m.media($bp-size, g.$breakpoints) {
+      @each $key, $value in $z-indices {
+        .#{$bp-size}\:z-#{$key} {
+          z-index: $value;
+        }
+      }
+    }
+  }
+}
