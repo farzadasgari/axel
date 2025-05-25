@@ -14,10 +14,10 @@
 
 // --------------------------------------------------------------------------
 // Focus Management
-// Utility for accessible focus indicators.
-// Example usage: .focus-ring { outline: 3px solid var(--primary); }
+// Placeholder for accessible focus indicators.
+// Example usage: @extend %focus-ring;
 // --------------------------------------------------------------------------
-.focus-ring {
+%focus-ring {
   outline: 3px solid var(--primary);
   outline-offset: 2px;
 
@@ -26,13 +26,16 @@
   }
 }
 
+.focus-ring {
+  @extend %focus-ring;
+}
 
 // --------------------------------------------------------------------------
 // Screen Reader Utilities
 // Classes for visually hidden but accessible content.
 // Example usage: .sr-only { position: absolute; clip: rect(0, 0, 0, 0); }
 // --------------------------------------------------------------------------
-.sr-only {
+%sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -43,8 +46,12 @@
   border: 0;
 }
 
+.sr-only {
+  @extend %sr-only;
+}
+
 .sr-only-focusable {
-  @extend .sr-only;
+  @extend %sr-only;
 
   &:focus,
   &:active {

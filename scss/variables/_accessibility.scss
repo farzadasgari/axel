@@ -3,12 +3,13 @@
 @use 'typography' as t;
 @use 'colors' as c;
 @use '../mixins/mixins' as m;
+@use 'base' as b;
 
 // ==========================================================================
 // Axel Framework - Accessibility
 // Description: Accessibility utilities and mixins for the Axel CSS framework.
-// Provides focus management, reduced motion support, screen reader utilities,
-// and high-contrast enhancements. Builds on WCAG 2.1 compliance from _contrast.scss.
+// Provides skip links, reduced motion support, high-contrast enhancements, and ARIA utilities.
+// Builds on WCAG 2.1 compliance from _contrast.scss and base styles from _base.scss.
 // Author: Farzad Asgari <https://github.com/farzadasgari>
 // Version: 1.1.1
 // ==========================================================================
@@ -101,14 +102,13 @@
   &[aria-expanded="true"] {
     &::after {
       content: " (expanded)";
-      @extend .sr-only;
+      @extend %sr-only;
     }
   }
-
   &[aria-expanded="false"] {
     &::after {
       content: " (collapsed)";
-      @extend .sr-only;
+      @extend %sr-only;
     }
   }
 }
