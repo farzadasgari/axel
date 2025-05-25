@@ -1,14 +1,49 @@
-@use 'mixins/mixins';
 @use 'variables/colors';
-@use 'variables/theming';
 @use 'variables/typography';
 @use 'variables/spacing';
-@use 'variables/grid';
+@use 'variables/contrast';
+@use 'variables/theming';
 @use 'variables/flex';
+@use 'variables/grid';
 @use 'variables/buttons';
-@use 'variables/utilities';
 @use 'variables/accessibility';
+@use 'variables/utilities';
 @use 'variables/shadows';
 @use 'variables/borders';
 @use 'variables/transitions';
-@use 'variables/z-indexes';
+@use 'variables/z-index';
+@use 'mixins/mixins' as m;
+
+// ==========================================================================
+// Axel Framework - Core
+// Description: Main entry point for the Axel CSS framework.
+// Imports all partials and applies global styles.
+// Author: Farzad Asgari <https://github.com/farzadasgari>
+// Version: 1.1.1
+// ==========================================================================
+
+// Global Reset
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Apply Theming
+:root {
+  @include m.theme(light, colors.$themes);
+}
+
+[data-theme="dark"] {
+  @include m.theme(dark, colors.$themes);
+}
+
+[data-theme="high-contrast"] {
+  @include m.theme(high-contrast, colors.$themes);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    @include m.theme(dark, colors.$themes);
+  }
+}
