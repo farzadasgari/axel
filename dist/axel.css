@@ -10180,6 +10180,15 @@ select {
   margin-left: 0.25rem;
 }
 
+.form-group {
+  margin-bottom: 1.5rem;
+}
+.form-group .form-label + .input,
+.form-group .form-label + select,
+.form-group .form-label + textarea {
+  margin-top: 0.25rem;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

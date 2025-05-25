@@ -236,3 +236,18 @@ select {
     margin-left: 0.25rem;
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Form Groups
+// Containers for form elements with consistent spacing.
+// --------------------------------------------------------------------------
+.form-group {
+  margin-bottom: map.get(s.$spacings, 4);
+
+  .form-label + .input,
+  .form-label + select,
+  .form-label + textarea {
+    margin-top: map.get(s.$spacings, 1);
+  }
+}
