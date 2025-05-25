@@ -1,0 +1,18 @@
+@use 'sass:map';
+@use 'sass:color';
+@use 'colors' as c;
+@use 'typography' as t;
+@use 'spacing' as s;
+@use 'grid' as g;
+@use '../mixins/mixins' as m;
+@use 'contrast';
+@use 'borders';
+@use 'transitions';
+
+// ==========================================================================
+// Axel Framework - Forms
+// Description: Form component styles for inputs, selects, textareas, labels,
+// and validation states. Supports variants, sizes, themes, and WCAG 2.1 accessibility.
+// Author: Farzad Asgari <https://github.com/farzadasgari>
+// Version: 1.1.1
+// ==========================================================================
