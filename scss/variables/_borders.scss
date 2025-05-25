@@ -1,0 +1,12 @@
+@use 'sass:map';
+@use '../mixins/mixins' as m;
+@use 'colors' as c;
+
+// ==========================================================================
+// Axel Framework - Borders
+// Description: Utility classes for border properties in the Axel CSS framework.
+// Supports border-width, border-style, border-color, and border-radius with
+// responsive variants. Integrates with theme colors for border-color.
+// Author: Farzad Asgari <https://github.com/farzadasgari>
+// Version: 1.1.1
+// ==========================================================================
