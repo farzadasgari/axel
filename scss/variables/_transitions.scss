@@ -8,3 +8,31 @@
 // Author: Farzad Asgari <https://github.com/farzadasgari>
 // Version: 1.1.1
 // ==========================================================================
+
+
+// --------------------------------------------------------------------------
+// Transition Configuration
+// Defines transition properties for utility classes.
+// Example usage: .transition-all { transition: all 0.3s ease; }
+// --------------------------------------------------------------------------
+$transition-properties: (
+  "all": all,
+  "colors": (color, background-color, border-color),
+  "opacity": opacity,
+  "transform": transform
+);
+
+$transition-durations: (
+  "100": 100ms,
+  "200": 200ms,
+  "300": 300ms,
+  "500": 500ms,
+  "700": 700ms
+);
+
+$transition-easings: (
+  "ease": ease,
+  "ease-in": ease-in,
+  "ease-out": ease-out,
+  "ease-in-out": ease-in-out
+);
