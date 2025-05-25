@@ -15,19 +15,10 @@
 
 
 // --------------------------------------------------------------------------
-// Focus Management
-// Utilities for accessible focus indicators and skip links.
-// Example usage: .focus-ring { outline: 3px solid var(--primary); }
+// Skip Links
+// Utility for accessible skip-to-content links.
+// Example usage: .skip-link { position: absolute; }
 // --------------------------------------------------------------------------
-.focus-ring {
-  outline: 3px solid var(--primary);
-  outline-offset: 2px;
-
-  &:focus:not(:focus-visible) {
-    outline: none;
-  }
-}
-
 .skip-link {
   position: absolute;
   top: -9999px;
@@ -76,37 +67,6 @@
 
 
 // --------------------------------------------------------------------------
-// Screen Reader Utilities
-// Classes for visually hidden but accessible content.
-// Example usage: .sr-only { position: absolute; clip: rect(0, 0, 0, 0); }
-// --------------------------------------------------------------------------
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-.sr-only-focusable {
-  @extend .sr-only;
-
-  &:focus,
-  &:active {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
-  }
-}
-
-
-// --------------------------------------------------------------------------
 // High-Contrast Utilities
 // Forces high-contrast styles for text and backgrounds.
 // Example usage: .high-contrast-text { color: var(--text); }
@@ -144,6 +104,7 @@
       @extend .sr-only;
     }
   }
+
   &[aria-expanded="false"] {
     &::after {
       content: " (collapsed)";
