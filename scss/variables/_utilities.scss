@@ -9,9 +9,8 @@
 
 // ==========================================================================
 // Axel Framework - Utilities
-// Description: Comprehensive utility classes for spacing, sizing, display,
-// position, text, colors, borders, shadows, and more. Supports responsive
-// variants and light/dark/high-contrast themes.
+// Description: Core utility classes for spacing, sizing, display, position,
+// text, colors, and more. Supports responsive variants and light/dark/high-contrast
 // Author: Farzad Asgari <https://github.com/farzadasgari>
 // Version: 1.1.1
 // ==========================================================================
@@ -170,7 +169,7 @@ $utilities: (
   // Text Color
   "color": (
     "prefix": "text",
-    "values": map.keys(map.get(c.$themes, light)), // Use theme keys
+    "values": map.keys(map.get(c.$themes, light)),
     "theme": true
   ),
 
@@ -179,62 +178,6 @@ $utilities: (
     "prefix": "bg",
     "values": map.keys(map.get(c.$themes, light)),
     "theme": true
-  ),
-
-  // Border Color
-  "border-color": (
-    "prefix": "border",
-    "values": map.keys(map.get(c.$themes, light)),
-    "theme": true
-  ),
-
-  // Border Width
-  "border-width": (
-    "prefix": "border",
-    "values": (
-      "0": 0,
-      "1": 1px,
-      "2": 2px,
-      "3": 3px,
-      "4": 4px
-    )
-  ),
-
-  // Border Style
-  "border-style": (
-    "prefix": "border",
-    "values": (
-      "solid": solid,
-      "dashed": dashed,
-      "dotted": dotted,
-      "none": none
-    )
-  ),
-
-  // Border Radius
-  "border-radius": (
-    "prefix": "rounded",
-    "values": (
-      "0": 0,
-      "1": 2px,
-      "2": 4px,
-      "3": 8px,
-      "4": 12px,
-      "5": 16px,
-      "full": 9999px
-    )
-  ),
-
-  // Box Shadow
-  "box-shadow": (
-    "prefix": "shadow",
-    "values": (
-      "none": none,
-      "sm": 0 1px 2px rgba(0, 0, 0, 0.05),
-      "md": 0 4px 6px rgba(0, 0, 0, 0.1),
-      "lg": 0 10px 15px rgba(0, 0, 0, 0.1),
-      "xl": 0 20px 25px rgba(0, 0, 0, 0.15)
-    )
   ),
 
   // Opacity
@@ -263,20 +206,6 @@ $utilities: (
       "pointer": pointer,
       "default": default,
       "not-allowed": not-allowed
-    )
-  ),
-
-  // Z-index
-  "z-index": (
-    "prefix": "z",
-    "values": (
-      "0": 0,
-      "10": 10,
-      "20": 20,
-      "30": 30,
-      "40": 40,
-      "50": 50,
-      "auto": auto
     )
   ),
 
