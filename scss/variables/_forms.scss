@@ -272,3 +272,10 @@ select {
   opacity: map.get(c.$color-variations, disabled);
   pointer-events: none;
 }
+
+
+// --------------------------------------------------------------------------
+// Accessibility
+// Ensures forms meet WCAG 2.1 requirements for contrast and touch targets.
+// --------------------------------------------------------------------------
+$min-form-touch-target: s.$min-touch-target-size;
