@@ -1,5 +1,6 @@
 @use 'sass:map';
 @use '../mixins/mixins' as m;
+@use 'grid' as g;
 
 // ==========================================================================
 // Axel Framework - Transitions
@@ -36,3 +37,51 @@ $transition-easings: (
   "ease-out": ease-out,
   "ease-in-out": ease-in-out
 );
+
+
+// --------------------------------------------------------------------------
+// Transition Utilities
+// Generates transition utility classes with responsive variants.
+// --------------------------------------------------------------------------
+
+// Transition Property
+@include m.generate-utility("transition-property", "transition", $transition-properties);
+@each $bp-size, $bp-value in g.$breakpoints {
+  @if $bp-size != 'xs' {
+    @include m.media($bp-size, g.$breakpoints) {
+      @each $key, $value in $transition-properties {
+        .#{$bp-size}\:transition-#{$key} {
+          transition-property: $value;
+        }
+      }
+    }
+  }
+}
+
+// Transition Duration
+@include m.generate-utility("transition-duration", "duration", $transition-durations);
+@each $bp-size, $bp-value in g.$breakpoints {
+  @if $bp-size != 'xs' {
+    @include m.media($bp-size, g.$breakpoints) {
+      @each $key, $value in $transition-durations {
+        .#{$bp-size}\:duration-#{$key} {
+          transition-duration: $value;
+        }
+      }
+    }
+  }
+}
+
+// Transition Timing Function
+@include m.generate-utility("transition-timing-function", "ease", $transition-easings);
+@each $bp-size, $bp-value in g.$breakpoints {
+  @if $bp-size != 'xs' {
+    @include m.media($bp-size, g.$breakpoints) {
+      @each $key, $value in $transition-easings {
+        .#{$bp-size}\:ease-#{$key} {
+          transition-timing-function: $value;
+        }
+      }
+    }
+  }
+}

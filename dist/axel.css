@@ -9643,5 +9643,282 @@
     border-radius: 9999px;
   }
 }
+.transition-all {
+  transition-property: all;
+}
+
+.transition-colors {
+  transition-property: color, background-color, border-color;
+}
+
+.transition-opacity {
+  transition-property: opacity;
+}
+
+.transition-transform {
+  transition-property: transform;
+}
+
+@media (min-width: 576px) {
+  .sm\:transition-all {
+    transition-property: all;
+  }
+  .sm\:transition-colors {
+    transition-property: color, background-color, border-color;
+  }
+  .sm\:transition-opacity {
+    transition-property: opacity;
+  }
+  .sm\:transition-transform {
+    transition-property: transform;
+  }
+}
+@media (min-width: 768px) {
+  .md\:transition-all {
+    transition-property: all;
+  }
+  .md\:transition-colors {
+    transition-property: color, background-color, border-color;
+  }
+  .md\:transition-opacity {
+    transition-property: opacity;
+  }
+  .md\:transition-transform {
+    transition-property: transform;
+  }
+}
+@media (min-width: 992px) {
+  .lg\:transition-all {
+    transition-property: all;
+  }
+  .lg\:transition-colors {
+    transition-property: color, background-color, border-color;
+  }
+  .lg\:transition-opacity {
+    transition-property: opacity;
+  }
+  .lg\:transition-transform {
+    transition-property: transform;
+  }
+}
+@media (min-width: 1200px) {
+  .xl\:transition-all {
+    transition-property: all;
+  }
+  .xl\:transition-colors {
+    transition-property: color, background-color, border-color;
+  }
+  .xl\:transition-opacity {
+    transition-property: opacity;
+  }
+  .xl\:transition-transform {
+    transition-property: transform;
+  }
+}
+@media (min-width: 1400px) {
+  .xxl\:transition-all {
+    transition-property: all;
+  }
+  .xxl\:transition-colors {
+    transition-property: color, background-color, border-color;
+  }
+  .xxl\:transition-opacity {
+    transition-property: opacity;
+  }
+  .xxl\:transition-transform {
+    transition-property: transform;
+  }
+}
+.duration-100 {
+  transition-duration: 100ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
+.duration-700 {
+  transition-duration: 700ms;
+}
+
+@media (min-width: 576px) {
+  .sm\:duration-100 {
+    transition-duration: 100ms;
+  }
+  .sm\:duration-200 {
+    transition-duration: 200ms;
+  }
+  .sm\:duration-300 {
+    transition-duration: 300ms;
+  }
+  .sm\:duration-500 {
+    transition-duration: 500ms;
+  }
+  .sm\:duration-700 {
+    transition-duration: 700ms;
+  }
+}
+@media (min-width: 768px) {
+  .md\:duration-100 {
+    transition-duration: 100ms;
+  }
+  .md\:duration-200 {
+    transition-duration: 200ms;
+  }
+  .md\:duration-300 {
+    transition-duration: 300ms;
+  }
+  .md\:duration-500 {
+    transition-duration: 500ms;
+  }
+  .md\:duration-700 {
+    transition-duration: 700ms;
+  }
+}
+@media (min-width: 992px) {
+  .lg\:duration-100 {
+    transition-duration: 100ms;
+  }
+  .lg\:duration-200 {
+    transition-duration: 200ms;
+  }
+  .lg\:duration-300 {
+    transition-duration: 300ms;
+  }
+  .lg\:duration-500 {
+    transition-duration: 500ms;
+  }
+  .lg\:duration-700 {
+    transition-duration: 700ms;
+  }
+}
+@media (min-width: 1200px) {
+  .xl\:duration-100 {
+    transition-duration: 100ms;
+  }
+  .xl\:duration-200 {
+    transition-duration: 200ms;
+  }
+  .xl\:duration-300 {
+    transition-duration: 300ms;
+  }
+  .xl\:duration-500 {
+    transition-duration: 500ms;
+  }
+  .xl\:duration-700 {
+    transition-duration: 700ms;
+  }
+}
+@media (min-width: 1400px) {
+  .xxl\:duration-100 {
+    transition-duration: 100ms;
+  }
+  .xxl\:duration-200 {
+    transition-duration: 200ms;
+  }
+  .xxl\:duration-300 {
+    transition-duration: 300ms;
+  }
+  .xxl\:duration-500 {
+    transition-duration: 500ms;
+  }
+  .xxl\:duration-700 {
+    transition-duration: 700ms;
+  }
+}
+.ease-ease {
+  transition-timing-function: ease;
+}
+
+.ease-ease-in {
+  transition-timing-function: ease-in;
+}
+
+.ease-ease-out {
+  transition-timing-function: ease-out;
+}
+
+.ease-ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+
+@media (min-width: 576px) {
+  .sm\:ease-ease {
+    transition-timing-function: ease;
+  }
+  .sm\:ease-ease-in {
+    transition-timing-function: ease-in;
+  }
+  .sm\:ease-ease-out {
+    transition-timing-function: ease-out;
+  }
+  .sm\:ease-ease-in-out {
+    transition-timing-function: ease-in-out;
+  }
+}
+@media (min-width: 768px) {
+  .md\:ease-ease {
+    transition-timing-function: ease;
+  }
+  .md\:ease-ease-in {
+    transition-timing-function: ease-in;
+  }
+  .md\:ease-ease-out {
+    transition-timing-function: ease-out;
+  }
+  .md\:ease-ease-in-out {
+    transition-timing-function: ease-in-out;
+  }
+}
+@media (min-width: 992px) {
+  .lg\:ease-ease {
+    transition-timing-function: ease;
+  }
+  .lg\:ease-ease-in {
+    transition-timing-function: ease-in;
+  }
+  .lg\:ease-ease-out {
+    transition-timing-function: ease-out;
+  }
+  .lg\:ease-ease-in-out {
+    transition-timing-function: ease-in-out;
+  }
+}
+@media (min-width: 1200px) {
+  .xl\:ease-ease {
+    transition-timing-function: ease;
+  }
+  .xl\:ease-ease-in {
+    transition-timing-function: ease-in;
+  }
+  .xl\:ease-ease-out {
+    transition-timing-function: ease-out;
+  }
+  .xl\:ease-ease-in-out {
+    transition-timing-function: ease-in-out;
+  }
+}
+@media (min-width: 1400px) {
+  .xxl\:ease-ease {
+    transition-timing-function: ease;
+  }
+  .xxl\:ease-ease-in {
+    transition-timing-function: ease-in;
+  }
+  .xxl\:ease-ease-out {
+    transition-timing-function: ease-out;
+  }
+  .xxl\:ease-ease-in-out {
+    transition-timing-function: ease-in-out;
+  }
+}
 
 /*# sourceMappingURL=axel.css.map */
