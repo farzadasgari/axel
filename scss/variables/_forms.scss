@@ -27,3 +27,41 @@ $form-border-width: 2px;
 $form-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 $form-min-touch-target: s.$min-touch-target-size; // 44px
 $form-contrast-ratio: 4.5;
+
+
+// --------------------------------------------------------------------------
+// Form Sizes
+// Defines padding, font-size, and border-radius for form elements.
+// --------------------------------------------------------------------------
+$form-sizes: (
+  xs: (
+    padding: map.get(s.$spacings, 1) map.get(s.$spacings, 2),
+    font-size: map.get(t.$font-sizes, xs),
+    border-radius: 4px,
+    min-height: $form-min-touch-target
+  ),
+  sm: (
+    padding: map.get(s.$spacings, 2) map.get(s.$spacings, 3),
+    font-size: map.get(t.$font-sizes, sm),
+    border-radius: 6px,
+    min-height: $form-min-touch-target
+  ),
+  md: (
+    padding: map.get(s.$spacings, 3) map.get(s.$spacings, 4),
+    font-size: map.get(t.$font-sizes, base),
+    border-radius: 8px,
+    min-height: $form-min-touch-target
+  ),
+  lg: (
+    padding: map.get(s.$spacings, 4) map.get(s.$spacings, 5),
+    font-size: map.get(t.$font-sizes, lg),
+    border-radius: 10px,
+    min-height: 48px
+  ),
+  xl: (
+    padding: map.get(s.$spacings, 5) map.get(s.$spacings, 6),
+    font-size: map.get(t.$font-sizes, xl),
+    border-radius: 12px,
+    min-height: 52px
+  )
+);
