@@ -10189,6 +10189,21 @@ select {
   margin-top: 0.25rem;
 }
 
+.form-inline {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.form-inline .form-label {
+  margin-bottom: 0;
+  margin-right: 0.5rem;
+}
+
+.form-disabled {
+  opacity: 0.65;
+  pointer-events: none;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

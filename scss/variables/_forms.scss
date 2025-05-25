@@ -251,3 +251,24 @@ select {
     margin-top: map.get(s.$spacings, 1);
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Form Utilities
+// Additional styles for inline forms and disabled states.
+// --------------------------------------------------------------------------
+.form-inline {
+  display: flex;
+  gap: map.get(s.$spacings, 3);
+  align-items: center;
+
+  .form-label {
+    margin-bottom: 0;
+    margin-right: map.get(s.$spacings, 2);
+  }
+}
+
+.form-disabled {
+  opacity: map.get(c.$color-variations, disabled);
+  pointer-events: none;
+}
