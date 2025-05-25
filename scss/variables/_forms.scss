@@ -129,3 +129,41 @@ select {
   background-size: 1rem;
   padding-right: map.get(s.$spacings, 5);
 }
+
+
+// --------------------------------------------------------------------------
+// Form Variants
+// Generates variant styles for form elements (solid, outline, etc.).
+// --------------------------------------------------------------------------
+@each $color, $hex in map.get(c.$themes, light) {
+  .input-#{$color} {
+    border-color: var(--#{$color});
+
+    &:focus {
+      border-color: var(--#{$color});
+      box-shadow: 0 0 0 3px rgba(var(--#{$color}-rgb), 0.2);
+    }
+  }
+
+  .input-outline-#{$color} {
+    background-color: transparent;
+    border-color: var(--#{$color});
+    color: var(--#{$color});
+
+    &:focus {
+      border-color: var(--#{$color});
+      box-shadow: 0 0 0 3px rgba(var(--#{$color}-rgb), 0.2);
+    }
+  }
+
+  .input-soft-#{$color} {
+    background-color: rgba(var(--#{$color}-rgb), 0.15);
+    border-color: transparent;
+    color: var(--#{$color});
+
+    &:focus {
+      border-color: var(--#{$color});
+      box-shadow: 0 0 0 3px rgba(var(--#{$color}-rgb), 0.2);
+    }
+  }
+}

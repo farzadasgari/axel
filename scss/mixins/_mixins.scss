@@ -230,7 +230,7 @@
 @mixin accessible-component {
   // Focus styles
   &:focus-visible {
-    @extend .focus-ring;
+    @extend .focus-ring !optional;
   }
 
   // Touch target
