@@ -10165,6 +10165,21 @@ select {
   background-size: 1rem;
 }
 
+.form-label {
+  display: block;
+  font-family: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+  font-weight: 500;
+  font-size: clamp(14px, 2vw, 16px);
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+.form-label.required::after {
+  content: "*";
+  color: var(--error);
+  margin-left: 0.25rem;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

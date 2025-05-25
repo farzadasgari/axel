@@ -215,3 +215,24 @@ select {
   background-position: right 0.75rem center;
   background-size: 1rem;
 }
+
+
+// --------------------------------------------------------------------------
+// Form Labels
+// Styles for form labels, including required indicators.
+// --------------------------------------------------------------------------
+.form-label {
+  display: block;
+  font-family: map.get(t.$font-families, heading);
+  font-weight: map.get(t.$font-weights, medium);
+  font-size: map.get(t.$font-sizes, base);
+  color: var(--text);
+  margin-bottom: map.get(s.$spacings, 2);
+  line-height: 1.5;
+
+  &.required::after {
+    content: "*";
+    color: var(--error);
+    margin-left: 0.25rem;
+  }
+}
