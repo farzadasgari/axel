@@ -1,0 +1,14 @@
+@use 'sass:map';
+@use 'colors' as c;
+@use 'typography' as t;
+@use 'spacing' as s;
+@use 'borders' as b;
+@use 'animations';
+@use '../mixins/mixins' as m;
+
+// ==========================================================================
+// Axel Framework - Components
+// Description: Simple component styles for badges, spinners, and other lightweight elements.
+// Author: Farzad Asgari <https://github.com/farzadasgari>
+// Version: 1.1.1
+// ==========================================================================
