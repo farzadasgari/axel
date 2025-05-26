@@ -1,0 +1,17 @@
+@use 'sass:map';
+@use 'sass:math';
+@use 'spacing' as s;
+@use 'transitions' as t;
+@use 'typography' as ty;
+@use 'colors' as c;
+@use 'grid' as g;
+@use '../mixins/mixins' as m;
+
+// ==========================================================================
+// Axel Framework - Animations
+// Description: Animation keyframes and utility classes for the Axel CSS framework.
+// Provides fade, slide, scale, and spin animations with customizable durations and delays.
+// Respects prefers-reduced-motion for accessibility.
+// Author: Farzad Asgari <https://github.com/farzadasgari>
+// Version: 1.1.1
+// ==========================================================================
