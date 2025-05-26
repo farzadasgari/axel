@@ -22,3 +22,18 @@
 $table-border-width: map.get(b.$border-widths, "1px");
 $table-padding: map.get(s.$spacings, 2);
 $table-font-size: map.get(t.$font-sizes, base);
+
+
+// --------------------------------------------------------------------------
+// Base Table Styles
+// Core styles for tables.
+// Example usage: .table { border-collapse: collapse; }
+// --------------------------------------------------------------------------
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: $table-font-size;
+  color: var(--text);
+  background-color: var(--background);
+  @include m.accessible-component;
+}

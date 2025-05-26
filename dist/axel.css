@@ -95,13 +95,13 @@
   --gutter-default: 1rem;
 }
 
-.navbar:focus-visible, .nav-link:focus-visible, .badge:focus-visible, .spinner:focus-visible, .card:focus-visible, .input:focus-visible,
+.table:focus-visible, .navbar:focus-visible, .nav-link:focus-visible, .badge:focus-visible, .spinner:focus-visible, .card:focus-visible, .input:focus-visible,
 select:focus-visible,
 textarea:focus-visible, .focus-ring {
   outline: 3px solid var(--primary);
   outline-offset: 2px;
 }
-.navbar:focus:not(:focus-visible):focus-visible, .nav-link:focus:not(:focus-visible):focus-visible, .badge:focus:not(:focus-visible):focus-visible, .spinner:focus:not(:focus-visible):focus-visible, .card:focus:not(:focus-visible):focus-visible, .input:focus:not(:focus-visible):focus-visible,
+.table:focus:not(:focus-visible):focus-visible, .navbar:focus:not(:focus-visible):focus-visible, .nav-link:focus:not(:focus-visible):focus-visible, .badge:focus:not(:focus-visible):focus-visible, .spinner:focus:not(:focus-visible):focus-visible, .card:focus:not(:focus-visible):focus-visible, .input:focus:not(:focus-visible):focus-visible,
 select:focus:not(:focus-visible):focus-visible,
 textarea:focus:not(:focus-visible):focus-visible, .focus-ring:focus:not(:focus-visible) {
   outline: none;
@@ -11922,6 +11922,26 @@ select {
     margin-right: 0.5rem;
   }
 }
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: clamp(14px, 2vw, 16px);
+  color: var(--text);
+  background-color: var(--background);
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (prefers-reduced-motion: reduce) {
+  .table {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
