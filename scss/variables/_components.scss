@@ -160,3 +160,37 @@
     pointer-events: none;
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Progress Bars
+// Styles for progress indicators.
+// --------------------------------------------------------------------------
+.progress {
+  display: flex;
+  height: 16px;
+  overflow: hidden;
+  background-color: var(--background-muted);
+  border-radius: map.get(b.$border-radii, "4px");
+}
+
+.progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  color: var(--background);
+  transition: width 0.6s ease;
+  animation: slide-down 0.5s ease-out; // Fixed: Apply animation directly
+  animation-fill-mode: both;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none !important;
+  }
+
+  @each $color, $hex in map.get(c.$themes, light) {
+    &.progress-#{$color} {
+      background-color: var(--#{$color});
+    }
+  }
+}
