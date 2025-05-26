@@ -46,3 +46,59 @@ $animation-timing-functions: (
   "ease-in-out": ease-in-out,
   "linear": linear
 );
+
+
+// --------------------------------------------------------------------------
+// Keyframes
+// Core animation definitions for reuse across utilities.
+// --------------------------------------------------------------------------
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: 0 translateY(map.get(s.$spacings, 4));
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(calc(-1 * map.get(s.$spacings, 4)));
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
