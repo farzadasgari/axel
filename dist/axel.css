@@ -11948,6 +11948,129 @@ th, td {
   text-align: left;
 }
 
+.table-striped tbody tr:nth-child(odd) {
+  background-color: rgba(var(--background-rgb), 0.05);
+}
+
+.table-bordered {
+  border: solid var(--border);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(var(--primary-rgb), 0.1);
+  animation: fade-in 0.5s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .table-hover tbody tr:hover {
+    animation: none !important;
+  }
+}
+
+.table-primary {
+  background-color: rgba(var(--primary-rgb), 0.05);
+  border-color: var(--primary);
+}
+.table-primary th, .table-primary td {
+  border-color: var(--primary);
+}
+
+.table-secondary {
+  background-color: rgba(var(--secondary-rgb), 0.05);
+  border-color: var(--secondary);
+}
+.table-secondary th, .table-secondary td {
+  border-color: var(--secondary);
+}
+
+.table-danger {
+  background-color: rgba(var(--danger-rgb), 0.05);
+  border-color: var(--danger);
+}
+.table-danger th, .table-danger td {
+  border-color: var(--danger);
+}
+
+.table-success {
+  background-color: rgba(var(--success-rgb), 0.05);
+  border-color: var(--success);
+}
+.table-success th, .table-success td {
+  border-color: var(--success);
+}
+
+.table-warning {
+  background-color: rgba(var(--warning-rgb), 0.05);
+  border-color: var(--warning);
+}
+.table-warning th, .table-warning td {
+  border-color: var(--warning);
+}
+
+.table-info {
+  background-color: rgba(var(--info-rgb), 0.05);
+  border-color: var(--info);
+}
+.table-info th, .table-info td {
+  border-color: var(--info);
+}
+
+.table-dark {
+  background-color: rgba(var(--dark-rgb), 0.05);
+  border-color: var(--dark);
+}
+.table-dark th, .table-dark td {
+  border-color: var(--dark);
+}
+
+.table-light {
+  background-color: rgba(var(--light-rgb), 0.05);
+  border-color: var(--light);
+}
+.table-light th, .table-light td {
+  border-color: var(--light);
+}
+
+.table-white {
+  background-color: rgba(var(--white-rgb), 0.05);
+  border-color: var(--white);
+}
+.table-white th, .table-white td {
+  border-color: var(--white);
+}
+
+.table-black {
+  background-color: rgba(var(--black-rgb), 0.05);
+  border-color: var(--black);
+}
+.table-black th, .table-black td {
+  border-color: var(--black);
+}
+
+.table-background {
+  background-color: rgba(var(--background-rgb), 0.05);
+  border-color: var(--background);
+}
+.table-background th, .table-background td {
+  border-color: var(--background);
+}
+
+.table-text {
+  background-color: rgba(var(--text-rgb), 0.05);
+  border-color: var(--text);
+}
+.table-text th, .table-text td {
+  border-color: var(--text);
+}
+
+.table-accent {
+  background-color: rgba(var(--accent-rgb), 0.05);
+  border-color: var(--accent);
+}
+.table-accent th, .table-accent td {
+  border-color: var(--accent);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

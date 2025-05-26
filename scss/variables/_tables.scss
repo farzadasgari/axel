@@ -48,3 +48,40 @@ th, td {
   border: $table-border-width solid var(--border);
   text-align: left;
 }
+
+
+// --------------------------------------------------------------------------
+// Table Variants
+// Styles for striped, bordered, and hover effects.
+// --------------------------------------------------------------------------
+.table-striped {
+  tbody tr:nth-child(odd) {
+    background-color: rgba(var(--background-rgb), 0.05);
+  }
+}
+
+.table-bordered {
+  border: $table-border-width solid var(--border);
+}
+
+.table-hover {
+  tbody tr:hover {
+    background-color: rgba(var(--primary-rgb), 0.1);
+    animation: fade-in 0.5s ease-out; // Fixed: Apply animation directly
+    animation-fill-mode: both;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none !important;
+    }
+  }
+}
+
+@each $color, $hex in map.get(c.$themes, light) {
+  .table-#{$color} {
+    background-color: rgba(var(--#{$color}-rgb), 0.05);
+    border-color: var(--#{$color});
+    th, td {
+      border-color: var(--#{$color});
+    }
+  }
+}
