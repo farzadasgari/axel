@@ -254,9 +254,9 @@ $utilities: (
 // --------------------------------------------------------------------------
 @each $color in map.keys(map.get(c.$themes, light)) {
   .text-#{$color} {
-    color: var(--#{$color});
+    color: var(--#{$color}) !important;
   }
   .bg-#{$color} {
-    background-color: var(--#{$color});
+    background-color: var(--#{$color}) !important;
   }
 }

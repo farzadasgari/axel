@@ -8184,107 +8184,107 @@ textarea:focus:not(:focus-visible):focus-visible, .focus-ring:focus:not(:focus-v
   }
 }
 .text-primary {
-  color: var(--primary);
+  color: var(--primary) !important;
 }
 
 .bg-primary {
-  background-color: var(--primary);
+  background-color: var(--primary) !important;
 }
 
 .text-secondary {
-  color: var(--secondary);
+  color: var(--secondary) !important;
 }
 
 .bg-secondary {
-  background-color: var(--secondary);
+  background-color: var(--secondary) !important;
 }
 
 .text-danger {
-  color: var(--danger);
+  color: var(--danger) !important;
 }
 
 .bg-danger {
-  background-color: var(--danger);
+  background-color: var(--danger) !important;
 }
 
 .text-success {
-  color: var(--success);
+  color: var(--success) !important;
 }
 
 .bg-success {
-  background-color: var(--success);
+  background-color: var(--success) !important;
 }
 
 .text-warning {
-  color: var(--warning);
+  color: var(--warning) !important;
 }
 
 .bg-warning {
-  background-color: var(--warning);
+  background-color: var(--warning) !important;
 }
 
 .text-info {
-  color: var(--info);
+  color: var(--info) !important;
 }
 
 .bg-info {
-  background-color: var(--info);
+  background-color: var(--info) !important;
 }
 
 .text-dark {
-  color: var(--dark);
+  color: var(--dark) !important;
 }
 
 .bg-dark {
-  background-color: var(--dark);
+  background-color: var(--dark) !important;
 }
 
 .text-light {
-  color: var(--light);
+  color: var(--light) !important;
 }
 
 .bg-light {
-  background-color: var(--light);
+  background-color: var(--light) !important;
 }
 
 .text-white {
-  color: var(--white);
+  color: var(--white) !important;
 }
 
 .bg-white {
-  background-color: var(--white);
+  background-color: var(--white) !important;
 }
 
 .text-black {
-  color: var(--black);
+  color: var(--black) !important;
 }
 
 .bg-black {
-  background-color: var(--black);
+  background-color: var(--black) !important;
 }
 
 .text-background {
-  color: var(--background);
+  color: var(--background) !important;
 }
 
 .bg-background {
-  background-color: var(--background);
+  background-color: var(--background) !important;
 }
 
 .text-text {
-  color: var(--text);
+  color: var(--text) !important;
 }
 
 .bg-text {
-  background-color: var(--text);
+  background-color: var(--text) !important;
 }
 
 .text-accent {
-  color: var(--accent);
+  color: var(--accent) !important;
 }
 
 .bg-accent {
-  background-color: var(--accent);
+  background-color: var(--accent) !important;
 }
 
 .shadow-none {
