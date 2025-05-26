@@ -13,3 +13,12 @@
 // Author: Farzad Asgari <https://github.com/farzadasgari>
 // Version: 1.1.1
 // ==========================================================================
+
+
+// --------------------------------------------------------------------------
+// Table Variables
+// Configuration for table layout and spacing.
+// --------------------------------------------------------------------------
+$table-border-width: map.get(b.$border-widths, "1px");
+$table-padding: map.get(s.$spacings, 2);
+$table-font-size: map.get(t.$font-sizes, base);
