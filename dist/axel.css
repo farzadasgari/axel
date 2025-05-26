@@ -95,13 +95,13 @@
   --gutter-default: 1rem;
 }
 
-.table:focus-visible, .navbar:focus-visible, .nav-link:focus-visible, .badge:focus-visible, .spinner:focus-visible, .card:focus-visible, .input:focus-visible,
+.table:focus-visible, .navbar:focus-visible, .nav-link:focus-visible, .badge:focus-visible, .spinner:focus-visible, .breadcrumb-item a:focus-visible, .card:focus-visible, .input:focus-visible,
 select:focus-visible,
 textarea:focus-visible, .focus-ring {
   outline: 3px solid var(--primary);
   outline-offset: 2px;
 }
-.table:focus:not(:focus-visible):focus-visible, .navbar:focus:not(:focus-visible):focus-visible, .nav-link:focus:not(:focus-visible):focus-visible, .badge:focus:not(:focus-visible):focus-visible, .spinner:focus:not(:focus-visible):focus-visible, .card:focus:not(:focus-visible):focus-visible, .input:focus:not(:focus-visible):focus-visible,
+.table:focus:not(:focus-visible):focus-visible, .navbar:focus:not(:focus-visible):focus-visible, .nav-link:focus:not(:focus-visible):focus-visible, .badge:focus:not(:focus-visible):focus-visible, .spinner:focus:not(:focus-visible):focus-visible, .breadcrumb-item a:focus:not(:focus-visible):focus-visible, .card:focus:not(:focus-visible):focus-visible, .input:focus:not(:focus-visible):focus-visible,
 select:focus:not(:focus-visible):focus-visible,
 textarea:focus:not(:focus-visible):focus-visible, .focus-ring:focus:not(:focus-visible) {
   outline: none;
@@ -11655,6 +11655,47 @@ select {
 .spinner-accent {
   border-color: var(--accent);
   border-top-color: transparent;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0.5rem;
+  margin: 0;
+  font-size: clamp(12px, 1.8vw, 14px);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "/";
+  padding: 0 0.25rem;
+  color: var(--text-muted);
+}
+.breadcrumb-item a {
+  color: var(--primary);
+  text-decoration: none;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (prefers-reduced-motion: reduce) {
+  .breadcrumb-item a {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+.breadcrumb-item a:hover {
+  color: var(--primary-dark);
+  animation: scale-in 0.3s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .breadcrumb-item a:hover {
+    animation: none !important;
+  }
 }
 
 .navbar {

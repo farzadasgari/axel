@@ -32,7 +32,7 @@
   @include m.accessible-component;
 
   &.animate {
-    animation: scale-in 0.3s ease-out; // Fixed: Apply animation directly
+    animation: scale-in 0.3s ease-out;
     animation-fill-mode: both;
 
     @media (prefers-reduced-motion: reduce) {
@@ -60,7 +60,7 @@
   border: map.get(b.$border-widths, "2px") solid var(--primary);
   border-top-color: transparent;
   border-radius: 50%;
-  animation: spin 1s linear infinite; // Fixed: Apply animation directly
+  animation: spin 1s linear infinite;
   animation-fill-mode: both;
   @include m.accessible-component;
 
@@ -73,5 +73,43 @@
   .spinner-#{$color} {
     border-color: var(--#{$color});
     border-top-color: transparent;
+  }
+}
+
+
+// --------------------------------------------------------------------------
+// Breadcrumbs
+// Styles for navigation trails.
+// --------------------------------------------------------------------------
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: map.get(s.$spacings, 2);
+  margin: 0;
+  font-size: map.get(t.$font-sizes, sm);
+}
+
+.breadcrumb-item {
+  & + .breadcrumb-item::before {
+    content: "/";
+    padding: 0 map.get(s.$spacings, 1);
+    color: var(--text-muted);
+  }
+
+  a {
+    color: var(--primary);
+    text-decoration: none;
+    @include m.accessible-component;
+
+    &:hover {
+      color: var(--primary-dark);
+      animation: scale-in 0.3s ease-out;
+      animation-fill-mode: both;
+
+      @media (prefers-reduced-motion: reduce) {
+        animation: none !important;
+      }
+    }
   }
 }
