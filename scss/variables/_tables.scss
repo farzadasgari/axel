@@ -1,0 +1,15 @@
+@use 'sass:map';
+@use 'colors' as c;
+@use 'typography' as t;
+@use 'spacing' as s;
+@use 'borders' as b;
+@use 'grid' as g;
+@use 'contrast';
+@use '../mixins/mixins' as m;
+
+// ==========================================================================
+// Axel Framework - Tables
+// Description: Table styles for data display with stripes, borders, and responsive variants.
+// Author: Farzad Asgari <https://github.com/farzadasgari>
+// Version: 1.1.1
+// ==========================================================================
