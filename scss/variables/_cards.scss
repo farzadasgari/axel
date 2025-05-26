@@ -15,3 +15,14 @@
 // Author: Farzad Asgari <https://github.com/farzadasgari>
 // Version: 1.1.1
 // ==========================================================================
+
+
+// --------------------------------------------------------------------------
+// Card Variables
+// Configuration for card layout, spacing, and shadows.
+// --------------------------------------------------------------------------
+$card-border-width: map.get(b.$border-widths, "1px");
+$card-border-radius: map.get(b.$border-radii, "8px");
+$card-shadow: map.get(sh.$shadows, "sm");
+$card-padding: map.get(s.$spacings, 4);
+$card-margin: map.get(s.$spacings, 4);
