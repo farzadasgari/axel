@@ -41,3 +41,27 @@
     color: map.get(c.$themes, light, text); // Ensure contrast
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Spinners
+// Styles for loading indicators.
+// Example usage: .spinner { animation: spin 1s linear infinite; }
+// --------------------------------------------------------------------------
+.spinner {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: map.get(b.$border-widths, "2px") solid var(--primary);
+  border-top-color: transparent;
+  border-radius: 50%;
+  @extend .animate-spin, .animate-repeat;
+  @include m.accessible-component;
+}
+
+@each $color, $hex in map.get(c.$themes, light) {
+  .spinner-#{$color} {
+    border-color: var(--#{$color});
+    border-top-color: transparent;
+  }
+}
