@@ -5,7 +5,7 @@
 @use 'borders' as b;
 @use 'shadows' as sh;
 @use 'grid' as g;
-@use 'animations' as a;
+@use 'animations';
 @use '../mixins/mixins' as m;
 
 // ==========================================================================
@@ -105,7 +105,6 @@ $card-margin: map.get(s.$spacings, 4);
   .card-#{$color} {
     border-color: var(--#{$color});
     background-color: rgba(var(--#{$color}-rgb), 0.05);
-
     .card-header {
       color: var(--#{$color});
     }
@@ -114,7 +113,6 @@ $card-margin: map.get(s.$spacings, 4);
   .card-outline-#{$color} {
     border-color: var(--#{$color});
     background-color: transparent;
-
     .card-header {
       color: var(--#{$color});
     }
@@ -125,14 +123,14 @@ $card-margin: map.get(s.$spacings, 4);
 // --------------------------------------------------------------------------
 // Responsive Cards
 // Responsive variants for card layouts.
-// Example usage: .card-md { width: 100%; }
+// Example usage: .card-md { width: 100%; max-width: 768px; }
 // --------------------------------------------------------------------------
 @each $bp-size, $value in g.$breakpoints {
   @if $bp-size != 'xs' {
     @include m.media($bp-size, g.$breakpoints) {
       .card-#{$bp-size} {
         width: 100%;
-        max-width: map.get($value, max-width);
+        max-width: $value;
       }
     }
   }
