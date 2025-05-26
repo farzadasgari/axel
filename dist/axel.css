@@ -10254,6 +10254,906 @@ select {
     transform: rotate(360deg);
   }
 }
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in {
+    animation: none !important;
+  }
+}
+
+.animate-fade-in-100ms {
+  animation: fade-in 0.1s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-100ms {
+    animation: none !important;
+  }
+}
+
+.animate-fade-in-200ms {
+  animation: fade-in 0.2s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-200ms {
+    animation: none !important;
+  }
+}
+
+.animate-fade-in-300ms {
+  animation: fade-in 0.3s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-300ms {
+    animation: none !important;
+  }
+}
+
+.animate-fade-in-500ms {
+  animation: fade-in 0.5s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-500ms {
+    animation: none !important;
+  }
+}
+
+.animate-fade-in-700ms {
+  animation: fade-in 0.7s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-700ms {
+    animation: none !important;
+  }
+}
+
+.animate-fade-in-1000ms {
+  animation: fade-in 1s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-1000ms {
+    animation: none !important;
+  }
+}
+
+.animate-fade-in-delay-0ms {
+  animation: fade-in 0.5s ease-out;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-delay-0ms {
+    animation: none !important;
+  }
+}
+
+.animate-fade-in-delay-100ms {
+  animation: fade-in 0.5s ease-out;
+  animation-delay: 0.1s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-delay-100ms {
+    animation: none !important;
+  }
+}
+
+.animate-fade-in-delay-200ms {
+  animation: fade-in 0.5s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-delay-200ms {
+    animation: none !important;
+  }
+}
+
+.animate-fade-in-delay-300ms {
+  animation: fade-in 0.5s ease-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-delay-300ms {
+    animation: none !important;
+  }
+}
+
+.animate-fade-in-delay-500ms {
+  animation: fade-in 0.5s ease-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-delay-500ms {
+    animation: none !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .animate-fade-in-sm {
+    animation: fade-in 0.5s ease-out;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 576px) and (prefers-reduced-motion: reduce) {
+  .animate-fade-in-sm {
+    animation: none !important;
+  }
+}
+@media (min-width: 768px) {
+  .animate-fade-in-md {
+    animation: fade-in 0.5s ease-out;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 768px) and (prefers-reduced-motion: reduce) {
+  .animate-fade-in-md {
+    animation: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .animate-fade-in-lg {
+    animation: fade-in 0.5s ease-out;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 992px) and (prefers-reduced-motion: reduce) {
+  .animate-fade-in-lg {
+    animation: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .animate-fade-in-xl {
+    animation: fade-in 0.5s ease-out;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 1200px) and (prefers-reduced-motion: reduce) {
+  .animate-fade-in-xl {
+    animation: none !important;
+  }
+}
+@media (min-width: 1400px) {
+  .animate-fade-in-xxl {
+    animation: fade-in 0.5s ease-out;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 1400px) and (prefers-reduced-motion: reduce) {
+  .animate-fade-in-xxl {
+    animation: none !important;
+  }
+}
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-up {
+    animation: none !important;
+  }
+}
+
+.animate-slide-up-100ms {
+  animation: slide-up 0.1s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-up-100ms {
+    animation: none !important;
+  }
+}
+
+.animate-slide-up-200ms {
+  animation: slide-up 0.2s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-up-200ms {
+    animation: none !important;
+  }
+}
+
+.animate-slide-up-300ms {
+  animation: slide-up 0.3s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-up-300ms {
+    animation: none !important;
+  }
+}
+
+.animate-slide-up-500ms {
+  animation: slide-up 0.5s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-up-500ms {
+    animation: none !important;
+  }
+}
+
+.animate-slide-up-700ms {
+  animation: slide-up 0.7s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-up-700ms {
+    animation: none !important;
+  }
+}
+
+.animate-slide-up-1000ms {
+  animation: slide-up 1s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-up-1000ms {
+    animation: none !important;
+  }
+}
+
+.animate-slide-up-delay-0ms {
+  animation: slide-up 0.5s ease-out;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-up-delay-0ms {
+    animation: none !important;
+  }
+}
+
+.animate-slide-up-delay-100ms {
+  animation: slide-up 0.5s ease-out;
+  animation-delay: 0.1s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-up-delay-100ms {
+    animation: none !important;
+  }
+}
+
+.animate-slide-up-delay-200ms {
+  animation: slide-up 0.5s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-up-delay-200ms {
+    animation: none !important;
+  }
+}
+
+.animate-slide-up-delay-300ms {
+  animation: slide-up 0.5s ease-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-up-delay-300ms {
+    animation: none !important;
+  }
+}
+
+.animate-slide-up-delay-500ms {
+  animation: slide-up 0.5s ease-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-up-delay-500ms {
+    animation: none !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .animate-slide-up-sm {
+    animation: slide-up 0.5s ease-out;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 576px) and (prefers-reduced-motion: reduce) {
+  .animate-slide-up-sm {
+    animation: none !important;
+  }
+}
+@media (min-width: 768px) {
+  .animate-slide-up-md {
+    animation: slide-up 0.5s ease-out;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 768px) and (prefers-reduced-motion: reduce) {
+  .animate-slide-up-md {
+    animation: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .animate-slide-up-lg {
+    animation: slide-up 0.5s ease-out;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 992px) and (prefers-reduced-motion: reduce) {
+  .animate-slide-up-lg {
+    animation: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .animate-slide-up-xl {
+    animation: slide-up 0.5s ease-out;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 1200px) and (prefers-reduced-motion: reduce) {
+  .animate-slide-up-xl {
+    animation: none !important;
+  }
+}
+@media (min-width: 1400px) {
+  .animate-slide-up-xxl {
+    animation: slide-up 0.5s ease-out;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 1400px) and (prefers-reduced-motion: reduce) {
+  .animate-slide-up-xxl {
+    animation: none !important;
+  }
+}
+.animate-slide-down {
+  animation: slide-down 0.5s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-down {
+    animation: none !important;
+  }
+}
+
+.animate-slide-down-100ms {
+  animation: slide-down 0.1s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-down-100ms {
+    animation: none !important;
+  }
+}
+
+.animate-slide-down-200ms {
+  animation: slide-down 0.2s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-down-200ms {
+    animation: none !important;
+  }
+}
+
+.animate-slide-down-300ms {
+  animation: slide-down 0.3s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-down-300ms {
+    animation: none !important;
+  }
+}
+
+.animate-slide-down-500ms {
+  animation: slide-down 0.5s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-down-500ms {
+    animation: none !important;
+  }
+}
+
+.animate-slide-down-700ms {
+  animation: slide-down 0.7s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-down-700ms {
+    animation: none !important;
+  }
+}
+
+.animate-slide-down-1000ms {
+  animation: slide-down 1s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-down-1000ms {
+    animation: none !important;
+  }
+}
+
+.animate-slide-down-delay-0ms {
+  animation: slide-down 0.5s ease-out;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-down-delay-0ms {
+    animation: none !important;
+  }
+}
+
+.animate-slide-down-delay-100ms {
+  animation: slide-down 0.5s ease-out;
+  animation-delay: 0.1s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-down-delay-100ms {
+    animation: none !important;
+  }
+}
+
+.animate-slide-down-delay-200ms {
+  animation: slide-down 0.5s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-down-delay-200ms {
+    animation: none !important;
+  }
+}
+
+.animate-slide-down-delay-300ms {
+  animation: slide-down 0.5s ease-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-down-delay-300ms {
+    animation: none !important;
+  }
+}
+
+.animate-slide-down-delay-500ms {
+  animation: slide-down 0.5s ease-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-down-delay-500ms {
+    animation: none !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .animate-slide-down-sm {
+    animation: slide-down 0.5s ease-out;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 576px) and (prefers-reduced-motion: reduce) {
+  .animate-slide-down-sm {
+    animation: none !important;
+  }
+}
+@media (min-width: 768px) {
+  .animate-slide-down-md {
+    animation: slide-down 0.5s ease-out;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 768px) and (prefers-reduced-motion: reduce) {
+  .animate-slide-down-md {
+    animation: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .animate-slide-down-lg {
+    animation: slide-down 0.5s ease-out;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 992px) and (prefers-reduced-motion: reduce) {
+  .animate-slide-down-lg {
+    animation: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .animate-slide-down-xl {
+    animation: slide-down 0.5s ease-out;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 1200px) and (prefers-reduced-motion: reduce) {
+  .animate-slide-down-xl {
+    animation: none !important;
+  }
+}
+@media (min-width: 1400px) {
+  .animate-slide-down-xxl {
+    animation: slide-down 0.5s ease-out;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 1400px) and (prefers-reduced-motion: reduce) {
+  .animate-slide-down-xxl {
+    animation: none !important;
+  }
+}
+.animate-scale-in {
+  animation: scale-in 0.3s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-scale-in {
+    animation: none !important;
+  }
+}
+
+.animate-scale-in-100ms {
+  animation: scale-in 0.1s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-scale-in-100ms {
+    animation: none !important;
+  }
+}
+
+.animate-scale-in-200ms {
+  animation: scale-in 0.2s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-scale-in-200ms {
+    animation: none !important;
+  }
+}
+
+.animate-scale-in-300ms {
+  animation: scale-in 0.3s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-scale-in-300ms {
+    animation: none !important;
+  }
+}
+
+.animate-scale-in-500ms {
+  animation: scale-in 0.5s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-scale-in-500ms {
+    animation: none !important;
+  }
+}
+
+.animate-scale-in-700ms {
+  animation: scale-in 0.7s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-scale-in-700ms {
+    animation: none !important;
+  }
+}
+
+.animate-scale-in-1000ms {
+  animation: scale-in 1s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-scale-in-1000ms {
+    animation: none !important;
+  }
+}
+
+.animate-scale-in-delay-0ms {
+  animation: scale-in 0.3s ease-out;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-scale-in-delay-0ms {
+    animation: none !important;
+  }
+}
+
+.animate-scale-in-delay-100ms {
+  animation: scale-in 0.3s ease-out;
+  animation-delay: 0.1s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-scale-in-delay-100ms {
+    animation: none !important;
+  }
+}
+
+.animate-scale-in-delay-200ms {
+  animation: scale-in 0.3s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-scale-in-delay-200ms {
+    animation: none !important;
+  }
+}
+
+.animate-scale-in-delay-300ms {
+  animation: scale-in 0.3s ease-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-scale-in-delay-300ms {
+    animation: none !important;
+  }
+}
+
+.animate-scale-in-delay-500ms {
+  animation: scale-in 0.3s ease-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-scale-in-delay-500ms {
+    animation: none !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .animate-scale-in-sm {
+    animation: scale-in 0.3s ease-out;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 576px) and (prefers-reduced-motion: reduce) {
+  .animate-scale-in-sm {
+    animation: none !important;
+  }
+}
+@media (min-width: 768px) {
+  .animate-scale-in-md {
+    animation: scale-in 0.3s ease-out;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 768px) and (prefers-reduced-motion: reduce) {
+  .animate-scale-in-md {
+    animation: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .animate-scale-in-lg {
+    animation: scale-in 0.3s ease-out;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 992px) and (prefers-reduced-motion: reduce) {
+  .animate-scale-in-lg {
+    animation: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .animate-scale-in-xl {
+    animation: scale-in 0.3s ease-out;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 1200px) and (prefers-reduced-motion: reduce) {
+  .animate-scale-in-xl {
+    animation: none !important;
+  }
+}
+@media (min-width: 1400px) {
+  .animate-scale-in-xxl {
+    animation: scale-in 0.3s ease-out;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 1400px) and (prefers-reduced-motion: reduce) {
+  .animate-scale-in-xxl {
+    animation: none !important;
+  }
+}
+.animate-spin {
+  animation: spin 1s linear;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin {
+    animation: none !important;
+  }
+}
+
+.animate-spin-100ms {
+  animation: spin 0.1s linear;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-100ms {
+    animation: none !important;
+  }
+}
+
+.animate-spin-200ms {
+  animation: spin 0.2s linear;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-200ms {
+    animation: none !important;
+  }
+}
+
+.animate-spin-300ms {
+  animation: spin 0.3s linear;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-300ms {
+    animation: none !important;
+  }
+}
+
+.animate-spin-500ms {
+  animation: spin 0.5s linear;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-500ms {
+    animation: none !important;
+  }
+}
+
+.animate-spin-700ms {
+  animation: spin 0.7s linear;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-700ms {
+    animation: none !important;
+  }
+}
+
+.animate-spin-1000ms {
+  animation: spin 1s linear;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-1000ms {
+    animation: none !important;
+  }
+}
+
+.animate-spin-delay-0ms {
+  animation: spin 1s linear;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-delay-0ms {
+    animation: none !important;
+  }
+}
+
+.animate-spin-delay-100ms {
+  animation: spin 1s linear;
+  animation-delay: 0.1s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-delay-100ms {
+    animation: none !important;
+  }
+}
+
+.animate-spin-delay-200ms {
+  animation: spin 1s linear;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-delay-200ms {
+    animation: none !important;
+  }
+}
+
+.animate-spin-delay-300ms {
+  animation: spin 1s linear;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-delay-300ms {
+    animation: none !important;
+  }
+}
+
+.animate-spin-delay-500ms {
+  animation: spin 1s linear;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-delay-500ms {
+    animation: none !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .animate-spin-sm {
+    animation: spin 1s linear;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 576px) and (prefers-reduced-motion: reduce) {
+  .animate-spin-sm {
+    animation: none !important;
+  }
+}
+@media (min-width: 768px) {
+  .animate-spin-md {
+    animation: spin 1s linear;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 768px) and (prefers-reduced-motion: reduce) {
+  .animate-spin-md {
+    animation: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .animate-spin-lg {
+    animation: spin 1s linear;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 992px) and (prefers-reduced-motion: reduce) {
+  .animate-spin-lg {
+    animation: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .animate-spin-xl {
+    animation: spin 1s linear;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 1200px) and (prefers-reduced-motion: reduce) {
+  .animate-spin-xl {
+    animation: none !important;
+  }
+}
+@media (min-width: 1400px) {
+  .animate-spin-xxl {
+    animation: spin 1s linear;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 1400px) and (prefers-reduced-motion: reduce) {
+  .animate-spin-xxl {
+    animation: none !important;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;

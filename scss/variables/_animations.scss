@@ -102,3 +102,90 @@ $animation-timing-functions: (
     transform: rotate(360deg);
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Animation Utilities
+// Generates animation classes with customizable properties.
+// Example usage: .animate-fade-in-500ms { animation: fade-in 0.5s; }
+// --------------------------------------------------------------------------
+$animations: (
+  "fade-in": (
+    name: fade-in,
+    duration: map.get($animation-durations, "500ms"),
+    timing: map.get($animation-timing-functions, "ease-out")
+  ),
+  "slide-up": (
+    name: slide-up,
+    duration: map.get($animation-durations, "500ms"),
+    timing: map.get($animation-timing-functions, "ease-out")
+  ),
+  "slide-down": (
+    name: slide-down,
+    duration: map.get($animation-durations, "500ms"),
+    timing: map.get($animation-timing-functions, "ease-out")
+  ),
+  "scale-in": (
+    name: scale-in,
+    duration: map.get($animation-durations, "300ms"),
+    timing: map.get($animation-timing-functions, "ease-out")
+  ),
+  "spin": (
+    name: spin,
+    duration: map.get($animation-durations, "1000ms"),
+    timing: map.get($animation-timing-functions, "linear")
+  )
+);
+
+@each $name, $props in $animations {
+  .animate-#{$name} {
+    animation: map.get($props, name) map.get($props, duration) map.get($props, timing);
+    animation-fill-mode: both;
+
+    // Accessibility: Disable for prefers-reduced-motion
+    @media (prefers-reduced-motion: reduce) {
+      animation: none !important;
+    }
+  }
+
+  // Duration variants
+  @each $duration-name, $duration in $animation-durations {
+    .animate-#{$name}-#{$duration-name} {
+      animation: map.get($props, name) $duration map.get($props, timing);
+      animation-fill-mode: both;
+
+      @media (prefers-reduced-motion: reduce) {
+        animation: none !important;
+      }
+    }
+  }
+
+  // Delay variants
+  @each $delay-name, $delay in $animation-delays {
+    .animate-#{$name}-delay-#{$delay-name} {
+      animation: map.get($props, name) map.get($props, duration) map.get($props, timing);
+      animation-delay: $delay;
+      animation-fill-mode: both;
+
+      @media (prefers-reduced-motion: reduce) {
+        animation: none !important;
+      }
+    }
+  }
+
+  // Responsive variants
+  @each $bp-size, $value in g.$breakpoints {
+    @if $bp-size != 'xs' {
+      @include m.media($bp-size, g.$breakpoints) {
+        .animate-#{$name}-#{$bp-size} {
+          animation: map.get($props, name) map.get($props, duration) map.get($props, timing);
+          animation-fill-mode: both;
+
+          @media (prefers-reduced-motion: reduce) {
+            animation: none !important;
+          }
+        }
+      }
+    }
+  }
+}
