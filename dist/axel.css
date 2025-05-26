@@ -95,13 +95,13 @@
   --gutter-default: 1rem;
 }
 
-.table:focus-visible, .navbar:focus-visible, .nav-link:focus-visible, .badge:focus-visible, .spinner:focus-visible, .breadcrumb-item a:focus-visible, .card:focus-visible, .input:focus-visible,
+.table:focus-visible, .navbar:focus-visible, .nav-link:focus-visible, .badge:focus-visible, .spinner:focus-visible, .breadcrumb-item a:focus-visible, .page-link:focus-visible, .card:focus-visible, .input:focus-visible,
 select:focus-visible,
 textarea:focus-visible, .focus-ring {
   outline: 3px solid var(--primary);
   outline-offset: 2px;
 }
-.table:focus:not(:focus-visible):focus-visible, .navbar:focus:not(:focus-visible):focus-visible, .nav-link:focus:not(:focus-visible):focus-visible, .badge:focus:not(:focus-visible):focus-visible, .spinner:focus:not(:focus-visible):focus-visible, .breadcrumb-item a:focus:not(:focus-visible):focus-visible, .card:focus:not(:focus-visible):focus-visible, .input:focus:not(:focus-visible):focus-visible,
+.table:focus:not(:focus-visible):focus-visible, .navbar:focus:not(:focus-visible):focus-visible, .nav-link:focus:not(:focus-visible):focus-visible, .badge:focus:not(:focus-visible):focus-visible, .spinner:focus:not(:focus-visible):focus-visible, .breadcrumb-item a:focus:not(:focus-visible):focus-visible, .page-link:focus:not(:focus-visible):focus-visible, .card:focus:not(:focus-visible):focus-visible, .input:focus:not(:focus-visible):focus-visible,
 select:focus:not(:focus-visible):focus-visible,
 textarea:focus:not(:focus-visible):focus-visible, .focus-ring:focus:not(:focus-visible) {
   outline: none;
@@ -11696,6 +11696,56 @@ select {
   .breadcrumb-item a:hover {
     animation: none !important;
   }
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-item {
+  margin: 0 0.25rem;
+}
+
+.page-link {
+  display: block;
+  padding: 0.25rem 0.5rem;
+  border: solid var(--border);
+  color: var(--primary);
+  text-decoration: none;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-link {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+.page-link:hover {
+  background-color: rgba(var(--primary-rgb), 0.1);
+  animation: fade-in 0.5s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-link:hover {
+    animation: none !important;
+  }
+}
+.page-link.active {
+  background-color: var(--primary);
+  color: var(--background);
+  border-color: var(--primary);
+}
+.page-link.disabled {
+  color: var(--text-muted);
+  pointer-events: none;
 }
 
 .navbar {
