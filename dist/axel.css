@@ -11682,6 +11682,201 @@ select {
   color: var(--primary);
 }
 
+.navbar-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #2E2E2E;
+}
+.navbar-primary .nav-link {
+  color: #2E2E2E;
+}
+.navbar-primary .nav-link:hover, .navbar-primary .nav-link:focus {
+  background-color: rgba(var(--primary-rgb), 0.2);
+}
+.navbar-primary .nav-link.active {
+  color: #2E2E2E;
+}
+
+.navbar-secondary {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: #2E2E2E;
+}
+.navbar-secondary .nav-link {
+  color: #2E2E2E;
+}
+.navbar-secondary .nav-link:hover, .navbar-secondary .nav-link:focus {
+  background-color: rgba(var(--secondary-rgb), 0.2);
+}
+.navbar-secondary .nav-link.active {
+  color: #2E2E2E;
+}
+
+.navbar-danger {
+  background-color: var(--danger);
+  border-color: var(--danger);
+  color: #2E2E2E;
+}
+.navbar-danger .nav-link {
+  color: #2E2E2E;
+}
+.navbar-danger .nav-link:hover, .navbar-danger .nav-link:focus {
+  background-color: rgba(var(--danger-rgb), 0.2);
+}
+.navbar-danger .nav-link.active {
+  color: #2E2E2E;
+}
+
+.navbar-success {
+  background-color: var(--success);
+  border-color: var(--success);
+  color: #2E2E2E;
+}
+.navbar-success .nav-link {
+  color: #2E2E2E;
+}
+.navbar-success .nav-link:hover, .navbar-success .nav-link:focus {
+  background-color: rgba(var(--success-rgb), 0.2);
+}
+.navbar-success .nav-link.active {
+  color: #2E2E2E;
+}
+
+.navbar-warning {
+  background-color: var(--warning);
+  border-color: var(--warning);
+  color: #2E2E2E;
+}
+.navbar-warning .nav-link {
+  color: #2E2E2E;
+}
+.navbar-warning .nav-link:hover, .navbar-warning .nav-link:focus {
+  background-color: rgba(var(--warning-rgb), 0.2);
+}
+.navbar-warning .nav-link.active {
+  color: #2E2E2E;
+}
+
+.navbar-info {
+  background-color: var(--info);
+  border-color: var(--info);
+  color: #2E2E2E;
+}
+.navbar-info .nav-link {
+  color: #2E2E2E;
+}
+.navbar-info .nav-link:hover, .navbar-info .nav-link:focus {
+  background-color: rgba(var(--info-rgb), 0.2);
+}
+.navbar-info .nav-link.active {
+  color: #2E2E2E;
+}
+
+.navbar-dark {
+  background-color: var(--dark);
+  border-color: var(--dark);
+  color: #2E2E2E;
+}
+.navbar-dark .nav-link {
+  color: #2E2E2E;
+}
+.navbar-dark .nav-link:hover, .navbar-dark .nav-link:focus {
+  background-color: rgba(var(--dark-rgb), 0.2);
+}
+.navbar-dark .nav-link.active {
+  color: #2E2E2E;
+}
+
+.navbar-light {
+  background-color: var(--light);
+  border-color: var(--light);
+  color: #2E2E2E;
+}
+.navbar-light .nav-link {
+  color: #2E2E2E;
+}
+.navbar-light .nav-link:hover, .navbar-light .nav-link:focus {
+  background-color: rgba(var(--light-rgb), 0.2);
+}
+.navbar-light .nav-link.active {
+  color: #2E2E2E;
+}
+
+.navbar-white {
+  background-color: var(--white);
+  border-color: var(--white);
+  color: #2E2E2E;
+}
+.navbar-white .nav-link {
+  color: #2E2E2E;
+}
+.navbar-white .nav-link:hover, .navbar-white .nav-link:focus {
+  background-color: rgba(var(--white-rgb), 0.2);
+}
+.navbar-white .nav-link.active {
+  color: #2E2E2E;
+}
+
+.navbar-black {
+  background-color: var(--black);
+  border-color: var(--black);
+  color: #2E2E2E;
+}
+.navbar-black .nav-link {
+  color: #2E2E2E;
+}
+.navbar-black .nav-link:hover, .navbar-black .nav-link:focus {
+  background-color: rgba(var(--black-rgb), 0.2);
+}
+.navbar-black .nav-link.active {
+  color: #2E2E2E;
+}
+
+.navbar-background {
+  background-color: var(--background);
+  border-color: var(--background);
+  color: #2E2E2E;
+}
+.navbar-background .nav-link {
+  color: #2E2E2E;
+}
+.navbar-background .nav-link:hover, .navbar-background .nav-link:focus {
+  background-color: rgba(var(--background-rgb), 0.2);
+}
+.navbar-background .nav-link.active {
+  color: #2E2E2E;
+}
+
+.navbar-text {
+  background-color: var(--text);
+  border-color: var(--text);
+  color: #2E2E2E;
+}
+.navbar-text .nav-link {
+  color: #2E2E2E;
+}
+.navbar-text .nav-link:hover, .navbar-text .nav-link:focus {
+  background-color: rgba(var(--text-rgb), 0.2);
+}
+.navbar-text .nav-link.active {
+  color: #2E2E2E;
+}
+
+.navbar-accent {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #2E2E2E;
+}
+.navbar-accent .nav-link {
+  color: #2E2E2E;
+}
+.navbar-accent .nav-link:hover, .navbar-accent .nav-link:focus {
+  background-color: rgba(var(--accent-rgb), 0.2);
+}
+.navbar-accent .nav-link.active {
+  color: #2E2E2E;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

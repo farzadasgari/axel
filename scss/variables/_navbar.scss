@@ -75,3 +75,30 @@ $nav-link-padding: map.get(s.$spacings, 2);
     color: var(--primary);
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Navbar Variants
+// Theme-aware color variants.
+// Example usage: .navbar-primary { background-color: var(--primary); }
+// --------------------------------------------------------------------------
+@each $color, $hex in map.get(c.$themes, light) {
+  .navbar-#{$color} {
+    background-color: var(--#{$color});
+    border-color: var(--#{$color});
+    color: map.get(c.$themes, light, text);
+
+    .nav-link {
+      color: map.get(c.$themes, light, text);
+
+      &:hover,
+      &:focus {
+        background-color: rgba(var(--#{$color}-rgb), 0.2);
+      }
+
+      &.active {
+        color: map.get(c.$themes, light, text);
+      }
+    }
+  }
+}
