@@ -256,3 +256,41 @@
     color: var(--#{$color});
   }
 }
+
+
+// --------------------------------------------------------------------------
+// List Groups
+// Styles for grouped lists.
+// --------------------------------------------------------------------------
+.list-group {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-group-item {
+  padding: map.get(s.$spacings, 2);
+  border: map.get(b.$border-widths, "1px") solid var(--border);
+  border-radius: map.get(b.$border-radii, "4px");
+  margin-bottom: map.get(s.$spacings, 1);
+  font-size: map.get(t.$font-sizes, base);
+  color: var(--text);
+  background-color: var(--background);
+  @include m.accessible-component;
+
+  &:hover {
+    background-color: rgba(var(--primary-rgb), 0.1);
+    animation: fade-in 0.5s ease-out;
+    animation-fill-mode: both;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none !important;
+    }
+  }
+
+  &.active {
+    background-color: var(--primary);
+    color: var(--background);
+    border-color: var(--primary);
+  }
+}
