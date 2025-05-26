@@ -95,13 +95,13 @@
   --gutter-default: 1rem;
 }
 
-.navbar:focus-visible, .badge:focus-visible, .spinner:focus-visible, .card:focus-visible, .input:focus-visible,
+.navbar:focus-visible, .nav-link:focus-visible, .badge:focus-visible, .spinner:focus-visible, .card:focus-visible, .input:focus-visible,
 select:focus-visible,
 textarea:focus-visible, .focus-ring {
   outline: 3px solid var(--primary);
   outline-offset: 2px;
 }
-.navbar:focus:not(:focus-visible):focus-visible, .badge:focus:not(:focus-visible):focus-visible, .spinner:focus:not(:focus-visible):focus-visible, .card:focus:not(:focus-visible):focus-visible, .input:focus:not(:focus-visible):focus-visible,
+.navbar:focus:not(:focus-visible):focus-visible, .nav-link:focus:not(:focus-visible):focus-visible, .badge:focus:not(:focus-visible):focus-visible, .spinner:focus:not(:focus-visible):focus-visible, .card:focus:not(:focus-visible):focus-visible, .input:focus:not(:focus-visible):focus-visible,
 select:focus:not(:focus-visible):focus-visible,
 textarea:focus:not(:focus-visible):focus-visible, .focus-ring:focus:not(:focus-visible) {
   outline: none;
@@ -10794,12 +10794,12 @@ select {
     animation: none !important;
   }
 }
-.animate-scale-in, .badge.animate {
+.animate-scale-in, .nav-link:hover, .nav-link:focus, .badge.animate {
   animation: scale-in 0.3s ease-out;
   animation-fill-mode: both;
 }
 @media (prefers-reduced-motion: reduce) {
-  .animate-scale-in, .badge.animate {
+  .animate-scale-in, .nav-link:hover, .nav-link:focus, .badge.animate {
     animation: none !important;
   }
 }
@@ -11650,6 +11650,38 @@ select {
     transition: none !important;
   }
 }
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem;
+  font-size: clamp(14px, 2vw, 16px);
+  color: var(--text);
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-link {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+.nav-link:hover, .nav-link:focus {
+  background-color: rgba(var(--primary-rgb), 0.1);
+}
+.nav-link.active {
+  font-weight: 700;
+  color: var(--primary);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

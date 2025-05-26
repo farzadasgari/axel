@@ -45,3 +45,33 @@ $nav-link-padding: map.get(s.$spacings, 2);
     @extend .animate-fade-in;
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Nav Items and Links
+// Styles for navigation items and links.
+// --------------------------------------------------------------------------
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: $nav-link-padding;
+  font-size: map.get(t.$font-sizes, base);
+  color: var(--text);
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  @include m.accessible-component;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(var(--primary-rgb), 0.1);
+    @extend .animate-scale-in;
+  }
+
+  &.active {
+    font-weight: map.get(t.$font-weights, bold);
+    color: var(--primary);
+  }
+}
