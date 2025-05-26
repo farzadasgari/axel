@@ -26,3 +26,26 @@ $card-border-radius: map.get(b.$border-radii, "8px");
 $card-shadow: map.get(sh.$shadows, "sm");
 $card-padding: map.get(s.$spacings, 4);
 $card-margin: map.get(s.$spacings, 4);
+
+
+// --------------------------------------------------------------------------
+// Base Card Styles
+// Core styles for the card container.
+// Example usage: .card { border: 1px solid var(--border); }
+// --------------------------------------------------------------------------
+.card {
+  display: flex;
+  flex-direction: column;
+  border: $card-border-width solid var(--border);
+  border-radius: $card-border-radius;
+  box-shadow: $card-shadow;
+  background-color: var(--background);
+  margin: $card-margin;
+  overflow: hidden;
+  @include m.accessible-component;
+
+  // Animation on load
+  &.animate {
+    @extend .animate-fade-in;
+  }
+}
