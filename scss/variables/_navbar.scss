@@ -24,3 +24,24 @@ $navbar-padding: map.get(s.$spacings, 3);
 $navbar-border-width: map.get(b.$border-widths, "1px");
 $navbar-border-radius: map.get(b.$border-radii, "4px");
 $nav-link-padding: map.get(s.$spacings, 2);
+
+
+// --------------------------------------------------------------------------
+// Base Navbar Styles
+// Core styles for the navbar container.
+// Example usage: .navbar { display: flex; }
+// --------------------------------------------------------------------------
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: $navbar-padding;
+  background-color: var(--background);
+  border: $navbar-border-width solid var(--border);
+  border-radius: $navbar-border-radius;
+  @include m.accessible-component;
+
+  &.animate {
+    @extend .animate-fade-in;
+  }
+}

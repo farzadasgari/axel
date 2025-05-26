@@ -95,13 +95,13 @@
   --gutter-default: 1rem;
 }
 
-.badge:focus-visible, .spinner:focus-visible, .card:focus-visible, .input:focus-visible,
+.navbar:focus-visible, .badge:focus-visible, .spinner:focus-visible, .card:focus-visible, .input:focus-visible,
 select:focus-visible,
 textarea:focus-visible, .focus-ring {
   outline: 3px solid var(--primary);
   outline-offset: 2px;
 }
-.badge:focus:not(:focus-visible):focus-visible, .spinner:focus:not(:focus-visible):focus-visible, .card:focus:not(:focus-visible):focus-visible, .input:focus:not(:focus-visible):focus-visible,
+.navbar:focus:not(:focus-visible):focus-visible, .badge:focus:not(:focus-visible):focus-visible, .spinner:focus:not(:focus-visible):focus-visible, .card:focus:not(:focus-visible):focus-visible, .input:focus:not(:focus-visible):focus-visible,
 select:focus:not(:focus-visible):focus-visible,
 textarea:focus:not(:focus-visible):focus-visible, .focus-ring:focus:not(:focus-visible) {
   outline: none;
@@ -10254,12 +10254,12 @@ select {
     transform: rotate(360deg);
   }
 }
-.animate-fade-in, .card.animate {
+.animate-fade-in, .navbar.animate, .card.animate {
   animation: fade-in 0.5s ease-out;
   animation-fill-mode: both;
 }
 @media (prefers-reduced-motion: reduce) {
-  .animate-fade-in, .card.animate {
+  .animate-fade-in, .navbar.animate, .card.animate {
     animation: none !important;
   }
 }
@@ -11630,6 +11630,26 @@ select {
   border-top-color: transparent;
 }
 
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--background);
+  border: solid var(--border);
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (prefers-reduced-motion: reduce) {
+  .navbar {
+    animation: none !important;
+    transition: none !important;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
