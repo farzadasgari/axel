@@ -95,13 +95,13 @@
   --gutter-default: 1rem;
 }
 
-.table:focus-visible, .navbar:focus-visible, .nav-link:focus-visible, .badge:focus-visible, .spinner:focus-visible, .breadcrumb-item a:focus-visible, .page-link:focus-visible, .card:focus-visible, .input:focus-visible,
+.table:focus-visible, .navbar:focus-visible, .nav-link:focus-visible, .badge:focus-visible, .spinner:focus-visible, .breadcrumb-item a:focus-visible, .page-link:focus-visible, .alert:focus-visible, .card:focus-visible, .input:focus-visible,
 select:focus-visible,
 textarea:focus-visible, .focus-ring {
   outline: 3px solid var(--primary);
   outline-offset: 2px;
 }
-.table:focus:not(:focus-visible):focus-visible, .navbar:focus:not(:focus-visible):focus-visible, .nav-link:focus:not(:focus-visible):focus-visible, .badge:focus:not(:focus-visible):focus-visible, .spinner:focus:not(:focus-visible):focus-visible, .breadcrumb-item a:focus:not(:focus-visible):focus-visible, .page-link:focus:not(:focus-visible):focus-visible, .card:focus:not(:focus-visible):focus-visible, .input:focus:not(:focus-visible):focus-visible,
+.table:focus:not(:focus-visible):focus-visible, .navbar:focus:not(:focus-visible):focus-visible, .nav-link:focus:not(:focus-visible):focus-visible, .badge:focus:not(:focus-visible):focus-visible, .spinner:focus:not(:focus-visible):focus-visible, .breadcrumb-item a:focus:not(:focus-visible):focus-visible, .page-link:focus:not(:focus-visible):focus-visible, .alert:focus:not(:focus-visible):focus-visible, .card:focus:not(:focus-visible):focus-visible, .input:focus:not(:focus-visible):focus-visible,
 select:focus:not(:focus-visible):focus-visible,
 textarea:focus:not(:focus-visible):focus-visible, .focus-ring:focus:not(:focus-visible) {
   outline: none;
@@ -11825,6 +11825,113 @@ select {
 .placeholder-img {
   height: 100px;
   width: 100%;
+}
+
+.alert {
+  padding: 1rem;
+  border: solid var(--border);
+  font-size: clamp(14px, 2vw, 16px);
+  color: var(--text);
+  background-color: var(--background);
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (prefers-reduced-motion: reduce) {
+  .alert {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+.alert.animate {
+  animation: fade-in 0.5s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .alert.animate {
+    animation: none !important;
+  }
+}
+
+.alert-primary {
+  background-color: rgba(var(--primary-rgb), 0.1);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.alert-secondary {
+  background-color: rgba(var(--secondary-rgb), 0.1);
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.alert-danger {
+  background-color: rgba(var(--danger-rgb), 0.1);
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.alert-success {
+  background-color: rgba(var(--success-rgb), 0.1);
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.alert-warning {
+  background-color: rgba(var(--warning-rgb), 0.1);
+  border-color: var(--warning);
+  color: var(--warning);
+}
+
+.alert-info {
+  background-color: rgba(var(--info-rgb), 0.1);
+  border-color: var(--info);
+  color: var(--info);
+}
+
+.alert-dark {
+  background-color: rgba(var(--dark-rgb), 0.1);
+  border-color: var(--dark);
+  color: var(--dark);
+}
+
+.alert-light {
+  background-color: rgba(var(--light-rgb), 0.1);
+  border-color: var(--light);
+  color: var(--light);
+}
+
+.alert-white {
+  background-color: rgba(var(--white-rgb), 0.1);
+  border-color: var(--white);
+  color: var(--white);
+}
+
+.alert-black {
+  background-color: rgba(var(--black-rgb), 0.1);
+  border-color: var(--black);
+  color: var(--black);
+}
+
+.alert-background {
+  background-color: rgba(var(--background-rgb), 0.1);
+  border-color: var(--background);
+  color: var(--background);
+}
+
+.alert-text {
+  background-color: rgba(var(--text-rgb), 0.1);
+  border-color: var(--text);
+  color: var(--text);
+}
+
+.alert-accent {
+  background-color: rgba(var(--accent-rgb), 0.1);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .navbar {

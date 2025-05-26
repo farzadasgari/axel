@@ -181,7 +181,7 @@
   background-color: var(--primary);
   color: var(--background);
   transition: width 0.6s ease;
-  animation: slide-down 0.5s ease-out; // Fixed: Apply animation directly
+  animation: slide-down 0.5s ease-out;
   animation-fill-mode: both;
 
   @media (prefers-reduced-motion: reduce) {
@@ -223,4 +223,36 @@
   @extend .placeholder;
   height: 100px;
   width: 100%;
+}
+
+
+// --------------------------------------------------------------------------
+// Alerts
+// Styles for notification messages.
+// --------------------------------------------------------------------------
+.alert {
+  padding: map.get(s.$spacings, 3);
+  border: map.get(b.$border-widths, "1px") solid var(--border);
+  border-radius: map.get(b.$border-radii, "4px");
+  font-size: map.get(t.$font-sizes, base);
+  color: var(--text);
+  background-color: var(--background);
+  @include m.accessible-component;
+
+  &.animate {
+    animation: fade-in 0.5s ease-out;
+    animation-fill-mode: both;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none !important;
+    }
+  }
+}
+
+@each $color, $hex in map.get(c.$themes, light) {
+  .alert-#{$color} {
+    background-color: rgba(var(--#{$color}-rgb), 0.1);
+    border-color: var(--#{$color});
+    color: var(--#{$color});
+  }
 }
