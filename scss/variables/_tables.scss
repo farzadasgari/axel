@@ -37,3 +37,14 @@ $table-font-size: map.get(t.$font-sizes, base);
   background-color: var(--background);
   @include m.accessible-component;
 }
+
+
+// --------------------------------------------------------------------------
+// Table Cells
+// Styles for th and td elements.
+// --------------------------------------------------------------------------
+th, td {
+  padding: $table-padding;
+  border: $table-border-width solid var(--border);
+  text-align: left;
+}
