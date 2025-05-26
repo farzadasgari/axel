@@ -11154,6 +11154,23 @@ select {
     animation: none !important;
   }
 }
+.animate-repeat {
+  animation-iteration-count: infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-repeat {
+    animation: none !important;
+  }
+}
+
+.animate-once {
+  animation-iteration-count: 1;
+}
+
+.animate-reverse {
+  animation-direction: reverse;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

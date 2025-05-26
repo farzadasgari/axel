@@ -189,3 +189,25 @@ $animations: (
     }
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Animation Modifiers
+// Additional utilities for animation behavior.
+// Example usage: .animate-repeat { animation-iteration-count: infinite; }
+// --------------------------------------------------------------------------
+.animate-repeat {
+  animation-iteration-count: infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none !important;
+  }
+}
+
+.animate-once {
+  animation-iteration-count: 1;
+}
+
+.animate-reverse {
+  animation-direction: reverse;
+}
