@@ -14,3 +14,13 @@
 // Author: Farzad Asgari <https://github.com/farzadasgari>
 // Version: 1.1.1
 // ==========================================================================
+
+
+// --------------------------------------------------------------------------
+// Navbar Variables
+// Configuration for navbar layout, spacing, and borders.
+// --------------------------------------------------------------------------
+$navbar-padding: map.get(s.$spacings, 3);
+$navbar-border-width: map.get(b.$border-widths, "1px");
+$navbar-border-radius: map.get(b.$border-radii, "4px");
+$nav-link-padding: map.get(s.$spacings, 2);
