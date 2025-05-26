@@ -11220,6 +11220,214 @@ select {
   object-fit: cover;
 }
 
+.card-primary {
+  border-color: var(--primary);
+  background-color: rgba(var(--primary-rgb), 0.05);
+}
+.card-primary .card-header {
+  color: var(--primary);
+}
+
+.card-outline-primary {
+  border-color: var(--primary);
+  background-color: transparent;
+}
+.card-outline-primary .card-header {
+  color: var(--primary);
+}
+
+.card-secondary {
+  border-color: var(--secondary);
+  background-color: rgba(var(--secondary-rgb), 0.05);
+}
+.card-secondary .card-header {
+  color: var(--secondary);
+}
+
+.card-outline-secondary {
+  border-color: var(--secondary);
+  background-color: transparent;
+}
+.card-outline-secondary .card-header {
+  color: var(--secondary);
+}
+
+.card-danger {
+  border-color: var(--danger);
+  background-color: rgba(var(--danger-rgb), 0.05);
+}
+.card-danger .card-header {
+  color: var(--danger);
+}
+
+.card-outline-danger {
+  border-color: var(--danger);
+  background-color: transparent;
+}
+.card-outline-danger .card-header {
+  color: var(--danger);
+}
+
+.card-success {
+  border-color: var(--success);
+  background-color: rgba(var(--success-rgb), 0.05);
+}
+.card-success .card-header {
+  color: var(--success);
+}
+
+.card-outline-success {
+  border-color: var(--success);
+  background-color: transparent;
+}
+.card-outline-success .card-header {
+  color: var(--success);
+}
+
+.card-warning {
+  border-color: var(--warning);
+  background-color: rgba(var(--warning-rgb), 0.05);
+}
+.card-warning .card-header {
+  color: var(--warning);
+}
+
+.card-outline-warning {
+  border-color: var(--warning);
+  background-color: transparent;
+}
+.card-outline-warning .card-header {
+  color: var(--warning);
+}
+
+.card-info {
+  border-color: var(--info);
+  background-color: rgba(var(--info-rgb), 0.05);
+}
+.card-info .card-header {
+  color: var(--info);
+}
+
+.card-outline-info {
+  border-color: var(--info);
+  background-color: transparent;
+}
+.card-outline-info .card-header {
+  color: var(--info);
+}
+
+.card-dark {
+  border-color: var(--dark);
+  background-color: rgba(var(--dark-rgb), 0.05);
+}
+.card-dark .card-header {
+  color: var(--dark);
+}
+
+.card-outline-dark {
+  border-color: var(--dark);
+  background-color: transparent;
+}
+.card-outline-dark .card-header {
+  color: var(--dark);
+}
+
+.card-light {
+  border-color: var(--light);
+  background-color: rgba(var(--light-rgb), 0.05);
+}
+.card-light .card-header {
+  color: var(--light);
+}
+
+.card-outline-light {
+  border-color: var(--light);
+  background-color: transparent;
+}
+.card-outline-light .card-header {
+  color: var(--light);
+}
+
+.card-white {
+  border-color: var(--white);
+  background-color: rgba(var(--white-rgb), 0.05);
+}
+.card-white .card-header {
+  color: var(--white);
+}
+
+.card-outline-white {
+  border-color: var(--white);
+  background-color: transparent;
+}
+.card-outline-white .card-header {
+  color: var(--white);
+}
+
+.card-black {
+  border-color: var(--black);
+  background-color: rgba(var(--black-rgb), 0.05);
+}
+.card-black .card-header {
+  color: var(--black);
+}
+
+.card-outline-black {
+  border-color: var(--black);
+  background-color: transparent;
+}
+.card-outline-black .card-header {
+  color: var(--black);
+}
+
+.card-background {
+  border-color: var(--background);
+  background-color: rgba(var(--background-rgb), 0.05);
+}
+.card-background .card-header {
+  color: var(--background);
+}
+
+.card-outline-background {
+  border-color: var(--background);
+  background-color: transparent;
+}
+.card-outline-background .card-header {
+  color: var(--background);
+}
+
+.card-text {
+  border-color: var(--text);
+  background-color: rgba(var(--text-rgb), 0.05);
+}
+.card-text .card-header {
+  color: var(--text);
+}
+
+.card-outline-text {
+  border-color: var(--text);
+  background-color: transparent;
+}
+.card-outline-text .card-header {
+  color: var(--text);
+}
+
+.card-accent {
+  border-color: var(--accent);
+  background-color: rgba(var(--accent-rgb), 0.05);
+}
+.card-accent .card-header {
+  color: var(--accent);
+}
+
+.card-outline-accent {
+  border-color: var(--accent);
+  background-color: transparent;
+}
+.card-outline-accent .card-header {
+  color: var(--accent);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

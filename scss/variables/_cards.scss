@@ -94,3 +94,29 @@ $card-margin: map.get(s.$spacings, 4);
   border-bottom-left-radius: $card-border-radius;
   border-bottom-right-radius: $card-border-radius;
 }
+
+
+// --------------------------------------------------------------------------
+// Card Variants
+// Theme-aware color variants for cards.
+// Example usage: .card-primary { border-color: var(--primary); }
+// --------------------------------------------------------------------------
+@each $color, $hex in map.get(c.$themes, light) {
+  .card-#{$color} {
+    border-color: var(--#{$color});
+    background-color: rgba(var(--#{$color}-rgb), 0.05);
+
+    .card-header {
+      color: var(--#{$color});
+    }
+  }
+
+  .card-outline-#{$color} {
+    border-color: var(--#{$color});
+    background-color: transparent;
+
+    .card-header {
+      color: var(--#{$color});
+    }
+  }
+}
