@@ -10794,12 +10794,12 @@ select {
     animation: none !important;
   }
 }
-.animate-scale-in, .nav-link:hover, .nav-link:focus, .badge.animate {
+.animate-scale-in, .nav-link:hover, .nav-link:focus {
   animation: scale-in 0.3s ease-out;
   animation-fill-mode: both;
 }
 @media (prefers-reduced-motion: reduce) {
-  .animate-scale-in, .nav-link:hover, .nav-link:focus, .badge.animate {
+  .animate-scale-in, .nav-link:hover, .nav-link:focus {
     animation: none !important;
   }
 }
@@ -10974,12 +10974,12 @@ select {
     animation: none !important;
   }
 }
-.animate-spin, .spinner {
+.animate-spin {
   animation: spin 1s linear;
   animation-fill-mode: both;
 }
 @media (prefers-reduced-motion: reduce) {
-  .animate-spin, .spinner {
+  .animate-spin {
     animation: none !important;
   }
 }
@@ -11154,11 +11154,11 @@ select {
     animation: none !important;
   }
 }
-.animate-repeat, .spinner {
+.animate-repeat {
   animation-iteration-count: infinite;
 }
 @media (prefers-reduced-motion: reduce) {
-  .animate-repeat, .spinner {
+  .animate-repeat {
     animation: none !important;
   }
 }
@@ -11489,6 +11489,16 @@ select {
     transition: none !important;
   }
 }
+.badge.animate {
+  animation: scale-in 0.3s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .badge.animate {
+    animation: none !important;
+  }
+}
+
 .badge-primary {
   background-color: var(--primary);
   color: #2E2E2E;
@@ -11561,6 +11571,8 @@ select {
   border: solid var(--primary);
   border-top-color: transparent;
   border-radius: 50%;
+  animation: spin 1s linear infinite;
+  animation-fill-mode: both;
   min-width: 44px;
   min-height: 44px;
   padding: 0.5rem;
@@ -11572,6 +11584,11 @@ select {
   .spinner {
     animation: none !important;
     transition: none !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation: none !important;
   }
 }
 

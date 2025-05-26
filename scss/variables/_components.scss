@@ -4,11 +4,13 @@
 @use 'spacing' as s;
 @use 'borders' as b;
 @use 'animations';
+@use 'grid' as g;
 @use '../mixins/mixins' as m;
 
 // ==========================================================================
 // Axel Framework - Components
-// Description: Simple component styles for badges, spinners, and other lightweight elements.
+// Description: Simple component styles for badges, spinners, breadcrumbs, pagination,
+// progress bars, placeholders, alerts, and list groups.
 // Author: Farzad Asgari <https://github.com/farzadasgari>
 // Version: 1.1.1
 // ==========================================================================
@@ -17,7 +19,6 @@
 // --------------------------------------------------------------------------
 // Badges
 // Styles for small labels or tags.
-// Example usage: .badge { background-color: var(--primary); }
 // --------------------------------------------------------------------------
 .badge {
   display: inline-block;
@@ -31,14 +32,19 @@
   @include m.accessible-component;
 
   &.animate {
-    @extend .animate-scale-in;
+    animation: scale-in 0.3s ease-out; // Fixed: Apply animation directly
+    animation-fill-mode: both;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none !important;
+    }
   }
 }
 
 @each $color, $hex in map.get(c.$themes, light) {
   .badge-#{$color} {
     background-color: var(--#{$color});
-    color: map.get(c.$themes, light, text); // Ensure contrast
+    color: map.get(c.$themes, light, text);
   }
 }
 
@@ -46,7 +52,6 @@
 // --------------------------------------------------------------------------
 // Spinners
 // Styles for loading indicators.
-// Example usage: .spinner { animation: spin 1s linear infinite; }
 // --------------------------------------------------------------------------
 .spinner {
   display: inline-block;
@@ -55,8 +60,13 @@
   border: map.get(b.$border-widths, "2px") solid var(--primary);
   border-top-color: transparent;
   border-radius: 50%;
-  @extend .animate-spin, .animate-repeat;
+  animation: spin 1s linear infinite; // Fixed: Apply animation directly
+  animation-fill-mode: both;
   @include m.accessible-component;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none !important;
+  }
 }
 
 @each $color, $hex in map.get(c.$themes, light) {
