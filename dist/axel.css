@@ -10218,7 +10218,7 @@ select {
 }
 @keyframes slide-up {
   from {
-    transform: 0 translateY(1.5rem);
+    transform: translateY(1.5rem);
     opacity: 0;
   }
   to {
@@ -10252,6 +10252,14 @@ select {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes shimmer {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
   }
 }
 .animate-fade-in, .navbar.animate {
@@ -11151,6 +11159,186 @@ select {
 }
 @media (min-width: 1400px) and (prefers-reduced-motion: reduce) {
   .animate-spin-xxl {
+    animation: none !important;
+  }
+}
+.animate-shimmer {
+  animation: shimmer 1.5s linear;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-shimmer {
+    animation: none !important;
+  }
+}
+
+.animate-shimmer-100ms {
+  animation: shimmer 0.1s linear;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-shimmer-100ms {
+    animation: none !important;
+  }
+}
+
+.animate-shimmer-200ms {
+  animation: shimmer 0.2s linear;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-shimmer-200ms {
+    animation: none !important;
+  }
+}
+
+.animate-shimmer-300ms {
+  animation: shimmer 0.3s linear;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-shimmer-300ms {
+    animation: none !important;
+  }
+}
+
+.animate-shimmer-500ms {
+  animation: shimmer 0.5s linear;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-shimmer-500ms {
+    animation: none !important;
+  }
+}
+
+.animate-shimmer-700ms {
+  animation: shimmer 0.7s linear;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-shimmer-700ms {
+    animation: none !important;
+  }
+}
+
+.animate-shimmer-1000ms {
+  animation: shimmer 1s linear;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-shimmer-1000ms {
+    animation: none !important;
+  }
+}
+
+.animate-shimmer-delay-0ms {
+  animation: shimmer 1.5s linear;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-shimmer-delay-0ms {
+    animation: none !important;
+  }
+}
+
+.animate-shimmer-delay-100ms {
+  animation: shimmer 1.5s linear;
+  animation-delay: 0.1s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-shimmer-delay-100ms {
+    animation: none !important;
+  }
+}
+
+.animate-shimmer-delay-200ms {
+  animation: shimmer 1.5s linear;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-shimmer-delay-200ms {
+    animation: none !important;
+  }
+}
+
+.animate-shimmer-delay-300ms {
+  animation: shimmer 1.5s linear;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-shimmer-delay-300ms {
+    animation: none !important;
+  }
+}
+
+.animate-shimmer-delay-500ms {
+  animation: shimmer 1.5s linear;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-shimmer-delay-500ms {
+    animation: none !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .animate-shimmer-sm {
+    animation: shimmer 1.5s linear;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 576px) and (prefers-reduced-motion: reduce) {
+  .animate-shimmer-sm {
+    animation: none !important;
+  }
+}
+@media (min-width: 768px) {
+  .animate-shimmer-md {
+    animation: shimmer 1.5s linear;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 768px) and (prefers-reduced-motion: reduce) {
+  .animate-shimmer-md {
+    animation: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .animate-shimmer-lg {
+    animation: shimmer 1.5s linear;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 992px) and (prefers-reduced-motion: reduce) {
+  .animate-shimmer-lg {
+    animation: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .animate-shimmer-xl {
+    animation: shimmer 1.5s linear;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 1200px) and (prefers-reduced-motion: reduce) {
+  .animate-shimmer-xl {
+    animation: none !important;
+  }
+}
+@media (min-width: 1400px) {
+  .animate-shimmer-xxl {
+    animation: shimmer 1.5s linear;
+    animation-fill-mode: both;
+  }
+}
+@media (min-width: 1400px) and (prefers-reduced-motion: reduce) {
+  .animate-shimmer-xxl {
     animation: none !important;
   }
 }

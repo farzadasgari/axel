@@ -10,7 +10,7 @@
 // ==========================================================================
 // Axel Framework - Animations
 // Description: Animation keyframes and utility classes for the Axel CSS framework.
-// Provides fade, slide, scale, and spin animations with customizable durations and delays.
+// Provides fade, slide, scale, spin, and shimmer animations with customizable durations and delays.
 // Respects prefers-reduced-motion for accessibility.
 // Author: Farzad Asgari <https://github.com/farzadasgari>
 // Version: 1.1.1
@@ -63,7 +63,7 @@ $animation-timing-functions: (
 
 @keyframes slide-up {
   from {
-    transform: 0 translateY(map.get(s.$spacings, 4));
+    transform: translateY(map.get(s.$spacings, 4)); // Fixed: Removed invalid "0"
     opacity: 0;
   }
   to {
@@ -103,6 +103,15 @@ $animation-timing-functions: (
   }
 }
 
+@keyframes shimmer {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
 
 // --------------------------------------------------------------------------
 // Animation Utilities
@@ -133,6 +142,11 @@ $animations: (
   "spin": (
     name: spin,
     duration: map.get($animation-durations, "1000ms"),
+    timing: map.get($animation-timing-functions, "linear")
+  ),
+  "shimmer": (
+    name: shimmer,
+    duration: 1.5s,
     timing: map.get($animation-timing-functions, "linear")
   )
 );
@@ -211,6 +225,7 @@ $animations: (
 .animate-reverse {
   animation-direction: reverse;
 }
+
 
 // --------------------------------------------------------------------------
 // Accessibility
