@@ -102,3 +102,24 @@ $nav-link-padding: map.get(s.$spacings, 2);
     }
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Responsive Navbar
+// Responsive layouts for navbar items.
+// Example usage: .navbar-expand-md { flex-wrap: nowrap; }
+// --------------------------------------------------------------------------
+@each $bp-size, $value in g.$breakpoints {
+  @if $bp-size != 'xs' {
+    @include m.media($bp-size, g.$breakpoints) {
+      .navbar-expand-#{$bp-size} {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+
+        .nav-item {
+          margin-right: map.get(s.$spacings, 2);
+        }
+      }
+    }
+  }
+}
