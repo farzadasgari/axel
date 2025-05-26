@@ -12,3 +12,32 @@
 // Author: Farzad Asgari <https://github.com/farzadasgari>
 // Version: 1.1.1
 // ==========================================================================
+
+
+// --------------------------------------------------------------------------
+// Badges
+// Styles for small labels or tags.
+// Example usage: .badge { background-color: var(--primary); }
+// --------------------------------------------------------------------------
+.badge {
+  display: inline-block;
+  padding: map.get(s.$spacings, 1) map.get(s.$spacings, 2);
+  font-size: map.get(t.$font-sizes, xs);
+  font-weight: map.get(t.$font-weights, medium);
+  line-height: 1.5;
+  border-radius: map.get(b.$border-radii, "4px");
+  color: var(--background);
+  background-color: var(--primary);
+  @include m.accessible-component;
+
+  &.animate {
+    @extend .animate-scale-in;
+  }
+}
+
+@each $color, $hex in map.get(c.$themes, light) {
+  .badge-#{$color} {
+    background-color: var(--#{$color});
+    color: map.get(c.$themes, light, text); // Ensure contrast
+  }
+}
