@@ -15,3 +15,34 @@
 // Author: Farzad Asgari <https://github.com/farzadasgari>
 // Version: 1.1.1
 // ==========================================================================
+
+
+// --------------------------------------------------------------------------
+// Animation Configuration
+// Defines keyframes, durations, delays, and timing functions.
+// Example usage: .animate-fade-in { animation: fade-in 0.5s ease-out; }
+// --------------------------------------------------------------------------
+$animation-durations: (
+  "100ms": 0.1s,
+  "200ms": 0.2s,
+  "300ms": 0.3s,
+  "500ms": 0.5s,
+  "700ms": 0.7s,
+  "1000ms": 1s
+);
+
+$animation-delays: (
+  "0ms": 0s,
+  "100ms": 0.1s,
+  "200ms": 0.2s,
+  "300ms": 0.3s,
+  "500ms": 0.5s
+);
+
+$animation-timing-functions: (
+  "ease": ease,
+  "ease-in": ease-in,
+  "ease-out": ease-out,
+  "ease-in-out": ease-in-out,
+  "linear": linear
+);
