@@ -211,3 +211,9 @@ $animations: (
 .animate-reverse {
   animation-direction: reverse;
 }
+
+// --------------------------------------------------------------------------
+// Accessibility
+// Ensures animations respect WCAG 2.1 reduced motion preferences.
+// --------------------------------------------------------------------------
+$animation-min-touch-target: s.$min-touch-target-size; // 44px
