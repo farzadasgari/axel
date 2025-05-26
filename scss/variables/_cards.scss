@@ -49,3 +49,48 @@ $card-margin: map.get(s.$spacings, 4);
     @extend .animate-fade-in;
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Card Sub-Components
+// Styles for header, body, footer, and image.
+// --------------------------------------------------------------------------
+.card-header {
+  padding: $card-padding;
+  border-bottom: $card-border-width solid var(--border);
+  font-family: map.get(t.$font-families, heading);
+  font-weight: map.get(t.$font-weights, medium);
+  font-size: map.get(t.$font-sizes, lg);
+  color: var(--text);
+}
+
+.card-body {
+  padding: $card-padding;
+  font-size: map.get(t.$font-sizes, base);
+  color: var(--text);
+}
+
+.card-footer {
+  padding: $card-padding;
+  border-top: $card-border-width solid var(--border);
+  font-size: map.get(t.$font-sizes, sm);
+  color: var(--text-muted);
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-img-top {
+  @extend .card-img;
+  border-top-left-radius: $card-border-radius;
+  border-top-right-radius: $card-border-radius;
+}
+
+.card-img-bottom {
+  @extend .card-img;
+  border-bottom-left-radius: $card-border-radius;
+  border-bottom-right-radius: $card-border-radius;
+}
