@@ -1,0 +1,17 @@
+@use 'sass:map';
+@use 'colors' as c;
+@use 'typography' as t;
+@use 'spacing' as s;
+@use 'borders' as b;
+@use 'shadows' as sh;
+@use 'grid' as g;
+@use 'animations' as a;
+@use '../mixins/mixins' as m;
+
+// ==========================================================================
+// Axel Framework - Cards
+// Description: Card component styles for content containers with headers,
+// bodies, footers, and images. Supports variants, themes, and responsive layouts.
+// Author: Farzad Asgari <https://github.com/farzadasgari>
+// Version: 1.1.1
+// ==========================================================================
