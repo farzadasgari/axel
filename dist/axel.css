@@ -11810,6 +11810,23 @@ select {
   background-color: var(--accent);
 }
 
+.placeholder, .placeholder-img, .placeholder-text {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--background-muted) 25%, rgba(var(--background-rgb), 0.2) 50%, var(--background-muted) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.placeholder-text {
+  height: clamp(14px, 2vw, 16px);
+  width: 100%;
+}
+
+.placeholder-img {
+  height: 100px;
+  width: 100%;
+}
+
 .navbar {
   display: flex;
   flex-wrap: wrap;

@@ -194,3 +194,33 @@
     }
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Placeholders
+// Styles for loading placeholders with shimmer effect.
+// --------------------------------------------------------------------------
+.placeholder {
+  display: inline-block;
+  background: linear-gradient(
+      90deg,
+      var(--background-muted) 25%,
+      rgba(var(--background-rgb), 0.2) 50%,
+      var(--background-muted) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: map.get(b.$border-radii, "4px");
+}
+
+.placeholder-text {
+  @extend .placeholder;
+  height: map.get(t.$font-sizes, base);
+  width: 100%;
+}
+
+.placeholder-img {
+  @extend .placeholder;
+  height: 100px;
+  width: 100%;
+}
