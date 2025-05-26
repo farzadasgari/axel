@@ -46,7 +46,12 @@ $card-margin: map.get(s.$spacings, 4);
 
   // Animation on load
   &.animate {
-    @extend .animate-fade-in;
+    animation: fade-in 0.5s ease-out;
+    animation-fill-mode: both;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none !important;
+    }
   }
 }
 

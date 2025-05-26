@@ -10254,12 +10254,12 @@ select {
     transform: rotate(360deg);
   }
 }
-.animate-fade-in, .navbar.animate, .card.animate {
+.animate-fade-in, .navbar.animate {
   animation: fade-in 0.5s ease-out;
   animation-fill-mode: both;
 }
 @media (prefers-reduced-motion: reduce) {
-  .animate-fade-in, .navbar.animate, .card.animate {
+  .animate-fade-in, .navbar.animate {
     animation: none !important;
   }
 }
@@ -11192,6 +11192,16 @@ select {
     transition: none !important;
   }
 }
+.card.animate {
+  animation: fade-in 0.5s ease-out;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .card.animate {
+    animation: none !important;
+  }
+}
+
 .card-header {
   padding: 1.5rem;
   border-bottom: solid var(--border);
