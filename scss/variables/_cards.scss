@@ -120,3 +120,20 @@ $card-margin: map.get(s.$spacings, 4);
     }
   }
 }
+
+
+// --------------------------------------------------------------------------
+// Responsive Cards
+// Responsive variants for card layouts.
+// Example usage: .card-md { width: 100%; }
+// --------------------------------------------------------------------------
+@each $bp-size, $value in g.$breakpoints {
+  @if $bp-size != 'xs' {
+    @include m.media($bp-size, g.$breakpoints) {
+      .card-#{$bp-size} {
+        width: 100%;
+        max-width: map.get($value, max-width);
+      }
+    }
+  }
+}
